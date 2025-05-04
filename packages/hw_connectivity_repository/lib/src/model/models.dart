@@ -1,0 +1,1 @@
+export 'auction_data.dart';

@@ -1,0 +1,50 @@
+name: porsche_ebike_code_challenge
+description: "A new Flutter project for Porsche Ebike coding challenge tech assessment."
+
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.6.1
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.8
+  riverpod: ^2.6.1
+  flutter_riverpod: ^2.6.1
+  intl: ^0.20.2
+  flutter_spinkit: ^5.2.1
+  equatable: ^2.0.7
+  shared_preferences: ^2.5.3
+
+
+  hw_connectivity_repository:
+    path: packages/hw_connectivity_repository
+  network_api:
+    path: packages/network_api
+  authentication_repository:
+    path: packages/authentication_repository
+  secure_storage_api:
+    path: packages/secure_storage_api
+  usb_con_api:
+    path: packages/usb_con_api
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  bloc_test: ^10.0.0
+  mocktail: ^1.0.4
+
+  flutter_lints: ^5.0.0
+  flutter_launcher_icons: ^0.14.3
+
+
+flutter:
+
+  uses-material-design: true
+  assets:
+    - assets/
+    - assets/images/

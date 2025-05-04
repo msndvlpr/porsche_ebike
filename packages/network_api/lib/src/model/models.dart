@@ -1,0 +1,1 @@
+export 'bike_asset_data.dart';

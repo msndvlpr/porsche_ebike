@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/android/caronsale_code_challenge_android.iml" filepath="$PROJECT_DIR$/android/caronsale_code_challenge_android.iml" />
+      <module fileurl="file://$PROJECT_DIR$/porsche_ebike_code_challenge.iml" filepath="$PROJECT_DIR$/porsche_ebike_code_challenge.iml" />
+    </modules>
+  </component>
+</project>

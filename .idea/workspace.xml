@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AndroidLayouts">
+    <shared>
+      <config />
+    </shared>
+  </component>
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="NONE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="8ed2c952-683f-4e19-b9f3-80980f90de14" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="DartProblemsView" show-warnings="false" show-hints="false" />
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Dart File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;mohsenedag&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://msndvlpr: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@github.com/msndvlpr/caronsale-code-challenge.git&quot;,
+    &quot;accountId&quot;: &quot;bd46d142-981b-46e9-bedd-06b28059e856&quot;
+  }
+}</component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="ProjectErrors" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
+  <component name="ProjectId" id="2sjVMjYYX3JYwE07x6dNjJqJyVp" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Dart Command Line App.auction_repository_test.dart.executor": "Run",
+    "Dart Command Line App.authentication_repository_test.dart.executor": "Run",
+    "Dart Command Line App.bluetooth_con_api_service.dart.executor": "Run",
+    "Dart Command Line App.cos_challenge.dart.executor": "Run",
+    "Dart Command Line App.new_test.dart.executor": "Run",
+    "Dart Command Line App.secure_storage_api_test.dart.executor": "Run",
+    "Dart Command Line App.snippet.dart.executor": "Run",
+    "Dart Test.Tests in authentication_repository_test.dart.executor": "Run",
+    "Flutter Test.AuctionDataBloc.executor": "Run",
+    "Flutter Test.Displays CircularProgressIndicator when state is AuctionDataStateLoading.executor": "Run",
+    "Flutter Test.Does not display CircularProgressIndicator when state is loaded.executor": "Run",
+    "Flutter Test.Does not display CircularProgressIndicator when state is not AuctionDataStateLoading.executor": "Run",
+    "Flutter Test.ElevatedButton is disabled when state is AuctionDataStateLoading.executor": "Run",
+    "Flutter Test.ElevatedButton is enabled when state is not AuctionDataStateLoading.executor": "Run",
+    "Flutter Test.GIVEN AuthenticationRepository returns data for user authentication WHEN UserAuthDataFetched event is added THEN emit [Loading, Exception] with the exception thrown.executor": "Run",
+    "Flutter Test.GIVEN NetworkApiService as my data source WHEN http get method is called THEN should respond 200 with data.executor": "Run",
+    "Flutter Test.GIVEN NetworkApiService as my data source WHEN http get method is called THEN should respond 300 with multiple choice data.executor": "Run",
+    "Flutter Test.GIVEN NetworkApiService as my data source WHEN http get method is called THEN should respond 400 with error response.executor": "Run",
+    "Flutter Test.GIVEN NetworkApiService as my data source WHEN http get method is called with an external id THEN should respond 200 with data.executor": "Run",
+    "Flutter Test.GIVEN NetworkApiService as my data source WHEN http get method is called with an external id THEN should respond 400 with error response.executor": "Run",
+    "Flutter Test.GIVEN NetworkApiService as my data source WHEN http get method is called with user credentials THEN should respond 200 with token.executor": "Run",
+    "Flutter Test.GIVEN VehicleSelectionScreen WHEN rendered THEN should display text, tiles, and cards.executor": "Run",
+    "Flutter Test.GIVEN VehicleSelectionScreen with the passed vehicle items WHEN an item is clicked THEN should trigger AuctionDataFetched jjjevent.executor": "Run",
+    "Flutter Test.GIVEN VehicleSelectionScreen with the passed vehicle items WHEN rendered THEN should display text, tiles, and cards.executor": "Run",
+    "Flutter Test.GIVEN VehicleSelectionScreen with the passed vehicle items WHEN view is rendered and an listTile is tapped THEN should navigate to next screen (1).executor": "Run",
+    "Flutter Test.GIVEN VehicleSelectionScreen with the passed vehicle items WHEN view is rendered and an listTile is tapped THEN should navigate to next screen.executor": "Run",
+    "Flutter Test.GIVEN empty VIN input WHEN submitted THEN should show validation error.executor": "Run",
+    "Flutter Test.GIVEN error state WHEN screen is rendered THEN should display error message.executor": "Run",
+    "Flutter Test.GIVEN invalid VIN input WHEN submitted THEN should show validation error.executor": "Run",
+    "Flutter Test.GIVEN loading state WHEN screen is rendered THEN should show CircularProgressIndicator.executor": "Run",
+    "Flutter Test.GIVEN the repository throws an exception WHEN EnergyDataFetched is added THEN emit [Loading, Failure] with the error message.executor": "Run",
+    "Flutter Test.GIVEN valid VIN input WHEN submitted THEN should trigger AuctionDataFetched event.executor": "Run",
+    "Flutter Test.Given NetworkApiService as my data source When http get method is called Then should respond 200 with data.executor": "Run",
+    "Flutter Test.Given NetworkApiService as my data source When http get method is called Then should respond 300 with multiple choice data.executor": "Run",
+    "Flutter Test.Navigates to AuctionVehicleDetailsScreen when a ListTile is tapped.executor": "Run",
+    "Flutter Test.Shows error message when state is AuctionDataStateFailure.executor": "Run",
+    "Flutter Test.Shows error message when state is AuctionDataStateFailure2.executor": "Run",
+    "Flutter Test.Shows error message when state is AuctionDataStateFailure3.executor": "Run",
+    "Flutter Test.Shows error message when state is AuctionDataStateFailure4.executor": "Run",
+    "Flutter Test.Shows error message when state is AuctionDataStateFailure5.executor": "Run",
+    "Flutter Test.Triggers VehicleDataFetched event when a vehicle is selected.executor": "Run",
+    "Flutter Test.VehicleSelectionScreen.executor": "Run",
+    "Flutter Test.getAuctionData.executor": "Run",
+    "Flutter Test.postUserAuthenticationInfo.executor": "Run",
+    "Flutter Test.tests in auction_data_bloc_test.dart.executor": "Run",
+    "Flutter Test.tests in data_validator_test.dart.executor": "Run",
+    "Flutter Test.tests in network_api_service_test.dart.executor": "Run",
+    "Flutter Test.tests in user_auth_bloc_test.dart.executor": "Run",
+    "Flutter Test.tests in vehicle_search_screen_test.dart.executor": "Run",
+    "Flutter Test.tests in vehicle_selection_screen_test.dart.executor": "Run",
+    "Flutter.main.dart.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "RunOnceActivity.readMode.enableVisualFormatting": "true",
+    "cf.first.check.clang-format": "false",
+    "cidr.known.project.marker": "true",
+    "dart.analysis.tool.window.visible": "false",
+    "git-widget-placeholder": "develop",
+    "io.flutter.reload.alreadyRun": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/me88756/Projects/Personal/porsche-ebike-code-challenge/packages",
+    "settings.editor.selected.configurable": "editor.preferences.fonts.default",
+    "show.migrate.to.gradle.popup": "false"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\me88756\Projects\Personal\porsche-ebike-code-challenge\packages" />
+      <recent name="C:\Users\me88756\Projects\Personal\porsche-ebike-code-challenge\lib\shared" />
+      <recent name="C:\Users\me88756\Projects\Personal\porsche-ebike-code-challenge\lib\theme" />
+      <recent name="C:\Users\me88756\Projects\Personal\porsche-ebike-code-challenge\lib\app" />
+      <recent name="C:\Users\me88756\Projects\Personal\caronsale-code-challenge\test\vehicle_auction\view" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\me88756\Projects\Personal\porsche-ebike-code-challenge\lib\shared" />
+      <recent name="C:\Users\me88756\Projects\Personal\caronsale-code-challenge\lib\home\view" />
+      <recent name="C:\Users\me88756\Projects\Personal\caronsale-code-challenge\lib\auction\view" />
+      <recent name="C:\Users\me88756\Projects\Personal\caronsale-code-challenge\lib\identification\view" />
+      <recent name="C:\Users\me88756\Projects\Personal\caronsale-code-challenge\packages\network_api\lib\src" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Flutter.main.dart">
+    <configuration name="bluetooth_con_api_service.dart" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application" temporary="true" nameIsGenerated="true">
+      <option name="filePath" value="$PROJECT_DIR$/packages/bluetooth_con_api/lib/src/bluetooth_con_api_service.dart" />
+      <option name="workingDirectory" value="$PROJECT_DIR$/packages/bluetooth_con_api" />
+      <method v="2" />
+    </configuration>
+    <configuration name="GIVEN VehicleSelectionScreen with the passed vehicle items WHEN rendered THEN should display text, tiles, and cards" type="FlutterTestConfigType" factoryName="Flutter Test" temporary="true" nameIsGenerated="true">
+      <option name="testName" value="GIVEN VehicleSelectionScreen with the passed vehicle items WHEN rendered THEN should display text, tiles, and cards" />
+      <option name="testFile" value="$PROJECT_DIR$/test/vehicle_auction/view/vehicle_selection_screen_test.dart" />
+      <option name="useRegexp" value="true" />
+      <method v="2" />
+    </configuration>
+    <configuration name="GIVEN VehicleSelectionScreen with the passed vehicle items WHEN view is rendered and an listTile is tapped THEN should navigate to next screen (1)" type="FlutterTestConfigType" factoryName="Flutter Test" temporary="true" nameIsGenerated="true">
+      <option name="testName" value="GIVEN VehicleSelectionScreen with the passed vehicle items WHEN view is rendered and an listTile is tapped THEN should navigate to next screen" />
+      <option name="testFile" value="$PROJECT_DIR$/test/vehicle_search/view/vehicle_search_screen_test.dart" />
+      <option name="useRegexp" value="true" />
+      <method v="2" />
+    </configuration>
+    <configuration name="GIVEN VehicleSelectionScreen with the passed vehicle items WHEN view is rendered and an listTile is tapped THEN should navigate to next screen" type="FlutterTestConfigType" factoryName="Flutter Test" temporary="true" nameIsGenerated="true">
+      <option name="testName" value="GIVEN VehicleSelectionScreen with the passed vehicle items WHEN view is rendered and an listTile is tapped THEN should navigate to next screen" />
+      <option name="testFile" value="$PROJECT_DIR$/test/vehicle_auction/view/vehicle_selection_screen_test.dart" />
+      <option name="useRegexp" value="true" />
+      <method v="2" />
+    </configuration>
+    <configuration name="VehicleSelectionScreen" type="FlutterTestConfigType" factoryName="Flutter Test" temporary="true" nameIsGenerated="true">
+      <option name="testName" value="VehicleSelectionScreen" />
+      <option name="testFile" value="$PROJECT_DIR$/test/vehicle_auction/view/vehicle_selection_screen_test.dart" />
+      <option name="useRegexp" value="false" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Dart Command Line App.bluetooth_con_api_service.dart" />
+      <item itemvalue="Flutter.main.dart" />
+      <item itemvalue="Flutter Test.GIVEN VehicleSelectionScreen with the passed vehicle items WHEN view is rendered and an listTile is tapped THEN should navigate to next screen (1)" />
+      <item itemvalue="Flutter Test.GIVEN VehicleSelectionScreen with the passed vehicle items WHEN rendered THEN should display text, tiles, and cards" />
+      <item itemvalue="Flutter Test.GIVEN VehicleSelectionScreen with the passed vehicle items WHEN view is rendered and an listTile is tapped THEN should navigate to next screen" />
+      <item itemvalue="Flutter Test.VehicleSelectionScreen" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Dart Command Line App.bluetooth_con_api_service.dart" />
+        <item itemvalue="Flutter Test.GIVEN VehicleSelectionScreen with the passed vehicle items WHEN view is rendered and an listTile is tapped THEN should navigate to next screen (1)" />
+        <item itemvalue="Flutter Test.GIVEN VehicleSelectionScreen with the passed vehicle items WHEN view is rendered and an listTile is tapped THEN should navigate to next screen" />
+        <item itemvalue="Flutter Test.VehicleSelectionScreen" />
+        <item itemvalue="Flutter Test.GIVEN VehicleSelectionScreen with the passed vehicle items WHEN rendered THEN should display text, tiles, and cards" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="8ed2c952-683f-4e19-b9f3-80980f90de14" name="Changes" comment="" />
+      <created>1738968974772</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1738968974772</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ID_ORDER">
+      <list>
+        <option value="Default.Root" />
+        <option value="Default.Author" />
+        <option value="Default.Date" />
+        <option value="Default.Subject" />
+      </list>
+    </option>
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <default-breakpoints>
+        <breakpoint type="dart-exception" />
+      </default-breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

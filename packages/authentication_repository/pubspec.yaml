@@ -1,0 +1,19 @@
+name: authentication_repository
+description: A repository that handles authentication related requests.
+version: 1.0.0+1
+publish_to: none
+
+environment:
+  sdk: ">=3.6.0 <4.0.0"
+
+dependencies:
+  network_api:
+    path: ../network_api
+  secure_storage_api:
+    path: ../secure_storage_api
+  encrypt: ^5.0.3
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  mocktail: ^1.0.4

@@ -1,0 +1,19 @@
+name: bluetooth_con_api
+description: A Flutter package for Bluetooth connection management to the external devices supporting BLE.
+version: 1.0.0+1
+publish_to: none
+
+environment:
+  sdk: ">=3.6.0 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  http: ^1.3.0
+  flutter_blue_plus: ^1.35.5
+  flutter_blue_plus_windows: ^1.25.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  mocktail: ^1.0.4
