@@ -1,9 +1,0 @@
--- The C compiler identification is Clang 14.0.6
--- Detecting C compiler ABI info
--- Detecting C compiler ABI info - done
--- Check for working C compiler: C:/Users/me88756/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/bin/clang.exe - skipped
--- Detecting C compile features
--- Detecting C compile features - done
--- Configuring done
--- Generating done
--- Build files have been written to: C:/Users/me88756/AppData/Local/Pub/Cache/hosted/pub.dev/flutter_libserialport-0.5.0/android/.cxx/Debug/5b144a22/arm64-v8a

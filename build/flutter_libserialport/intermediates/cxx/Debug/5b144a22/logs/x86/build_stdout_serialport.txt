@@ -1,6 +1,0 @@
-ninja: Entering directory `C:\Users\me88756\AppData\Local\Pub\Cache\hosted\pub.dev\flutter_libserialport-0.5.0\android\.cxx\Debug\5b144a22\x86'
-[1/5] Building C object CMakeFiles/serialport.dir/7908b75e7bb93062811ace63cae6d3e2/pub.dev/flutter_libserialport-0.5.0/third_party/libserialport/linux.c.o
-[2/5] Building C object CMakeFiles/serialport.dir/e8bc9e4f44b5ea40f59cd08b6035467c/flutter_libserialport-0.5.0/third_party/libserialport/linux_termios.c.o
-[3/5] Building C object CMakeFiles/serialport.dir/e8bc9e4f44b5ea40f59cd08b6035467c/flutter_libserialport-0.5.0/third_party/libserialport/serialport.c.o
-[4/5] Building C object CMakeFiles/serialport.dir/7908b75e7bb93062811ace63cae6d3e2/pub.dev/flutter_libserialport-0.5.0/third_party/libserialport/timing.c.o
-[5/5] Linking C shared library C:\Users\me88756\Projects\Personal\porsche-ebike-code-challenge\build\flutter_libserialport\intermediates\cxx\Debug\5b144a22\obj\x86\libserialport.so
