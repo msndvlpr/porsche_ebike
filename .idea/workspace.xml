@@ -52,73 +52,73 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Dart Command Line App.auction_repository_test.dart.executor": "Run",
-    "Dart Command Line App.authentication_repository_test.dart.executor": "Run",
-    "Dart Command Line App.bluetooth_con_api_service.dart.executor": "Run",
-    "Dart Command Line App.cos_challenge.dart.executor": "Run",
-    "Dart Command Line App.new_test.dart.executor": "Run",
-    "Dart Command Line App.secure_storage_api_test.dart.executor": "Run",
-    "Dart Command Line App.snippet.dart.executor": "Run",
-    "Dart Test.Tests in authentication_repository_test.dart.executor": "Run",
-    "Flutter Test.AuctionDataBloc.executor": "Run",
-    "Flutter Test.Displays CircularProgressIndicator when state is AuctionDataStateLoading.executor": "Run",
-    "Flutter Test.Does not display CircularProgressIndicator when state is loaded.executor": "Run",
-    "Flutter Test.Does not display CircularProgressIndicator when state is not AuctionDataStateLoading.executor": "Run",
-    "Flutter Test.ElevatedButton is disabled when state is AuctionDataStateLoading.executor": "Run",
-    "Flutter Test.ElevatedButton is enabled when state is not AuctionDataStateLoading.executor": "Run",
-    "Flutter Test.GIVEN AuthenticationRepository returns data for user authentication WHEN UserAuthDataFetched event is added THEN emit [Loading, Exception] with the exception thrown.executor": "Run",
-    "Flutter Test.GIVEN NetworkApiService as my data source WHEN http get method is called THEN should respond 200 with data.executor": "Run",
-    "Flutter Test.GIVEN NetworkApiService as my data source WHEN http get method is called THEN should respond 300 with multiple choice data.executor": "Run",
-    "Flutter Test.GIVEN NetworkApiService as my data source WHEN http get method is called THEN should respond 400 with error response.executor": "Run",
-    "Flutter Test.GIVEN NetworkApiService as my data source WHEN http get method is called with an external id THEN should respond 200 with data.executor": "Run",
-    "Flutter Test.GIVEN NetworkApiService as my data source WHEN http get method is called with an external id THEN should respond 400 with error response.executor": "Run",
-    "Flutter Test.GIVEN NetworkApiService as my data source WHEN http get method is called with user credentials THEN should respond 200 with token.executor": "Run",
-    "Flutter Test.GIVEN VehicleSelectionScreen WHEN rendered THEN should display text, tiles, and cards.executor": "Run",
-    "Flutter Test.GIVEN VehicleSelectionScreen with the passed vehicle items WHEN an item is clicked THEN should trigger AuctionDataFetched jjjevent.executor": "Run",
-    "Flutter Test.GIVEN VehicleSelectionScreen with the passed vehicle items WHEN rendered THEN should display text, tiles, and cards.executor": "Run",
-    "Flutter Test.GIVEN VehicleSelectionScreen with the passed vehicle items WHEN view is rendered and an listTile is tapped THEN should navigate to next screen (1).executor": "Run",
-    "Flutter Test.GIVEN VehicleSelectionScreen with the passed vehicle items WHEN view is rendered and an listTile is tapped THEN should navigate to next screen.executor": "Run",
-    "Flutter Test.GIVEN empty VIN input WHEN submitted THEN should show validation error.executor": "Run",
-    "Flutter Test.GIVEN error state WHEN screen is rendered THEN should display error message.executor": "Run",
-    "Flutter Test.GIVEN invalid VIN input WHEN submitted THEN should show validation error.executor": "Run",
-    "Flutter Test.GIVEN loading state WHEN screen is rendered THEN should show CircularProgressIndicator.executor": "Run",
-    "Flutter Test.GIVEN the repository throws an exception WHEN EnergyDataFetched is added THEN emit [Loading, Failure] with the error message.executor": "Run",
-    "Flutter Test.GIVEN valid VIN input WHEN submitted THEN should trigger AuctionDataFetched event.executor": "Run",
-    "Flutter Test.Given NetworkApiService as my data source When http get method is called Then should respond 200 with data.executor": "Run",
-    "Flutter Test.Given NetworkApiService as my data source When http get method is called Then should respond 300 with multiple choice data.executor": "Run",
-    "Flutter Test.Navigates to AuctionVehicleDetailsScreen when a ListTile is tapped.executor": "Run",
-    "Flutter Test.Shows error message when state is AuctionDataStateFailure.executor": "Run",
-    "Flutter Test.Shows error message when state is AuctionDataStateFailure2.executor": "Run",
-    "Flutter Test.Shows error message when state is AuctionDataStateFailure3.executor": "Run",
-    "Flutter Test.Shows error message when state is AuctionDataStateFailure4.executor": "Run",
-    "Flutter Test.Shows error message when state is AuctionDataStateFailure5.executor": "Run",
-    "Flutter Test.Triggers VehicleDataFetched event when a vehicle is selected.executor": "Run",
-    "Flutter Test.VehicleSelectionScreen.executor": "Run",
-    "Flutter Test.getAuctionData.executor": "Run",
-    "Flutter Test.postUserAuthenticationInfo.executor": "Run",
-    "Flutter Test.tests in auction_data_bloc_test.dart.executor": "Run",
-    "Flutter Test.tests in data_validator_test.dart.executor": "Run",
-    "Flutter Test.tests in network_api_service_test.dart.executor": "Run",
-    "Flutter Test.tests in user_auth_bloc_test.dart.executor": "Run",
-    "Flutter Test.tests in vehicle_search_screen_test.dart.executor": "Run",
-    "Flutter Test.tests in vehicle_selection_screen_test.dart.executor": "Run",
-    "Flutter.main.dart.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.cidr.known.project.marker": "true",
-    "RunOnceActivity.readMode.enableVisualFormatting": "true",
-    "cf.first.check.clang-format": "false",
-    "cidr.known.project.marker": "true",
-    "dart.analysis.tool.window.visible": "false",
-    "git-widget-placeholder": "develop",
-    "io.flutter.reload.alreadyRun": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/me88756/Projects/Personal/porsche-ebike-code-challenge/packages",
-    "settings.editor.selected.configurable": "editor.preferences.fonts.default",
-    "show.migrate.to.gradle.popup": "false"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Dart Command Line App.auction_repository_test.dart.executor&quot;: &quot;Run&quot;,
+    &quot;Dart Command Line App.authentication_repository_test.dart.executor&quot;: &quot;Run&quot;,
+    &quot;Dart Command Line App.bluetooth_con_api_service.dart.executor&quot;: &quot;Run&quot;,
+    &quot;Dart Command Line App.cos_challenge.dart.executor&quot;: &quot;Run&quot;,
+    &quot;Dart Command Line App.new_test.dart.executor&quot;: &quot;Run&quot;,
+    &quot;Dart Command Line App.secure_storage_api_test.dart.executor&quot;: &quot;Run&quot;,
+    &quot;Dart Command Line App.snippet.dart.executor&quot;: &quot;Run&quot;,
+    &quot;Dart Test.Tests in authentication_repository_test.dart.executor&quot;: &quot;Run&quot;,
+    &quot;Flutter Test.AuctionDataBloc.executor&quot;: &quot;Run&quot;,
+    &quot;Flutter Test.Displays CircularProgressIndicator when state is AuctionDataStateLoading.executor&quot;: &quot;Run&quot;,
+    &quot;Flutter Test.Does not display CircularProgressIndicator when state is loaded.executor&quot;: &quot;Run&quot;,
+    &quot;Flutter Test.Does not display CircularProgressIndicator when state is not AuctionDataStateLoading.executor&quot;: &quot;Run&quot;,
+    &quot;Flutter Test.ElevatedButton is disabled when state is AuctionDataStateLoading.executor&quot;: &quot;Run&quot;,
+    &quot;Flutter Test.ElevatedButton is enabled when state is not AuctionDataStateLoading.executor&quot;: &quot;Run&quot;,
+    &quot;Flutter Test.GIVEN AuthenticationRepository returns data for user authentication WHEN UserAuthDataFetched event is added THEN emit [Loading, Exception] with the exception thrown.executor&quot;: &quot;Run&quot;,
+    &quot;Flutter Test.GIVEN NetworkApiService as my data source WHEN http get method is called THEN should respond 200 with data.executor&quot;: &quot;Run&quot;,
+    &quot;Flutter Test.GIVEN NetworkApiService as my data source WHEN http get method is called THEN should respond 300 with multiple choice data.executor&quot;: &quot;Run&quot;,
+    &quot;Flutter Test.GIVEN NetworkApiService as my data source WHEN http get method is called THEN should respond 400 with error response.executor&quot;: &quot;Run&quot;,
+    &quot;Flutter Test.GIVEN NetworkApiService as my data source WHEN http get method is called with an external id THEN should respond 200 with data.executor&quot;: &quot;Run&quot;,
+    &quot;Flutter Test.GIVEN NetworkApiService as my data source WHEN http get method is called with an external id THEN should respond 400 with error response.executor&quot;: &quot;Run&quot;,
+    &quot;Flutter Test.GIVEN NetworkApiService as my data source WHEN http get method is called with user credentials THEN should respond 200 with token.executor&quot;: &quot;Run&quot;,
+    &quot;Flutter Test.GIVEN VehicleSelectionScreen WHEN rendered THEN should display text, tiles, and cards.executor&quot;: &quot;Run&quot;,
+    &quot;Flutter Test.GIVEN VehicleSelectionScreen with the passed vehicle items WHEN an item is clicked THEN should trigger AuctionDataFetched jjjevent.executor&quot;: &quot;Run&quot;,
+    &quot;Flutter Test.GIVEN VehicleSelectionScreen with the passed vehicle items WHEN rendered THEN should display text, tiles, and cards.executor&quot;: &quot;Run&quot;,
+    &quot;Flutter Test.GIVEN VehicleSelectionScreen with the passed vehicle items WHEN view is rendered and an listTile is tapped THEN should navigate to next screen (1).executor&quot;: &quot;Run&quot;,
+    &quot;Flutter Test.GIVEN VehicleSelectionScreen with the passed vehicle items WHEN view is rendered and an listTile is tapped THEN should navigate to next screen.executor&quot;: &quot;Run&quot;,
+    &quot;Flutter Test.GIVEN empty VIN input WHEN submitted THEN should show validation error.executor&quot;: &quot;Run&quot;,
+    &quot;Flutter Test.GIVEN error state WHEN screen is rendered THEN should display error message.executor&quot;: &quot;Run&quot;,
+    &quot;Flutter Test.GIVEN invalid VIN input WHEN submitted THEN should show validation error.executor&quot;: &quot;Run&quot;,
+    &quot;Flutter Test.GIVEN loading state WHEN screen is rendered THEN should show CircularProgressIndicator.executor&quot;: &quot;Run&quot;,
+    &quot;Flutter Test.GIVEN the repository throws an exception WHEN EnergyDataFetched is added THEN emit [Loading, Failure] with the error message.executor&quot;: &quot;Run&quot;,
+    &quot;Flutter Test.GIVEN valid VIN input WHEN submitted THEN should trigger AuctionDataFetched event.executor&quot;: &quot;Run&quot;,
+    &quot;Flutter Test.Given NetworkApiService as my data source When http get method is called Then should respond 200 with data.executor&quot;: &quot;Run&quot;,
+    &quot;Flutter Test.Given NetworkApiService as my data source When http get method is called Then should respond 300 with multiple choice data.executor&quot;: &quot;Run&quot;,
+    &quot;Flutter Test.Navigates to AuctionVehicleDetailsScreen when a ListTile is tapped.executor&quot;: &quot;Run&quot;,
+    &quot;Flutter Test.Shows error message when state is AuctionDataStateFailure.executor&quot;: &quot;Run&quot;,
+    &quot;Flutter Test.Shows error message when state is AuctionDataStateFailure2.executor&quot;: &quot;Run&quot;,
+    &quot;Flutter Test.Shows error message when state is AuctionDataStateFailure3.executor&quot;: &quot;Run&quot;,
+    &quot;Flutter Test.Shows error message when state is AuctionDataStateFailure4.executor&quot;: &quot;Run&quot;,
+    &quot;Flutter Test.Shows error message when state is AuctionDataStateFailure5.executor&quot;: &quot;Run&quot;,
+    &quot;Flutter Test.Triggers VehicleDataFetched event when a vehicle is selected.executor&quot;: &quot;Run&quot;,
+    &quot;Flutter Test.VehicleSelectionScreen.executor&quot;: &quot;Run&quot;,
+    &quot;Flutter Test.getAuctionData.executor&quot;: &quot;Run&quot;,
+    &quot;Flutter Test.postUserAuthenticationInfo.executor&quot;: &quot;Run&quot;,
+    &quot;Flutter Test.tests in auction_data_bloc_test.dart.executor&quot;: &quot;Run&quot;,
+    &quot;Flutter Test.tests in data_validator_test.dart.executor&quot;: &quot;Run&quot;,
+    &quot;Flutter Test.tests in network_api_service_test.dart.executor&quot;: &quot;Run&quot;,
+    &quot;Flutter Test.tests in user_auth_bloc_test.dart.executor&quot;: &quot;Run&quot;,
+    &quot;Flutter Test.tests in vehicle_search_screen_test.dart.executor&quot;: &quot;Run&quot;,
+    &quot;Flutter Test.tests in vehicle_selection_screen_test.dart.executor&quot;: &quot;Run&quot;,
+    &quot;Flutter.main.dart.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,
+    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
+    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;develop&quot;,
+    &quot;io.flutter.reload.alreadyRun&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/me88756/Projects/Personal/porsche-ebike-code-challenge/packages&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.fonts.default&quot;,
+    &quot;show.migrate.to.gradle.popup&quot;: &quot;false&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\me88756\Projects\Personal\porsche-ebike-code-challenge\packages" />
@@ -167,11 +167,11 @@
     </configuration>
     <list>
       <item itemvalue="Dart Command Line App.bluetooth_con_api_service.dart" />
-      <item itemvalue="Flutter.main.dart" />
-      <item itemvalue="Flutter Test.GIVEN VehicleSelectionScreen with the passed vehicle items WHEN view is rendered and an listTile is tapped THEN should navigate to next screen (1)" />
       <item itemvalue="Flutter Test.GIVEN VehicleSelectionScreen with the passed vehicle items WHEN rendered THEN should display text, tiles, and cards" />
+      <item itemvalue="Flutter Test.GIVEN VehicleSelectionScreen with the passed vehicle items WHEN view is rendered and an listTile is tapped THEN should navigate to next screen (1)" />
       <item itemvalue="Flutter Test.GIVEN VehicleSelectionScreen with the passed vehicle items WHEN view is rendered and an listTile is tapped THEN should navigate to next screen" />
       <item itemvalue="Flutter Test.VehicleSelectionScreen" />
+      <item itemvalue="Flutter.main.dart" />
     </list>
     <recent_temporary>
       <list>

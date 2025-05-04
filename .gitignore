@@ -1,0 +1,157 @@
+# Flutter-specific
+.fvm/flutter_sdk
+.dart_tool/
+.pub-cache/
+build/
+ios/Pods/
+ios/.symlinks/
+android/.gradle/
+android/build/
+android/app/build/
+linux/build/
+macos/build/
+windows/build/
+web/build/
+
+# Editor metadata
+.idea/
+.vscode/
+*.iml
+*.iws
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Log files and temporary files
+*.log
+*.tmp
+*.swp
+*.swo
+*.vmoptions
+
+# Packages config
+.packages
+pubspec.lock
+
+# Generated files (if any, adjust as needed)
+*.g.dart
+*.freezed.dart
+*.config
+
+# Crash reports
+crashlytics/
+
+# FVM Cache (if not using .fvm/flutter_sdk in project)
+# .fvm/cache/
+
+# Fenix Cache (if using Fenix)
+.fenix/
+
+# Melos related (if using Melos)
+melos.lock
+packages/*/build/
+
+# Firebase related (if using Firebase)
+firebase_options.dart
+
+# Other platform-specific build outputs you might have
+# e.g., for desktop embedding
+
+# Ignore local configuration files (if you have any)
+local.properties
+**/local.properties
+
+# Potentially sensitive files (adjust as needed)
+# *.json
+# *.yaml
+# *.env
+
+# Fenix build outputs (if using Fenix)
+.fenix_build/
+
+# End of Flutter-specific ignores
+
+# General ignores (can be added to any project)
+# Compiled source code
+*.o
+*.ko
+*.so
+*.dcu
+*.elf
+*.hex
+*.bin
+
+# Executables
+*.exe
+*.bat
+*.com
+*.cmd
+*.sh
+
+# Archives
+*.zip
+*.tar
+*.gz
+*.bz2
+*.7z
+*.rar
+*.dmg
+
+# Backup files
+*~
+*.bak
+*.orig
+*.rej
+
+# Node.js
+node_modules/
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Python
+__pycache__/
+*.pyc
+*.pyd
+
+# Java
+*.class
+*.jar
+*.war
+*.ear
+.gradle/
+gradle/
+
+# Ruby
+.bundle/
+vendor/bundle
+
+# Go
+bin/
+
+# Rust
+target/
+
+# Terraform
+.terraform/
+terraform.tfstate
+terraform.tfvars
+*.tfplan
+
+# Kubernetes
+.kube/
+
+# Docker
+*.dockerignore
+.dockerenv
+
+# Cloudflare Workers
+.wrangler/
+
+# JetBrains Rider
+.run/
+.settings/
+
+# Other build or temporary directories from other tools
+# Add as needed based on your workflow
