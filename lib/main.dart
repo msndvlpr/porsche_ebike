@@ -1,4 +1,4 @@
-/*import 'dart:developer';
+import 'dart:developer';
 import 'dart:ui';
 import 'package:authentication_repository/authentication_repository.dart';
 import 'package:flutter/material.dart';
@@ -40,8 +40,9 @@ Future<void> main() async {
         authenticationRepository: authenticationRepository,
         secureStorageApi: secureStorageApi),
   ));
-}*/
+}
 
+/*
 import 'package:flutter/material.dart';
 import 'package:flutter_libserialport/flutter_libserialport.dart';
 
@@ -79,6 +80,8 @@ class _ExampleAppState extends State<ExampleApp> {
   }
 
   void initPorts() {
+
+    //todo: 1
     setState(() => availablePorts = SerialPort.availablePorts);
   }
 
@@ -94,6 +97,7 @@ class _ExampleAppState extends State<ExampleApp> {
             children: [
               for (final address in availablePorts)
                 Builder(builder: (context) {
+                  //todo: 2
                   final port = SerialPort(address);
                   return ExpansionTile(
                     title: Text(address),
@@ -139,3 +143,5 @@ class CardListTile extends StatelessWidget {
     );
   }
 }
+
+ */

@@ -15,9 +15,11 @@ class MockHttpLoginHandler {
 
     if (request.url.path == '/api/login' && request.method == 'POST') {
       return _handleLoginRequest(request);
+
+    } else {
+      return Response(jsonEncode({'error': 'Requested service is not found'}), 404);
     }
 
-    return Response(jsonEncode({'error': 'Requested service is not found'}), 404);
   });
 
 
@@ -26,12 +28,13 @@ class MockHttpLoginHandler {
     final Map<String, dynamic> body = jsonDecode(request.body);
     final String auth = body['auth'];
 
-    // Simulate a response
-    final matched = Random().nextBool();
-    if (matched) {
+    // Simulate a checking the user authentication info whether is valid or not
+    final credentialsMatched = true;
+    if (credentialsMatched) {
       return Response(jsonEncode({'token': _validToken}), 200);
+    } else {
+      return Response(jsonEncode({'message': 'Incorrect username or password.'}), Random().nextBool() ? 401 : 403);
     }
-    return Response(jsonEncode({'message': 'Incorrect username or password.'}), Random().nextBool() ? 401 : 403);
   }
 }
 

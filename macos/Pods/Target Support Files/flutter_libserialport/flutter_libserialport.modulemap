@@ -1,0 +1,6 @@
+framework module flutter_libserialport {
+  umbrella header "flutter_libserialport-umbrella.h"
+
+  export *
+  module * { export * }
+}

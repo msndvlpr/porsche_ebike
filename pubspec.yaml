@@ -1,5 +1,5 @@
 name: porsche_ebike_code_challenge
-description: "A new Flutter project for Porsche Ebike coding challenge tech assessment."
+description: "A Flutter project for Porsche Ebike coding challenge assessment."
 
 publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 
@@ -15,8 +15,8 @@ dependencies:
   cupertino_icons: ^1.0.8
   riverpod: ^2.6.1
   flutter_riverpod: ^2.6.1
+  riverpod_annotation: ^2.6.1
   intl: ^0.20.2
-  flutter_spinkit: ^5.2.1
   equatable: ^2.0.7
   shared_preferences: ^2.5.3
 
@@ -37,6 +37,8 @@ dev_dependencies:
     sdk: flutter
   bloc_test: ^10.0.0
   mocktail: ^1.0.4
+  build_runner: ^2.4.15
+  riverpod_generator: ^2.6.5
 
   flutter_lints: ^5.0.0
   flutter_launcher_icons: ^0.14.3

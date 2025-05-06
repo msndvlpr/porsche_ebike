@@ -17,7 +17,7 @@ class AuthenticationRepository {
 
   Future<String> authenticateUserByCredentials(String username, String password) async {
     try {
-      // Encrypt the username and password before sending to backend
+      // Encrypting the username and password before sending to backend
       String encryptedUserCredentials = encryptData("$username:$password");
 
       final token = await _networkApiService.postUserLoginData(encryptedUserCredentials);
