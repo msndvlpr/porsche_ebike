@@ -10,224 +10,122 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8ed2c952-683f-4e19-b9f3-80980f90de14" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/ios/Podfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/bike_dashboard/state/hardware_connection_provider.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/macos/Flutter/ephemeral/.app_filename" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/macos/Flutter/ephemeral/.symlinks/plugins/flutter_blue_plus_darwin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/macos/Flutter/ephemeral/.symlinks/plugins/flutter_libserialport" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/macos/Flutter/ephemeral/.symlinks/plugins/flutter_secure_storage_macos" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/macos/Flutter/ephemeral/.symlinks/plugins/path_provider_foundation" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/macos/Flutter/ephemeral/.symlinks/plugins/shared_preferences_foundation" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/macos/Flutter/ephemeral/FlutterInputs.xcfilelist" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/macos/Flutter/ephemeral/FlutterMacOS.podspec" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/macos/Flutter/ephemeral/FlutterOutputs.xcfilelist" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/macos/Podfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/macos/Podfile.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/macos/Pods/Local Podspecs/FlutterMacOS.podspec.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/macos/Pods/Local Podspecs/flutter_blue_plus_darwin.podspec.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/macos/Pods/Local Podspecs/flutter_libserialport.podspec.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/macos/Pods/Local Podspecs/flutter_secure_storage_macos.podspec.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/macos/Pods/Local Podspecs/path_provider_foundation.podspec.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/macos/Pods/Local Podspecs/shared_preferences_foundation.podspec.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/macos/Pods/Manifest.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/macos/Pods/Pods.xcodeproj/project.pbxproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/macos/Pods/Pods.xcodeproj/xcuserdata/arefeh.xcuserdatad/xcschemes/FlutterMacOS.xcscheme" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/macos/Pods/Pods.xcodeproj/xcuserdata/arefeh.xcuserdatad/xcschemes/Pods-Runner.xcscheme" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/macos/Pods/Pods.xcodeproj/xcuserdata/arefeh.xcuserdatad/xcschemes/Pods-RunnerTests.xcscheme" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/macos/Pods/Pods.xcodeproj/xcuserdata/arefeh.xcuserdatad/xcschemes/flutter_blue_plus_darwin.xcscheme" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/macos/Pods/Pods.xcodeproj/xcuserdata/arefeh.xcuserdatad/xcschemes/flutter_libserialport.xcscheme" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/macos/Pods/Pods.xcodeproj/xcuserdata/arefeh.xcuserdatad/xcschemes/flutter_secure_storage_macos-flutter_secure_storage_macos.xcscheme" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/macos/Pods/Pods.xcodeproj/xcuserdata/arefeh.xcuserdatad/xcschemes/flutter_secure_storage_macos.xcscheme" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/macos/Pods/Pods.xcodeproj/xcuserdata/arefeh.xcuserdatad/xcschemes/libserialport.xcscheme" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/macos/Pods/Pods.xcodeproj/xcuserdata/arefeh.xcuserdatad/xcschemes/path_provider_foundation-path_provider_foundation_privacy.xcscheme" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/macos/Pods/Pods.xcodeproj/xcuserdata/arefeh.xcuserdatad/xcschemes/path_provider_foundation.xcscheme" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/macos/Pods/Pods.xcodeproj/xcuserdata/arefeh.xcuserdatad/xcschemes/shared_preferences_foundation-shared_preferences_foundation_privacy.xcscheme" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/macos/Pods/Pods.xcodeproj/xcuserdata/arefeh.xcuserdatad/xcschemes/shared_preferences_foundation.xcscheme" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/macos/Pods/Pods.xcodeproj/xcuserdata/arefeh.xcuserdatad/xcschemes/xcschememanagement.plist" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/macos/Pods/Target Support Files/FlutterMacOS/FlutterMacOS.debug.xcconfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/macos/Pods/Target Support Files/FlutterMacOS/FlutterMacOS.release.xcconfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/macos/Pods/Target Support Files/Pods-Runner/Pods-Runner-Info.plist" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/macos/Pods/Target Support Files/Pods-Runner/Pods-Runner-acknowledgements.markdown" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/macos/Pods/Target Support Files/Pods-Runner/Pods-Runner-acknowledgements.plist" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/macos/Pods/Target Support Files/Pods-Runner/Pods-Runner-dummy.m" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/macos/Pods/Target Support Files/Pods-Runner/Pods-Runner-frameworks-Debug-input-files.xcfilelist" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/macos/Pods/Target Support Files/Pods-Runner/Pods-Runner-frameworks-Debug-output-files.xcfilelist" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/macos/Pods/Target Support Files/Pods-Runner/Pods-Runner-frameworks-Profile-input-files.xcfilelist" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/macos/Pods/Target Support Files/Pods-Runner/Pods-Runner-frameworks-Profile-output-files.xcfilelist" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/macos/Pods/Target Support Files/Pods-Runner/Pods-Runner-frameworks-Release-input-files.xcfilelist" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/macos/Pods/Target Support Files/Pods-Runner/Pods-Runner-frameworks-Release-output-files.xcfilelist" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/macos/Pods/Target Support Files/Pods-Runner/Pods-Runner-umbrella.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/macos/Pods/Target Support Files/Pods-Runner/Pods-Runner.debug.xcconfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/macos/Pods/Target Support Files/Pods-Runner/Pods-Runner.modulemap" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/macos/Pods/Target Support Files/Pods-Runner/Pods-Runner.profile.xcconfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/macos/Pods/Target Support Files/Pods-Runner/Pods-Runner.release.xcconfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/macos/Pods/Target Support Files/Pods-RunnerTests/Pods-RunnerTests-Info.plist" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/macos/Pods/Target Support Files/Pods-RunnerTests/Pods-RunnerTests-acknowledgements.markdown" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/macos/Pods/Target Support Files/Pods-RunnerTests/Pods-RunnerTests-acknowledgements.plist" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/macos/Pods/Target Support Files/Pods-RunnerTests/Pods-RunnerTests-dummy.m" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/macos/Pods/Target Support Files/Pods-RunnerTests/Pods-RunnerTests-umbrella.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/macos/Pods/Target Support Files/Pods-RunnerTests/Pods-RunnerTests.debug.xcconfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/macos/Pods/Target Support Files/Pods-RunnerTests/Pods-RunnerTests.modulemap" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/macos/Pods/Target Support Files/Pods-RunnerTests/Pods-RunnerTests.profile.xcconfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/macos/Pods/Target Support Files/Pods-RunnerTests/Pods-RunnerTests.release.xcconfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/macos/Pods/Target Support Files/flutter_blue_plus_darwin/flutter_blue_plus_darwin-Info.plist" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/macos/Pods/Target Support Files/flutter_blue_plus_darwin/flutter_blue_plus_darwin-dummy.m" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/macos/Pods/Target Support Files/flutter_blue_plus_darwin/flutter_blue_plus_darwin-prefix.pch" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/macos/Pods/Target Support Files/flutter_blue_plus_darwin/flutter_blue_plus_darwin-umbrella.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/macos/Pods/Target Support Files/flutter_blue_plus_darwin/flutter_blue_plus_darwin.debug.xcconfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/macos/Pods/Target Support Files/flutter_blue_plus_darwin/flutter_blue_plus_darwin.modulemap" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/macos/Pods/Target Support Files/flutter_blue_plus_darwin/flutter_blue_plus_darwin.release.xcconfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/macos/Pods/Target Support Files/flutter_libserialport/flutter_libserialport-Info.plist" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/macos/Pods/Target Support Files/flutter_libserialport/flutter_libserialport-dummy.m" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/macos/Pods/Target Support Files/flutter_libserialport/flutter_libserialport-prefix.pch" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/macos/Pods/Target Support Files/flutter_libserialport/flutter_libserialport-umbrella.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/macos/Pods/Target Support Files/flutter_libserialport/flutter_libserialport.debug.xcconfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/macos/Pods/Target Support Files/flutter_libserialport/flutter_libserialport.modulemap" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/macos/Pods/Target Support Files/flutter_libserialport/flutter_libserialport.release.xcconfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/macos/Pods/Target Support Files/flutter_secure_storage_macos/ResourceBundle-flutter_secure_storage_macos-flutter_secure_storage_macos-Info.plist" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/macos/Pods/Target Support Files/flutter_secure_storage_macos/flutter_secure_storage_macos-Info.plist" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/macos/Pods/Target Support Files/flutter_secure_storage_macos/flutter_secure_storage_macos-dummy.m" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/macos/Pods/Target Support Files/flutter_secure_storage_macos/flutter_secure_storage_macos-prefix.pch" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/macos/Pods/Target Support Files/flutter_secure_storage_macos/flutter_secure_storage_macos-umbrella.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/macos/Pods/Target Support Files/flutter_secure_storage_macos/flutter_secure_storage_macos.debug.xcconfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/macos/Pods/Target Support Files/flutter_secure_storage_macos/flutter_secure_storage_macos.modulemap" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/macos/Pods/Target Support Files/flutter_secure_storage_macos/flutter_secure_storage_macos.release.xcconfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/macos/Pods/Target Support Files/libserialport/libserialport-Info.plist" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/macos/Pods/Target Support Files/libserialport/libserialport-dummy.m" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/macos/Pods/Target Support Files/libserialport/libserialport-prefix.pch" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/macos/Pods/Target Support Files/libserialport/libserialport-umbrella.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/macos/Pods/Target Support Files/libserialport/libserialport.debug.xcconfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/macos/Pods/Target Support Files/libserialport/libserialport.modulemap" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/macos/Pods/Target Support Files/libserialport/libserialport.release.xcconfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/macos/Pods/Target Support Files/path_provider_foundation/ResourceBundle-path_provider_foundation_privacy-path_provider_foundation-Info.plist" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/macos/Pods/Target Support Files/path_provider_foundation/path_provider_foundation-Info.plist" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/macos/Pods/Target Support Files/path_provider_foundation/path_provider_foundation-dummy.m" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/macos/Pods/Target Support Files/path_provider_foundation/path_provider_foundation-prefix.pch" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/macos/Pods/Target Support Files/path_provider_foundation/path_provider_foundation-umbrella.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/macos/Pods/Target Support Files/path_provider_foundation/path_provider_foundation.debug.xcconfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/macos/Pods/Target Support Files/path_provider_foundation/path_provider_foundation.modulemap" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/macos/Pods/Target Support Files/path_provider_foundation/path_provider_foundation.release.xcconfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/macos/Pods/Target Support Files/shared_preferences_foundation/ResourceBundle-shared_preferences_foundation_privacy-shared_preferences_foundation-Info.plist" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/macos/Pods/Target Support Files/shared_preferences_foundation/shared_preferences_foundation-Info.plist" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/macos/Pods/Target Support Files/shared_preferences_foundation/shared_preferences_foundation-dummy.m" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/macos/Pods/Target Support Files/shared_preferences_foundation/shared_preferences_foundation-prefix.pch" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/macos/Pods/Target Support Files/shared_preferences_foundation/shared_preferences_foundation-umbrella.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/macos/Pods/Target Support Files/shared_preferences_foundation/shared_preferences_foundation.debug.xcconfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/macos/Pods/Target Support Files/shared_preferences_foundation/shared_preferences_foundation.modulemap" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/macos/Pods/Target Support Files/shared_preferences_foundation/shared_preferences_foundation.release.xcconfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/macos/Pods/libserialport/COPYING" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/macos/Pods/libserialport/README" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/macos/Pods/libserialport/config.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/macos/Pods/libserialport/config.h.in" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/macos/Pods/libserialport/libserialport.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/macos/Pods/libserialport/libserialport.h.in" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/macos/Pods/libserialport/libserialport_internal.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/macos/Pods/libserialport/linux_termios.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/macos/Pods/libserialport/macosx.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/macos/Pods/libserialport/serialport.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/macos/Runner.xcodeproj/xcuserdata/arefeh.xcuserdatad/xcschemes/xcschememanagement.plist" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/macos/Runner.xcworkspace/xcuserdata/arefeh.xcuserdatad/UserInterfaceState.xcuserstate" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/hw_connectivity_repository/lib/hw_connectivity_repository.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/hw_connectivity_repository/lib/src/hw_connectivity_repository.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/hw_connectivity_repository/lib/src/model/bike_data.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/hw_connectivity_repository/lib/src/model/bike_type.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/usb_con_api/lib/src/model/usb_port.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.dart_tool/flutter_build/81135c4c825dfa5566d19cde3b3afa7b/.filecache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.dart_tool/flutter_build/81135c4c825dfa5566d19cde3b3afa7b/app.dill" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.dart_tool/flutter_build/81135c4c825dfa5566d19cde3b3afa7b/debug_android_application.stamp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.dart_tool/flutter_build/81135c4c825dfa5566d19cde3b3afa7b/flutter_assets.d" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.dart_tool/flutter_build/81135c4c825dfa5566d19cde3b3afa7b/gen_dart_plugin_registrant.stamp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.dart_tool/flutter_build/81135c4c825dfa5566d19cde3b3afa7b/gen_localizations.stamp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.dart_tool/flutter_build/81135c4c825dfa5566d19cde3b3afa7b/kernel_snapshot.stamp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.dart_tool/flutter_build/81135c4c825dfa5566d19cde3b3afa7b/kernel_snapshot_native_assets.stamp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.dart_tool/flutter_build/81135c4c825dfa5566d19cde3b3afa7b/kernel_snapshot_program.d" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.dart_tool/flutter_build/81135c4c825dfa5566d19cde3b3afa7b/kernel_snapshot_program.stamp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.dart_tool/flutter_build/81135c4c825dfa5566d19cde3b3afa7b/native_assets.d" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.dart_tool/flutter_build/81135c4c825dfa5566d19cde3b3afa7b/native_assets.dill" beforeDir="false" afterPath="$PROJECT_DIR$/macos/Flutter/ephemeral/tripwire" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.dart_tool/flutter_build/81135c4c825dfa5566d19cde3b3afa7b/native_assets.stamp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.dart_tool/flutter_build/81135c4c825dfa5566d19cde3b3afa7b/native_assets.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.dart_tool/flutter_build/81135c4c825dfa5566d19cde3b3afa7b/outputs.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.dart_tool/flutter_build/81135c4c825dfa5566d19cde3b3afa7b/program.dill" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/hardware_connectivity_repository/.flutter-plugins" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/hardware_connectivity_repository/.flutter-plugins-dependencies" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/hardware_connectivity_repository/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/hardware_connectivity_repository/lib/hardware_connectivity_repository.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/hardware_connectivity_repository/lib/src/hardware_connectivity_repository.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/hardware_connectivity_repository/lib/src/model/device_type.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/hardware_connectivity_repository/lib/src/model/found_device.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/hardware_connectivity_repository/lib/src/model/models.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/hardware_connectivity_repository/pubspec.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/usb_con_api/lib/src/mock_can_bus_data_provider.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/usb_con_api/lib/src/model/bike_data.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/usb_con_api/lib/src/model/bike_type.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.dart_tool/package_config.json" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/package_config.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.dart_tool/package_config_subset" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/package_config_subset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.dart_tool/version" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/version" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.flutter-plugins" beforeDir="false" afterPath="$PROJECT_DIR$/.flutter-plugins" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.flutter-plugins-dependencies" beforeDir="false" afterPath="$PROJECT_DIR$/.flutter-plugins-dependencies" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/caches/deviceStreaming.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/deviceStreaming.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_SDK.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_SDK.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/caronsale_code_challenge_android.iml" beforeDir="false" afterPath="$PROJECT_DIR$/android/caronsale_code_challenge_android.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/local.properties" beforeDir="false" afterPath="$PROJECT_DIR$/android/local.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/launcher.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/launcher.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Flutter/Debug.xcconfig" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Flutter/Debug.xcconfig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Flutter/Generated.xcconfig" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Flutter/Generated.xcconfig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Flutter/Release.xcconfig" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Flutter/Release.xcconfig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Flutter/flutter_export_environment.sh" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Flutter/flutter_export_environment.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/bike_dashboard/cubit/theme_cubit.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/bike_dashboard/cubit/theme_state.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/bike_dashboard/widget/home_tab_button.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/bike_dashboard/widget/home_tab_button.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/bike_dashboard/state/hardware_connection_provider.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/bike_dashboard/state/hardware_connection_provider.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/bike_dashboard/view/bike_dashboard_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/bike_dashboard/view/bike_dashboard_screen.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/main.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/linux/flutter/ephemeral/.plugin_symlinks/flutter_blue_plus_linux" beforeDir="false" afterPath="$PROJECT_DIR$/linux/flutter/ephemeral/.plugin_symlinks/flutter_blue_plus_linux" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/linux/flutter/ephemeral/.plugin_symlinks/flutter_libserialport" beforeDir="false" afterPath="$PROJECT_DIR$/linux/flutter/ephemeral/.plugin_symlinks/flutter_libserialport" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/linux/flutter/ephemeral/.plugin_symlinks/flutter_secure_storage_linux" beforeDir="false" afterPath="$PROJECT_DIR$/linux/flutter/ephemeral/.plugin_symlinks/flutter_secure_storage_linux" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/linux/flutter/ephemeral/.plugin_symlinks/path_provider_linux" beforeDir="false" afterPath="$PROJECT_DIR$/linux/flutter/ephemeral/.plugin_symlinks/path_provider_linux" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/linux/flutter/ephemeral/.plugin_symlinks/shared_preferences_linux" beforeDir="false" afterPath="$PROJECT_DIR$/linux/flutter/ephemeral/.plugin_symlinks/shared_preferences_linux" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/macos/Flutter/Flutter-Debug.xcconfig" beforeDir="false" afterPath="$PROJECT_DIR$/macos/Flutter/Flutter-Debug.xcconfig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/macos/Flutter/Flutter-Release.xcconfig" beforeDir="false" afterPath="$PROJECT_DIR$/macos/Flutter/Flutter-Release.xcconfig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/macos/Flutter/ephemeral/Flutter-Generated.xcconfig" beforeDir="false" afterPath="$PROJECT_DIR$/macos/Flutter/ephemeral/Flutter-Generated.xcconfig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/macos/Flutter/ephemeral/flutter_export_environment.sh" beforeDir="false" afterPath="$PROJECT_DIR$/macos/Flutter/ephemeral/flutter_export_environment.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/macos/Runner.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/macos/Runner.xcodeproj/project.pbxproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/macos/Runner.xcodeproj/xcshareddata/xcschemes/Runner.xcscheme" beforeDir="false" afterPath="$PROJECT_DIR$/macos/Runner.xcodeproj/xcshareddata/xcschemes/Runner.xcscheme" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/macos/Runner.xcworkspace/contents.xcworkspacedata" beforeDir="false" afterPath="$PROJECT_DIR$/macos/Runner.xcworkspace/contents.xcworkspacedata" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/macos/Runner/DebugProfile.entitlements" beforeDir="false" afterPath="$PROJECT_DIR$/macos/Runner/DebugProfile.entitlements" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/macos/Runner/Release.entitlements" beforeDir="false" afterPath="$PROJECT_DIR$/macos/Runner/Release.entitlements" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/user_login/view/login_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/user_login/view/login_screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/macos/Flutter/ephemeral/FlutterInputs.xcfilelist" beforeDir="false" afterPath="$PROJECT_DIR$/macos/Flutter/ephemeral/FlutterInputs.xcfilelist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/macos/Pods/Pods.xcodeproj/xcuserdata/arefeh.xcuserdatad/xcschemes/xcschememanagement.plist" beforeDir="false" afterPath="$PROJECT_DIR$/macos/Pods/Pods.xcodeproj/xcuserdata/arefeh.xcuserdatad/xcschemes/xcschememanagement.plist" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/packages/authentication_repository/.dart_tool/package_config.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/authentication_repository/.dart_tool/package_config.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/authentication_repository/lib/src/authentication_repository.dart" beforeDir="false" afterPath="$PROJECT_DIR$/packages/authentication_repository/lib/src/authentication_repository.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/authentication_repository/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/packages/authentication_repository/pubspec.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/bluetooth_con_api/.dart_tool/package_config.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/bluetooth_con_api/.dart_tool/package_config.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/bluetooth_con_api/.dart_tool/package_config_subset" beforeDir="false" afterPath="$PROJECT_DIR$/packages/bluetooth_con_api/.dart_tool/package_config_subset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/bluetooth_con_api/.dart_tool/version" beforeDir="false" afterPath="$PROJECT_DIR$/packages/bluetooth_con_api/.dart_tool/version" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/bluetooth_con_api/.flutter-plugins" beforeDir="false" afterPath="$PROJECT_DIR$/packages/bluetooth_con_api/.flutter-plugins" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/bluetooth_con_api/.flutter-plugins-dependencies" beforeDir="false" afterPath="$PROJECT_DIR$/packages/bluetooth_con_api/.flutter-plugins-dependencies" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/bluetooth_con_api/lib/src/model/bike_data.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/bluetooth_con_api/lib/src/bluetooth_con_api_service.dart" beforeDir="false" afterPath="$PROJECT_DIR$/packages/bluetooth_con_api/lib/src/bluetooth_con_api_service.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/bluetooth_con_api/lib/src/model/ble_data.dart" beforeDir="false" afterPath="$PROJECT_DIR$/packages/bluetooth_con_api/lib/src/model/found_ble_device.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/packages/bluetooth_con_api/lib/src/model/models.dart" beforeDir="false" afterPath="$PROJECT_DIR$/packages/bluetooth_con_api/lib/src/model/models.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/bluetooth_con_api/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/packages/bluetooth_con_api/pubspec.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/hw_connectivity_repository/.dart_tool/package_config.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/hw_connectivity_repository/.dart_tool/package_config.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/hw_connectivity_repository/.dart_tool/package_config_subset" beforeDir="false" afterPath="$PROJECT_DIR$/packages/hw_connectivity_repository/.dart_tool/package_config_subset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/hw_connectivity_repository/.dart_tool/version" beforeDir="false" afterPath="$PROJECT_DIR$/packages/hw_connectivity_repository/.dart_tool/version" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/hw_connectivity_repository/.flutter-plugins" beforeDir="false" afterPath="$PROJECT_DIR$/packages/hw_connectivity_repository/.flutter-plugins" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/hw_connectivity_repository/.flutter-plugins-dependencies" beforeDir="false" afterPath="$PROJECT_DIR$/packages/hw_connectivity_repository/.flutter-plugins-dependencies" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/hw_connectivity_repository/lib/hw_connectivity_repository_service.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/hw_connectivity_repository/lib/src/hw_connectivity_repository_service.dart" beforeDir="false" afterPath="$PROJECT_DIR$/packages/bluetooth_con_api/lib/src/model/ble_data.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/hw_connectivity_repository/lib/src/model/auction_data.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/hw_connectivity_repository/lib/src/model/models.dart" beforeDir="false" afterPath="$PROJECT_DIR$/packages/hw_connectivity_repository/lib/src/model/models.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/hw_connectivity_repository/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/packages/hw_connectivity_repository/pubspec.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/network_api/.dart_tool/package_config.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/network_api/.dart_tool/package_config.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/network_api/.dart_tool/package_config_subset" beforeDir="false" afterPath="$PROJECT_DIR$/packages/network_api/.dart_tool/package_config_subset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/network_api/.dart_tool/version" beforeDir="false" afterPath="$PROJECT_DIR$/packages/network_api/.dart_tool/version" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/network_api/.flutter-plugins" beforeDir="false" afterPath="$PROJECT_DIR$/packages/network_api/.flutter-plugins" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/network_api/.flutter-plugins-dependencies" beforeDir="false" afterPath="$PROJECT_DIR$/packages/network_api/.flutter-plugins-dependencies" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/network_api/lib/src/mock_http_login_handler.dart" beforeDir="false" afterPath="$PROJECT_DIR$/packages/network_api/lib/src/mock_http_login_handler.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/network_api/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/packages/network_api/pubspec.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/secure_storage_api/.dart_tool/package_config.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/secure_storage_api/.dart_tool/package_config.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/secure_storage_api/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/packages/secure_storage_api/pubspec.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/hw_connectivity_repository/.dart_tool/build/entrypoint/.packageLocations" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/hw_connectivity_repository/.dart_tool/build/entrypoint/build.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/hw_connectivity_repository/.dart_tool/build/entrypoint/build.dart.dill" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/hw_connectivity_repository/.dart_tool/build/fcd1995bc647fb959e82ea360c6c2c9a/asset_graph.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/hw_connectivity_repository/.dart_tool/build/generated/async/lib/async.dart.transitive_digest" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/hw_connectivity_repository/.dart_tool/build/generated/boolean_selector/lib/boolean_selector.dart.transitive_digest" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/hw_connectivity_repository/.dart_tool/build/generated/characters/lib/characters.dart.transitive_digest" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/hw_connectivity_repository/.dart_tool/build/generated/clock/lib/clock.dart.transitive_digest" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/hw_connectivity_repository/.dart_tool/build/generated/collection/lib/collection.dart.transitive_digest" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/hw_connectivity_repository/.dart_tool/build/generated/fake_async/lib/fake_async.dart.transitive_digest" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/hw_connectivity_repository/.dart_tool/build/generated/flutter/lib/cupertino.dart.transitive_digest" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/hw_connectivity_repository/.dart_tool/build/generated/flutter/lib/foundation.dart.transitive_digest" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/hw_connectivity_repository/.dart_tool/build/generated/flutter/lib/gestures.dart.transitive_digest" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/hw_connectivity_repository/.dart_tool/build/generated/flutter/lib/material.dart.transitive_digest" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/hw_connectivity_repository/.dart_tool/build/generated/flutter/lib/rendering.dart.transitive_digest" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/hw_connectivity_repository/.dart_tool/build/generated/flutter/lib/scheduler.dart.transitive_digest" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/hw_connectivity_repository/.dart_tool/build/generated/flutter/lib/semantics.dart.transitive_digest" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/hw_connectivity_repository/.dart_tool/build/generated/flutter/lib/services.dart.transitive_digest" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/hw_connectivity_repository/.dart_tool/build/generated/flutter/lib/widgets.dart.transitive_digest" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/hw_connectivity_repository/.dart_tool/build/generated/flutter_test/lib/flutter_test.dart.transitive_digest" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/hw_connectivity_repository/.dart_tool/build/generated/http/lib/http.dart.transitive_digest" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/hw_connectivity_repository/.dart_tool/build/generated/http/lib/testing.dart.transitive_digest" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/hw_connectivity_repository/.dart_tool/build/generated/http_parser/lib/http_parser.dart.transitive_digest" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/hw_connectivity_repository/.dart_tool/build/generated/leak_tracker/lib/leak_tracker.dart.transitive_digest" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/hw_connectivity_repository/.dart_tool/build/generated/leak_tracker_flutter_testing/lib/leak_tracker_flutter_testing.dart.transitive_digest" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/hw_connectivity_repository/.dart_tool/build/generated/leak_tracker_testing/lib/leak_tracker_testing.dart.transitive_digest" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/hw_connectivity_repository/.dart_tool/build/generated/matcher/lib/expect.dart.transitive_digest" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/hw_connectivity_repository/.dart_tool/build/generated/matcher/lib/matcher.dart.transitive_digest" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/hw_connectivity_repository/.dart_tool/build/generated/matcher/lib/src/expect/async_matcher.dart.transitive_digest" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/hw_connectivity_repository/.dart_tool/build/generated/material_color_utilities/lib/material_color_utilities.dart.transitive_digest" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/hw_connectivity_repository/.dart_tool/build/generated/meta/lib/meta.dart.transitive_digest" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/hw_connectivity_repository/.dart_tool/build/generated/meta/lib/meta_meta.dart.transitive_digest" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/hw_connectivity_repository/.dart_tool/build/generated/mockito/lib/annotations.dart.transitive_digest" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/hw_connectivity_repository/.dart_tool/build/generated/mockito/lib/mockito.dart.transitive_digest" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/hw_connectivity_repository/.dart_tool/build/generated/path/lib/path.dart.transitive_digest" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/hw_connectivity_repository/.dart_tool/build/generated/source_span/lib/source_span.dart.transitive_digest" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/hw_connectivity_repository/.dart_tool/build/generated/stack_trace/lib/stack_trace.dart.transitive_digest" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/hw_connectivity_repository/.dart_tool/build/generated/stream_channel/lib/stream_channel.dart.transitive_digest" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/hw_connectivity_repository/.dart_tool/build/generated/string_scanner/lib/string_scanner.dart.transitive_digest" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/hw_connectivity_repository/.dart_tool/build/generated/term_glyph/lib/term_glyph.dart.transitive_digest" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/hw_connectivity_repository/.dart_tool/build/generated/test_api/lib/fake.dart.transitive_digest" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/hw_connectivity_repository/.dart_tool/build/generated/test_api/lib/hooks.dart.transitive_digest" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/hw_connectivity_repository/.dart_tool/build/generated/test_api/lib/scaffolding.dart.transitive_digest" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/hw_connectivity_repository/.dart_tool/build/generated/test_api/lib/src/backend/declarer.dart.transitive_digest" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/hw_connectivity_repository/.dart_tool/build/generated/test_api/lib/src/backend/group.dart.transitive_digest" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/hw_connectivity_repository/.dart_tool/build/generated/test_api/lib/src/backend/group_entry.dart.transitive_digest" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/hw_connectivity_repository/.dart_tool/build/generated/test_api/lib/src/backend/invoker.dart.transitive_digest" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/hw_connectivity_repository/.dart_tool/build/generated/test_api/lib/src/backend/live_test.dart.transitive_digest" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/hw_connectivity_repository/.dart_tool/build/generated/test_api/lib/src/backend/message.dart.transitive_digest" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/hw_connectivity_repository/.dart_tool/build/generated/test_api/lib/src/backend/runtime.dart.transitive_digest" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/hw_connectivity_repository/.dart_tool/build/generated/test_api/lib/src/backend/state.dart.transitive_digest" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/hw_connectivity_repository/.dart_tool/build/generated/test_api/lib/src/backend/suite.dart.transitive_digest" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/hw_connectivity_repository/.dart_tool/build/generated/test_api/lib/src/backend/suite_platform.dart.transitive_digest" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/hw_connectivity_repository/.dart_tool/build/generated/test_api/lib/src/backend/test.dart.transitive_digest" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/hw_connectivity_repository/.dart_tool/build/generated/typed_data/lib/typed_data.dart.transitive_digest" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/hw_connectivity_repository/.dart_tool/build/generated/vector_math/lib/vector_math_64.dart.transitive_digest" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/hw_connectivity_repository/.dart_tool/build/generated/vm_service/lib/vm_service.dart.transitive_digest" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/hw_connectivity_repository/.dart_tool/build/generated/vm_service/lib/vm_service_io.dart.transitive_digest" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/hw_connectivity_repository/.dart_tool/build_resolvers/sdk.sum" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/hw_connectivity_repository/.dart_tool/build_resolvers/sdk.sum.deps" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/hw_connectivity_repository/.dart_tool/flutter_build/dart_plugin_registrant.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/hw_connectivity_repository/.dart_tool/package_config.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/hw_connectivity_repository/.dart_tool/package_config_subset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/hw_connectivity_repository/.dart_tool/pub/bin/build_runner/build_runner.dart-3.6.1.snapshot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/hw_connectivity_repository/.dart_tool/version" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/hw_connectivity_repository/.flutter-plugins" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/hw_connectivity_repository/.flutter-plugins-dependencies" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/hw_connectivity_repository/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/hw_connectivity_repository/build/native_assets/windows/native_assets.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/hw_connectivity_repository/build/test_cache/build/cache.dill.track.dill" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/hw_connectivity_repository/build/unit_test_assets/AssetManifest.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/hw_connectivity_repository/build/unit_test_assets/AssetManifest.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/hw_connectivity_repository/build/unit_test_assets/FontManifest.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/hw_connectivity_repository/build/unit_test_assets/NOTICES.Z" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/hw_connectivity_repository/build/unit_test_assets/shaders/ink_sparkle.frag" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/hw_connectivity_repository/lib/hw_connectivity_repository.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/hw_connectivity_repository/lib/src/hw_connectivity_repository.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/hw_connectivity_repository/lib/src/model/bike_data.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/hw_connectivity_repository/lib/src/model/bike_type.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/hw_connectivity_repository/lib/src/model/models.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/hw_connectivity_repository/pubspec.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/hw_connectivity_repository/pubspec.yaml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/packages/usb_con_api/.dart_tool/package_config.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/usb_con_api/.dart_tool/package_config.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/usb_con_api/.dart_tool/package_config_subset" beforeDir="false" afterPath="$PROJECT_DIR$/packages/usb_con_api/.dart_tool/package_config_subset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/usb_con_api/.dart_tool/version" beforeDir="false" afterPath="$PROJECT_DIR$/packages/usb_con_api/.dart_tool/version" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/usb_con_api/.flutter-plugins" beforeDir="false" afterPath="$PROJECT_DIR$/packages/usb_con_api/.flutter-plugins" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/packages/usb_con_api/.flutter-plugins-dependencies" beforeDir="false" afterPath="$PROJECT_DIR$/packages/usb_con_api/.flutter-plugins-dependencies" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/packages/usb_con_api/lib/src/model/models.dart" beforeDir="false" afterPath="$PROJECT_DIR$/packages/usb_con_api/lib/src/model/models.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/usb_con_api/lib/src/model/usb_port.dart" beforeDir="false" afterPath="$PROJECT_DIR$/packages/usb_con_api/lib/src/model/usb_port.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/packages/usb_con_api/lib/src/usb_con_api_service.dart" beforeDir="false" afterPath="$PROJECT_DIR$/packages/usb_con_api/lib/src/usb_con_api_service.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/usb_con_api/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/packages/usb_con_api/pubspec.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/porsche_ebike_code_challenge.iml" beforeDir="false" afterPath="$PROJECT_DIR$/porsche_ebike_code_challenge.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/windows/flutter/ephemeral/.plugin_symlinks/flutter_libserialport" beforeDir="false" afterPath="$PROJECT_DIR$/windows/flutter/ephemeral/.plugin_symlinks/flutter_libserialport" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/windows/flutter/ephemeral/.plugin_symlinks/flutter_secure_storage_windows" beforeDir="false" afterPath="$PROJECT_DIR$/windows/flutter/ephemeral/.plugin_symlinks/flutter_secure_storage_windows" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/windows/flutter/ephemeral/.plugin_symlinks/path_provider_windows" beforeDir="false" afterPath="$PROJECT_DIR$/windows/flutter/ephemeral/.plugin_symlinks/path_provider_windows" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/windows/flutter/ephemeral/.plugin_symlinks/shared_preferences_windows" beforeDir="false" afterPath="$PROJECT_DIR$/windows/flutter/ephemeral/.plugin_symlinks/shared_preferences_windows" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -323,7 +221,7 @@
     "Flutter Test.tests in user_auth_bloc_test.dart.executor": "Run",
     "Flutter Test.tests in vehicle_search_screen_test.dart.executor": "Run",
     "Flutter Test.tests in vehicle_selection_screen_test.dart.executor": "Run",
-    "Flutter.main.dart.executor": "Run",
+    "Flutter.main.dart.executor": "Debug",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.cidr.known.project.marker": "true",
     "RunOnceActivity.git.unshallow": "true",
@@ -331,7 +229,7 @@
     "cf.first.check.clang-format": "false",
     "cidr.known.project.marker": "true",
     "dart.analysis.tool.window.visible": "false",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "develop",
     "io.flutter.reload.alreadyRun": "true",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "/Users/arefeh/StudioProjects/porsche_ebike/assets/images",
@@ -349,10 +247,10 @@
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/packages/usb_con_api/lib/src" />
+      <recent name="$PROJECT_DIR$/packages/usb_con_api/lib/src/model" />
       <recent name="C:\Users\me88756\Projects\Personal\porsche-ebike-code-challenge\lib\shared" />
       <recent name="C:\Users\me88756\Projects\Personal\caronsale-code-challenge\lib\home\view" />
       <recent name="C:\Users\me88756\Projects\Personal\caronsale-code-challenge\lib\auction\view" />
-      <recent name="C:\Users\me88756\Projects\Personal\caronsale-code-challenge\lib\identification\view" />
     </key>
   </component>
   <component name="RunManager" selected="Flutter.main.dart">
@@ -383,17 +281,6 @@
       <option name="testName" value="VehicleSelectionScreen" />
       <option name="testFile" value="$PROJECT_DIR$/test/vehicle_auction/view/vehicle_selection_screen_test.dart" />
       <option name="useRegexp" value="false" />
-      <method v="2" />
-    </configuration>
-    <configuration default="true" type="JetRunConfigurationType">
-      <module name="porsche_ebike_code_challenge" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <module name="porsche_ebike_code_challenge" />
-      <option name="filePath" />
       <method v="2" />
     </configuration>
     <list>
@@ -448,113 +335,6 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="Dart">
-          <url>file://$PROJECT_DIR$/lib/main.dart</url>
-          <line>84</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="Dart">
-          <url>file://$PROJECT_DIR$/lib/main.dart</url>
-          <line>101</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="Dart">
-          <url>file://$PROJECT_DIR$/packages/network_api/lib/src/mock_http_login_handler.dart</url>
-          <line>33</line>
-          <option name="timeStamp" value="7" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="Dart">
-          <url>file://$PROJECT_DIR$/packages/network_api/lib/src/mock_http_login_handler.dart</url>
-          <line>32</line>
-          <option name="timeStamp" value="8" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="Dart">
-          <url>file://$PROJECT_DIR$/packages/authentication_repository/lib/src/authentication_repository.dart</url>
-          <line>38</line>
-          <option name="timeStamp" value="9" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="Dart">
-          <url>file://$PROJECT_DIR$/packages/authentication_repository/lib/src/authentication_repository.dart</url>
-          <line>35</line>
-          <option name="timeStamp" value="11" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="Dart">
-          <url>file://$PROJECT_DIR$/packages/authentication_repository/lib/src/authentication_repository.dart</url>
-          <line>31</line>
-          <option name="timeStamp" value="12" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="Dart">
-          <url>file://$PROJECT_DIR$/packages/authentication_repository/lib/src/authentication_repository.dart</url>
-          <line>29</line>
-          <option name="timeStamp" value="13" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="Dart">
-          <url>file://$PROJECT_DIR$/packages/authentication_repository/lib/src/authentication_repository.dart</url>
-          <line>23</line>
-          <option name="timeStamp" value="14" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="Dart">
-          <url>file://$PROJECT_DIR$/packages/authentication_repository/lib/src/authentication_repository.dart</url>
-          <line>22</line>
-          <option name="timeStamp" value="15" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="Dart">
-          <url>file://$PROJECT_DIR$/packages/network_api/lib/src/network_api_service.dart</url>
-          <line>131</line>
-          <option name="timeStamp" value="16" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="Dart">
-          <url>file://$PROJECT_DIR$/packages/network_api/lib/src/network_api_service.dart</url>
-          <line>127</line>
-          <option name="timeStamp" value="17" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="Dart">
-          <url>file://$PROJECT_DIR$/packages/network_api/lib/src/network_api_service.dart</url>
-          <line>123</line>
-          <option name="timeStamp" value="18" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="Dart">
-          <url>file://$PROJECT_DIR$/packages/network_api/lib/src/network_api_service.dart</url>
-          <line>119</line>
-          <option name="timeStamp" value="19" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="Dart">
-          <url>file://$PROJECT_DIR$/packages/network_api/lib/src/network_api_service.dart</url>
-          <line>114</line>
-          <option name="timeStamp" value="20" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="Dart">
-          <url>file://$PROJECT_DIR$/packages/network_api/lib/src/network_api_service.dart</url>
-          <line>110</line>
-          <option name="timeStamp" value="21" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="Dart">
-          <url>file://$PROJECT_DIR$/packages/network_api/lib/src/network_api_service.dart</url>
-          <line>106</line>
-          <option name="timeStamp" value="22" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="Dart">
-          <url>file://$PROJECT_DIR$/packages/network_api/lib/src/network_api_service.dart</url>
-          <line>102</line>
-          <option name="timeStamp" value="23" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="Dart">
-          <url>file://$PROJECT_DIR$/packages/authentication_repository/lib/src/authentication_repository.dart</url>
-          <line>27</line>
-          <option name="timeStamp" value="24" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="Dart">
-          <url>file://$PROJECT_DIR$/packages/authentication_repository/lib/src/authentication_repository.dart</url>
-          <line>26</line>
-          <option name="timeStamp" value="25" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="Dart">
-          <url>file://$PROJECT_DIR$/packages/authentication_repository/lib/src/authentication_repository.dart</url>
-          <line>41</line>
-          <option name="timeStamp" value="26" />
-        </line-breakpoint>
-      </breakpoints>
       <default-breakpoints>
         <breakpoint type="dart-exception" />
       </default-breakpoints>

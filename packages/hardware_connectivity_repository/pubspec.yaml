@@ -1,0 +1,20 @@
+name: hardware_connectivity_repository
+description: A Flutter package for handling business logic for accessing nearby hardware devices.
+version: 1.0.0+1
+publish_to: none
+
+environment:
+  sdk: ">=3.6.0 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  bluetooth_con_api:
+    path: ../bluetooth_con_api
+  usb_con_api:
+    path: ../usb_con_api
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  mocktail: ^1.0.4

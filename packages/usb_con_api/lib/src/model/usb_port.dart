@@ -1,5 +1,7 @@
 class UsbPort {
+
   final String? description;
+  final String? name;
   final String? transport;
   final String? busNumber;
   final String? deviceNumber;
@@ -12,6 +14,7 @@ class UsbPort {
 
   UsbPort({
     this.description,
+    this.name,
     this.transport,
     this.busNumber,
     this.deviceNumber,
@@ -26,6 +29,7 @@ class UsbPort {
   factory UsbPort.fromJson(Map<String, dynamic> json) {
     return UsbPort(
       description: json['description'] as String?,
+      name: json['name'] as String?,
       transport: json['transport'] as String,
       busNumber: json['busNumber'] as String?,
       deviceNumber: json['deviceNumber'] as String?,
@@ -34,13 +38,14 @@ class UsbPort {
       manufacturer: json['manufacturer'] as String?,
       productName: json['productName'] as String?,
       serialNumber: json['serialNumber'] as String?,
-      macAddress: json['macAddress'] as String?,
+      macAddress: json['macAddress'] as String?
     );
   }
 
   Map<String, dynamic> toJson() {
     return {
       'description': description,
+      'name': name,
       'transport': transport,
       'busNumber': busNumber,
       'deviceNumber': deviceNumber,

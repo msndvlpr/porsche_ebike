@@ -54,9 +54,6 @@
       <excludeFolder url="file://$MODULE_DIR$/packages/bluetooth_con_api/.dart_tool" />
       <excludeFolder url="file://$MODULE_DIR$/packages/bluetooth_con_api/.pub" />
       <excludeFolder url="file://$MODULE_DIR$/packages/bluetooth_con_api/build" />
-      <excludeFolder url="file://$MODULE_DIR$/packages/hw_connectivity_repository/.dart_tool" />
-      <excludeFolder url="file://$MODULE_DIR$/packages/hw_connectivity_repository/.pub" />
-      <excludeFolder url="file://$MODULE_DIR$/packages/hw_connectivity_repository/build" />
       <excludeFolder url="file://$MODULE_DIR$/packages/usb_con_api/.dart_tool" />
       <excludeFolder url="file://$MODULE_DIR$/packages/usb_con_api/.pub" />
       <excludeFolder url="file://$MODULE_DIR$/packages/usb_con_api/build" />
@@ -93,6 +90,9 @@
       <excludeFolder url="file://$MODULE_DIR$/macos/Flutter/ephemeral/.symlinks/plugins/shared_preferences_foundation/example/.dart_tool" />
       <excludeFolder url="file://$MODULE_DIR$/macos/Flutter/ephemeral/.symlinks/plugins/shared_preferences_foundation/example/.pub" />
       <excludeFolder url="file://$MODULE_DIR$/macos/Flutter/ephemeral/.symlinks/plugins/shared_preferences_foundation/example/build" />
+      <excludeFolder url="file://$MODULE_DIR$/packages/hardware_connectivity_repository/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/packages/hardware_connectivity_repository/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/packages/hardware_connectivity_repository/build" />
       <excludeFolder url="file://$MODULE_DIR$/windows/flutter/ephemeral/.plugin_symlinks/flutter_libserialport/.dart_tool" />
       <excludeFolder url="file://$MODULE_DIR$/windows/flutter/ephemeral/.plugin_symlinks/flutter_libserialport/.pub" />
       <excludeFolder url="file://$MODULE_DIR$/windows/flutter/ephemeral/.plugin_symlinks/flutter_libserialport/build" />

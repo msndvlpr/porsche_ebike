@@ -47,7 +47,7 @@ class UserAuthenticationScreenState extends ConsumerState<LoginScreen> {
         ScaffoldMessenger.of(context).clearSnackBars();
 
         Navigator.of(context).pushReplacement(
-          MaterialPageRoute(builder: (_) => DashboardScreen()),
+          MaterialPageRoute(builder: (_) => BikeDashboardScreen()),
         );
       } else if (current is UserAuthDataStateFailure) {
         ScaffoldMessenger.of(context).showSnackBar(

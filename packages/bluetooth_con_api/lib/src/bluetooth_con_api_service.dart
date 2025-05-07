@@ -68,4 +68,18 @@ class BluetoothConApi {
     }
   }
 
+  /// Get list of discovered devices
+  getDevices() {
+    FlutterBluePlus.scanResults.listen((results) {
+      for (ScanResult r in results) {
+        final displayName = r.advertisementData.localName.isNotEmpty
+            ? r.advertisementData.localName
+            : (r.device.name.isNotEmpty ? r.device.name : r.device.id.id); // fallback to MAC
+        print('Found device: $displayName');
+      }
+    });
+
+  }
+
+
 }

@@ -1,34 +1,80 @@
+import 'dart:async';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:hw_connectivity_repository/hw_connectivity_repository.dart';
+import 'package:hardware_connectivity_repository/hardware_connectivity_repository.dart';
 import 'package:usb_con_api/usb_con_api_service.dart';
 
-final usbDevicesProvider = StateNotifierProvider<UsbDevicesNotifier, AsyncValue<List<UsbPort>>>(
-      (ref) {
+
+final usbDevicesProvider = StateNotifierProvider<UsbDevicesNotifier, AsyncValue<List<FoundDevice>>>((ref) {
+
     final repo = ref.watch(hardwareConnectivityRepoProvider);
     return UsbDevicesNotifier(repo);
-  },
-);
+  });
 
-final hardwareConnectivityRepoProvider = Provider<HwConnectivityRepository>((ref) {
+final hardwareConnectivityRepoProvider = Provider<HardwareConnectivityRepository>((ref) {
+
   final api = UsbConApi();
-  return HwConnectivityRepository(api);
+  return HardwareConnectivityRepository(api);
 });
 
-class UsbDevicesNotifier extends StateNotifier<AsyncValue<List<UsbPort>>> {
-  final HwConnectivityRepository _repo;
+final selectedDeviceProvider = StateProvider<String?>((ref) => null);
 
-  UsbDevicesNotifier(this._repo) : super(const AsyncLoading()) {
+class UsbDevicesNotifier extends StateNotifier<AsyncValue<List<FoundDevice>>> {
+
+  final HardwareConnectivityRepository _repo;
+
+  StreamSubscription<List<FoundDevice>>? _subscription;
+
+  bool get isScanning => _subscription != null;
+
+  UsbDevicesNotifier(this._repo) : super(const AsyncData([])) {
     _listenToStream();
   }
 
-  void _listenToStream() {
-    _repo.watchUsbDevices().listen(
-          (devices) {
+  void toggleScanning() {
+    if (isScanning) {
+      stopScanning();
+    } else {
+      startScanning();
+    }
+  }
+
+  void startScanning() {
+    if (_subscription != null) return;
+    _repo.startUsbScanning();
+    _subscription?.cancel(); // Cancel previous subscription if any
+    state = const AsyncLoading();
+
+    _subscription = _repo.getDiscoveredDevicesStream().listen((devices) {
         state = AsyncData(devices);
       },
       onError: (e, st) {
         state = AsyncError(e, st);
       },
+    );
+  }
+
+  void stopScanning() {
+    _repo.stopUsbScanning();
+    _subscription?.cancel();
+    _subscription = null;
+    final currentList = state.value ?? [];
+    state = AsyncData(currentList);
+  }
+
+  @override
+  void dispose() {
+    _subscription?.cancel();
+    super.dispose();
+  }
+
+  void _listenToStream() {
+    _repo.getDiscoveredDevicesStream().listen(
+          (devices) {
+        state = AsyncData(devices);
+      },
+      onError: (e, st) {
+        state = AsyncError(e, st);
+      }
     );
   }
 }

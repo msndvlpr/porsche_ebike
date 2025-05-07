@@ -230,10 +230,6 @@ flutter_secure_storage_windows
 2.12
 file:///Users/arefeh/.pub-cache/hosted/pub.dev/flutter_secure_storage_windows-3.1.2/
 file:///Users/arefeh/.pub-cache/hosted/pub.dev/flutter_secure_storage_windows-3.1.2/lib/
-flutter_spinkit
-2.12
-file:///Users/arefeh/.pub-cache/hosted/pub.dev/flutter_spinkit-5.2.1/
-file:///Users/arefeh/.pub-cache/hosted/pub.dev/flutter_spinkit-5.2.1/lib/
 freezed_annotation
 3.0
 file:///Users/arefeh/.pub-cache/hosted/pub.dev/freezed_annotation-3.0.0/
@@ -606,10 +602,10 @@ bluetooth_con_api
 3.6
 file:///Users/arefeh/StudioProjects/porsche_ebike/packages/bluetooth_con_api/
 file:///Users/arefeh/StudioProjects/porsche_ebike/packages/bluetooth_con_api/lib/
-hw_connectivity_repository
+hardware_connectivity_repository
 3.6
-file:///Users/arefeh/StudioProjects/porsche_ebike/packages/hw_connectivity_repository/
-file:///Users/arefeh/StudioProjects/porsche_ebike/packages/hw_connectivity_repository/lib/
+file:///Users/arefeh/StudioProjects/porsche_ebike/packages/hardware_connectivity_repository/
+file:///Users/arefeh/StudioProjects/porsche_ebike/packages/hardware_connectivity_repository/lib/
 network_api
 3.6
 file:///Users/arefeh/StudioProjects/porsche_ebike/packages/network_api/

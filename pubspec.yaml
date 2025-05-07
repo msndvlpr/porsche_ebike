@@ -21,8 +21,8 @@ dependencies:
   shared_preferences: ^2.5.3
 
 
-  hw_connectivity_repository:
-    path: packages/hw_connectivity_repository
+  hardware_connectivity_repository:
+    path: packages/hardware_connectivity_repository
   network_api:
     path: packages/network_api
   authentication_repository:

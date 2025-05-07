@@ -484,14 +484,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "3.1.2"
-  flutter_spinkit:
-    dependency: "direct main"
-    description:
-      name: flutter_spinkit
-      sha256: d2696eed13732831414595b98863260e33e8882fc069ee80ec35d4ac9ddb0472
-      url: "https://pub.dev"
-    source: hosted
-    version: "5.2.1"
   flutter_test:
     dependency: "direct dev"
     description: flutter
@@ -534,6 +526,13 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.3.2"
+  hardware_connectivity_repository:
+    dependency: "direct main"
+    description:
+      path: "packages/hardware_connectivity_repository"
+      relative: true
+    source: path
+    version: "1.0.0+1"
   http:
     dependency: transitive
     description:
@@ -558,13 +557,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "4.1.2"
-  hw_connectivity_repository:
-    dependency: "direct main"
-    description:
-      path: "packages/hw_connectivity_repository"
-      relative: true
-    source: path
-    version: "1.0.0+1"
   image:
     dependency: transitive
     description:
