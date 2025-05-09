@@ -64,6 +64,13 @@ packages:
       relative: true
     source: path
     version: "1.0.0+1"
+  bike_metadata_repository:
+    dependency: "direct main"
+    description:
+      path: "packages/bike_metadata_repository"
+      relative: true
+    source: path
+    version: "1.0.0+1"
   bloc:
     dependency: transitive
     description:
@@ -80,10 +87,10 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "10.0.0"
-  bluetooth_con_api:
-    dependency: transitive
+  bluetooth_connection_api:
+    dependency: "direct main"
     description:
-      path: "packages/bluetooth_con_api"
+      path: "packages/bluetooth_connection_api"
       relative: true
     source: path
     version: "1.0.0+1"
@@ -1104,10 +1111,10 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.4.0"
-  usb_con_api:
+  usb_connection_api:
     dependency: "direct main"
     description:
-      path: "packages/usb_con_api"
+      path: "packages/usb_connection_api"
       relative: true
     source: path
     version: "1.0.0+1"

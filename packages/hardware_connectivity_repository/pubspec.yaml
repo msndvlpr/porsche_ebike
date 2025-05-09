@@ -9,10 +9,10 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  bluetooth_con_api:
-    path: ../bluetooth_con_api
-  usb_con_api:
-    path: ../usb_con_api
+  bluetooth_connection_api:
+    path: ../bluetooth_connection_api
+  usb_connection_api:
+    path: ../usb_connection_api
 
 dev_dependencies:
   flutter_test:

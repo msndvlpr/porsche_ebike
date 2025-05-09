@@ -4,54 +4,75 @@ import 'dart:math';
 import 'package:http/http.dart';
 import 'package:http/testing.dart' show MockClient;
 
+import 'dart:async';
+import 'dart:convert';
+import 'dart:math';
+
+import 'package:http/http.dart';
+import 'package:http/testing.dart';
+
+import 'dart:async';
+import 'dart:convert';
+import 'dart:math';
+
+import 'package:http/http.dart';
+import 'package:http/testing.dart';
+
 class MockHttpDataHandler {
   MockHttpDataHandler._();
 
   static const user = 'user';
 
   static final BaseClient httpClient = MockClient((request) async {
+    // Ensure auth header exists
+    if (request.headers[user]?.isEmpty ?? true) {
+      throw ClientException('Auth');
+    }
 
-      if (request.headers[user]?.isEmpty ?? true) throw ClientException('Auth');
-      final length = _ResponseCode.values.length;
-      final code = Random().nextInt(length + 1) + (length - 1);
-      await Future<void>.delayed(const Duration(seconds: 1));
+    // Simulate delay
+    await Future<void>.delayed(const Duration(seconds: 1));
 
-      if (code > length + 1) throw TimeoutException('Timed-out');
-      final response = _ResponseCode.values.elementAt(code - (length - 1));
+    // Parse query parameters
+    final uri = request.url;
+    final bikeType = uri.queryParameters['bikeType'];
 
-      final body = response.whenConst(
-        success: response._success, error: null,
-      );
+    if (bikeType == null) {
+      return Response('Missing query param: bikeType', 400);
+    }
 
-      return Response(body!, code * 100, request: request);
-    },
-  );
-}
+    // Build mock response
+    final mockData = _mockResponseForBikeType(bikeType);
+    if (mockData == null) {
+      return Response('Unknown bikeType', 404);
+    }
 
-enum _ResponseCode {
-  success,
-  error;
+    return Response(jsonEncode(mockData), 200, request: request);
+  });
 
-  const _ResponseCode();
+  static Map<String, dynamic>? _mockResponseForBikeType(String bikeType) {
+    final id = Random().nextInt(1000000);
 
-  R whenConst<R>({
-    required R success,
-    required R error,
-  }) {
-    switch (this) {
-      case _ResponseCode.success:
-        return success;
-      case _ResponseCode.error:
-        return error;
+    switch (bikeType) {
+      case 'MetroBee':
+        return {
+          'resourceId': id,
+          'bikeDescription':
+          'Conquer the concrete jungle with effortless speed and style. Glide through traffic, beat rush-hour, and make every ride a breeze.',
+          'bikeImageUrl':
+          'https://files.fazua.com/media/images/press_dt_8Fuq1nc.width-4096.jpegquality-50.jpg',
+        };
+      case 'CliffHanger':
+        return {
+          'resourceId': id,
+          'bikeDescription':
+          'Tame the toughest trails with power and precision. CliffHanger is built for bold climbs, sharp turns, and riders who never back down.',
+          'bikeImageUrl':
+          'https://files.fazua.com/media/images/brands_porsche_8xrevmT.width-4096.jpegquality-50.jpg',
+        };
+      default:
+        return null;
     }
   }
-
-  String get _success => '''
-   {
-      "resourceId": ${Random().nextInt(1000000)},
-      "bikeDescription": "description for MetroBee ebike",
-      "bikeImageUrl": "https://files.fazua.com/media/images/press_dt_8Fuq1nc.width-4096.jpegquality-50.jpg"
-    }
-''';
-
 }
+
+

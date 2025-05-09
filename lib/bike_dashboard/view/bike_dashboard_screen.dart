@@ -2,8 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'dart:async';
 import 'package:flutter_libserialport/flutter_libserialport.dart';
+import 'package:hardware_connectivity_repository/hardware_connectivity_repository.dart';
 import 'package:intl/intl.dart';
-import '../state/hardware_connection_provider.dart';
+import '../state/hardware_connectivity_provider.dart';
+import '../state/network_resource_provider.dart';
 
 /*class BikeDashboardScreen extends StatelessWidget {
   const BikeDashboardScreen({super.key});
@@ -44,201 +46,230 @@ import '../state/hardware_connection_provider.dart';
   }
 }*/
 
-final Map<String, String> _bikeReadings = {
-  'Bike Id': '5236942',
-  'Bike Model': 'MetroBee',
-  'State of Charge': '90%',
-  'ODO Meter': '1.268 km',
-  'Last Known Error': '5001',
-  'Last anti-theft alert': DateFormat('yyyy.MM.dd HH:mm').format(DateTime(2025, 5, 11, 21, 11)),
-};
-
 class BikeDashboardScreen extends ConsumerWidget {
   const BikeDashboardScreen({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final usbDevicesAsync = ref.watch(usbDevicesProvider);
-    final usbNotifier = ref.watch(usbDevicesProvider.notifier);
-    final selectedDeviceId = ref.watch(selectedDeviceProvider);
-    final isScanning = ref.watch(usbDevicesProvider.select((stateNotifier) =>
-    stateNotifier is AsyncData && (ref.read(usbDevicesProvider.notifier)).isScanning));
+
+    final usbDevicesAsync = ref.watch(devicesProvider);
+    final usbNotifier = ref.watch(devicesProvider.notifier);
+    final selectedDevice = ref.watch(selectedDeviceProvider);
+    final isScanning = ref.watch(devicesProvider.select((stateNotifier) =>
+       stateNotifier is AsyncData && (ref.read(devicesProvider.notifier)).isScanning));
 
     final theme = Theme.of(context);
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Bike Dashboard'),
+        title: const Text('PORSCHE eBike Performance Diagnostic'),
         centerTitle: true,
         elevation: 0,
         backgroundColor: theme.primaryColor.withOpacity(0.8),
         titleTextStyle: const TextStyle(color: Colors.white, fontSize: 22, fontWeight: FontWeight.bold),
       ),
-      body: Padding(
-        padding: const EdgeInsets.all(16.0),
-        child: Row(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
+      body: Container(margin: EdgeInsets.only(bottom: 8),
+        child: Padding(
+          padding: const EdgeInsets.all(20.0),
+          child: Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
 
-            /// Discovered bikes pane
-            Expanded(
-              child: Card(
-                child: Padding(
-                  padding: const EdgeInsets.all(16.0),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text('Discovered Bikes', style: theme.textTheme.headlineSmall),
-                      const SizedBox(height: 12),
-                      Expanded(
-                        child: usbDevicesAsync.when(
-                          loading: () => const Center(child: CircularProgressIndicator()),
-                          error: (error, stack) =>
-                              Center(child: Text('Error fetching found bikes list: $error')),
-                          data: (devices) {
-                            if (devices.isEmpty) {
-                              return const Center(
-                                child: Text('No USB or BLE devices available, please press Scan to start searching.'),
+              /// Discovered Bikes Pane
+              Expanded(
+                child: Card(
+                  elevation: 8,
+                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
+                  child: Padding(
+                    padding: const EdgeInsets.all(24.0),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text('Discovered Bikes', style: theme.textTheme.headlineSmall),
+                        const SizedBox(height: 12),
+                        Expanded(
+                          child: usbDevicesAsync.when(
+                            loading: () => const Center(child: CircularProgressIndicator()),
+                            error: (error, stack) => Center(child: Text('Error fetching found bikes list: $error')),
+                            data: (devices) {
+                              if (devices.isEmpty) {
+                                return const Center(
+                                  child: Text('No USB or BLE devices available, please press Scan to start searching.'),
+                                );
+                              }
+
+                              return ListView.builder(
+                                itemCount: devices.length,
+                                itemBuilder: (context, index) {
+                                  final item = devices[index];
+                                  final deviceId = item.deviceId;
+                                  final isSelected = selectedDevice == deviceId;
+
+                                  return ListTile(
+                                    title: Text(item.deviceName ?? 'Unknown'),
+                                    trailing: Text(item.connectionType?.value ?? 'N/A'),
+                                    tileColor: isSelected ? theme.primaryColor.withOpacity(0.2) : null,
+                                    onTap: () {
+                                      ref.read(selectedDeviceProvider.notifier).state = deviceId;
+                                    },
+                                  );
+                                },
                               );
+                            },
+                          ),
+                        ),
+                        const SizedBox(height: 12),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceAround,
+                          children: [
+
+                            ElevatedButton(
+                              onPressed: selectedDevice != null ? () {
+
+                                ref.read(bikeReadingProvider.notifier).startBikeReadingListening(selectedDevice);
+
+                                //reading.bikeType.name
+                                //todo
+                                ref.read(bikeMetadataProvider.notifier).fetch(selectedDevice, 'CliffHanger');
+
+                              } : null,
+                              child: Text('Connect / Disconnect')
+                            ),
+
+                            ElevatedButton.icon(
+                              onPressed: () {
+                                usbNotifier.toggleScanning();
+                                if (!isScanning) {
+                                  ScaffoldMessenger.of(context).showSnackBar(
+                                    const SnackBar(content: Text('Scanning for new bikes...')),
+                                  );
+                                }
+                              },
+                              icon: isScanning ? const SizedBox(
+                                height: 16,
+                                width: 16,
+                                child: CircularProgressIndicator(strokeWidth: 2.0),
+                              )
+                                  : const Icon(Icons.usb),
+                              label: Text(isScanning ? 'Stop' : 'Scan'),
+                            )
+                          ],
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+              ),
+
+              const SizedBox(width: 16),
+
+              /// Bike Readings Section
+              Expanded(
+                child: Card(
+                  elevation: 8,
+                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
+                  child: Padding(
+                    padding: const EdgeInsets.all(24.0),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text('Bike Readings', style: theme.textTheme.headlineSmall),
+                        const SizedBox(height: 12),
+                        ref.watch(bikeReadingProvider).when(
+                          data: (reading) {
+                            if (reading == null) {
+                              return const Text('No data received yet.');
                             }
 
-                            return ListView.builder(
-                              itemCount: devices.length,
-                              itemBuilder: (context, index) {
-                                final device = devices[index];
-                                final deviceId = '${device.deviceId}';
-                                final isSelected = selectedDeviceId == deviceId;
+                            final readingMap = {
+                              'Bike ID': reading.bikeId,
+                              'Model': reading.bikeType.name,
+                              'Motor RPM': reading.motorRpm.toString(),
+                              'Battery Charge': '${reading.batteryCharge}%',
+                              'Odometer': '${reading.odoMeterKm} km',
+                              'Last Error': reading.lastError,
+                              if (reading.lastTheftAlert != null)
+                                'Theft Alert': reading.lastTheftAlert!,
+                            };
 
-                                return ListTile(
-                                  title: Text(device.deviceName ?? 'Unknown'),
-                                  trailing: Text(device.deviceType?.value ?? 'N/A'),
-                                  tileColor: isSelected ? theme.primaryColor.withOpacity(0.2) : null,
-                                  onTap: () {
-                                    ref.read(selectedDeviceProvider.notifier).state = deviceId;
-                                  },
+                            return ListView.separated(
+                              shrinkWrap: true,
+                              physics: const NeverScrollableScrollPhysics(),
+                              itemCount: readingMap.length,
+                              separatorBuilder: (context, index) => const Divider(height: 16),
+                              itemBuilder: (context, index) {
+                                final key = readingMap.keys.elementAt(index);
+                                final value = readingMap.values.elementAt(index);
+                                return Row(
+                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                  children: [
+                                    Text(key, style: theme.textTheme.titleMedium),
+                                    Text(value.toString(), style: theme.textTheme.bodyMedium),
+                                  ],
                                 );
                               },
                             );
                           },
+                          loading: () => const Expanded(child: Center(child: CircularProgressIndicator())),
+                          error: (err, stack) => Text('Failed to get readings: $err'),
                         ),
-                      ),
-                      const SizedBox(height: 12),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceAround,
-                        children: [
-                          ElevatedButton(
-                            onPressed: selectedDeviceId != null
-                                ? () {
-                              // Connect/disconnect logic here with selectedDeviceId
-                              ScaffoldMessenger.of(context).showSnackBar(
-                                SnackBar(content: Text('Trying to connect to $selectedDeviceId')),
-                              );
-                            }
-                                : null,
-                            style: ElevatedButton.styleFrom(
-                              backgroundColor: theme.primaryColor,
+                      ],
+                    ),
+                  ),
+                ),
+              ),
+
+
+              const SizedBox(width: 16),
+
+              /// Model Overview Section
+              Expanded(
+                child: Card(
+                  elevation: 8,
+                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
+                  child: Padding(
+                    padding: const EdgeInsets.all(24.0),
+                    child: ref.watch(bikeMetadataProvider).when(
+                      data: (bikeData) {
+                        if (bikeData == null) return const Text('Select a bike and press Connect.');
+
+                        return Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text('Model Overview', style: theme.textTheme.headlineSmall),
+                            const SizedBox(height: 12),
+                            Text(
+                              bikeData.resourceId.toString(),//todo
+                              style: theme.textTheme.headlineSmall?.copyWith(color: theme.primaryColor),
                             ),
-                            child: Text(true ? 'Disconnect' : 'Connect'),
-                          ),
-                          ElevatedButton.icon(
-                            onPressed: () {
-                              usbNotifier.toggleScanning();
-                              if (!isScanning) {
-                                ScaffoldMessenger.of(context).showSnackBar(
-                                  const SnackBar(content: Text('Scanning for new bikes...')),
-                                );
-                              }
-                            },
-                            icon: isScanning
-                                ? const SizedBox(
-                              height: 16,
-                              width: 16,
-                              child: CircularProgressIndicator(strokeWidth: 2.0),
-                            )
-                                : const Icon(Icons.usb),
-                            label: Text(isScanning ? 'Stop' : 'Scan'),
-                          ),
-                        ],
-                      ),
-                    ],
+                            const SizedBox(height: 8),
+                            Text(bikeData.bikeDescription, style: theme.textTheme.bodyMedium),
+                            const SizedBox(height: 20),
+                            AspectRatio(
+                              aspectRatio: 16 / 9,
+                              child: Container(
+                                decoration: BoxDecoration(
+                                  border: Border.all(color: Colors.grey.shade300),
+                                  borderRadius: BorderRadius.circular(8),
+                                  image: DecorationImage(
+                                    image: NetworkImage(bikeData.bikeImageUrl),
+                                    fit: BoxFit.cover,
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ],
+                        );
+                      },
+                      loading: () => const Center(child: CircularProgressIndicator()),
+                      error: (err, st) => Center(child: Text('Failed to load metadata: $err')),
+                    ),
                   ),
                 ),
               ),
-            ),
 
-            const SizedBox(width: 16),
-
-            /// Bike Readings Section
-            Expanded(
-              child: Card(
-                child: Padding(
-                  padding: const EdgeInsets.all(16.0),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text('Bike Readings', style: theme.textTheme.headlineSmall),
-                      const SizedBox(height: 12),
-                      ListView.separated(
-                        shrinkWrap: true,
-                        physics: const NeverScrollableScrollPhysics(),
-                        itemCount: _bikeReadings.length,
-                        separatorBuilder: (context, index) => const Divider(height: 16),
-                        itemBuilder: (context, index) {
-                          final key = _bikeReadings.keys.elementAt(index);
-                          final value = _bikeReadings.values.elementAt(index);
-                          return Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              Text(key, style: theme.textTheme.titleMedium),
-                              Text(value, style: theme.textTheme.bodyMedium),
-                            ],
-                          );
-                        },
-                      ),
-                    ],
-                  ),
-                ),
-              ),
-            ),
-
-            const SizedBox(width: 16),
-
-            // Model Overview Section
-            Expanded(
-              child: Card(
-                child: Padding(
-                  padding: const EdgeInsets.all(16.0),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text('Model Overview', style: theme.textTheme.headlineSmall),
-                      const SizedBox(height: 12),
-                      Text(
-                        'MetroBee',
-                        style: theme.textTheme.headlineSmall?.copyWith(color: theme.primaryColor),
-                      ),
-                      const SizedBox(height: 8),
-                      Text(
-                        'Conquer the concrete jungle with effortless speed and style. Glide through traffic, beat rush-hour, and make every ride a breeze.',
-                        style: theme.textTheme.bodyMedium,
-                      ),
-                      const SizedBox(height: 20),
-                      AspectRatio(
-                        aspectRatio: 16 / 9,
-                        child: Container(
-                          decoration: BoxDecoration(
-                            border: Border.all(color: Colors.grey.shade300),
-                            borderRadius: BorderRadius.circular(8),
-                          ),
-                          child: const Center(child: Icon(Icons.image_outlined, size: 60, color: Colors.grey)),
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-              ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );

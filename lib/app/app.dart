@@ -13,6 +13,7 @@ class App extends ConsumerWidget {
   final AuthenticationRepository authenticationRepository;
   final SecureStorageApi secureStorageApi;
 
+  //todo
   App({/*required this.auctionRepository,*/
       required this.authenticationRepository,
       required this.secureStorageApi,
@@ -28,19 +29,6 @@ class App extends ConsumerWidget {
 
     final themeMode = ref.watch(appThemeProvider);
 
-    /*return MultiRepositoryProvider(
-      providers: [
-        RepositoryProvider<AuctionRepository>.value(value: auctionRepository),
-        RepositoryProvider<AuthenticationRepository>.value(value: authenticationRepository),
-        RepositoryProvider<SecureStorageApi>.value(value: secureStorageApi),
-      ],
-      child: MultiBlocProvider(
-        providers: [
-          BlocProvider(create: (context) => UserAuthBloc(context.read<AuthenticationRepository>())),
-          BlocProvider(create: (context) => AuctionDataBloc(context.read<AuctionRepository>())),
-          BlocProvider(create: (_) => ThemeCubit())
-        ],
-        child:*/
     return MaterialApp(
             debugShowCheckedModeBanner: false,
             theme: AppTheme.lightTheme,

@@ -21,16 +21,22 @@ dependencies:
   shared_preferences: ^2.5.3
 
 
+
   hardware_connectivity_repository:
     path: packages/hardware_connectivity_repository
+  bike_metadata_repository:
+    path: packages/bike_metadata_repository
   network_api:
     path: packages/network_api
   authentication_repository:
     path: packages/authentication_repository
   secure_storage_api:
     path: packages/secure_storage_api
-  usb_con_api:
-    path: packages/usb_con_api
+  usb_connection_api:
+    path: packages/usb_connection_api
+  bluetooth_connection_api:
+    path: packages/bluetooth_connection_api
+
 
 dev_dependencies:
   flutter_test:

@@ -2,14 +2,15 @@ part 'device_type.dart';
 
 class FoundDevice{
 
-  final DeviceType? deviceType;
+  final DeviceType? connectionType;
   final String? deviceName;
+  /// ID for USB device is Port Address and for BLE device is MAC Address
   final String? deviceId;
   final bool? connected;
 
 
   FoundDevice({
-    this.deviceType,
+    this.connectionType,
     this.deviceName,
     this.deviceId,
     this.connected

@@ -1,0 +1,18 @@
+name: bike_metadata_repository
+description: A Flutter package for fetching additional bike metadata such as description and image from backend.
+version: 1.0.0+1
+publish_to: none
+
+environment:
+  sdk: ">=3.6.0 <4.0.0"
+
+dependencies:
+  network_api:
+    path: ../network_api
+  secure_storage_api:
+    path: ../secure_storage_api
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  mocktail: ^1.0.4
