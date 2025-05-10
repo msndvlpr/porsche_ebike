@@ -189,9 +189,9 @@ class BikeDashboardScreen extends ConsumerWidget {
                             data: (reading) {
                               if (reading == null) {
                                 return Column(mainAxisAlignment: MainAxisAlignment.center ,children: [
-                                  Center(child: Text('No data received yet.')),
+                                  Center(child: Text('No data received yet')),
                                   SizedBox(height: 70)
-                                ],);
+                                ]);
                               }
 
                               final readingMap = {
@@ -246,16 +246,18 @@ class BikeDashboardScreen extends ConsumerWidget {
                   shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
                   child: Padding(
                     padding: const EdgeInsets.all(16.0),
-                    child: Expanded(
+                    child: Column(crossAxisAlignment: CrossAxisAlignment.start ,children: [
+                      Text('Model Overview', style: TextStyle(fontSize: 22, fontWeight: FontWeight.w800, color: Colors.grey[800])),
+                      const SizedBox(height: 22),
+                      Expanded(
                       child: ref.watch(bikeMetadataProvider).when(
                         data: (bikeData) {
-                          if (bikeData == null) return Center(child: const Text('Select a bike and press Connect.'));
+                          if (bikeData == null) return Center(child: const Text('No bike asset received yet'));
 
                           return Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Text('Model Overview', style: TextStyle(fontSize: 22, fontWeight: FontWeight.w800, color: Colors.grey[800])),
-                              const SizedBox(height: 22),
+
                               Text(
                                 bikeData.bikeModel,
                                 style: TextStyle(fontSize: 18, fontWeight: FontWeight.w600, color: Colors.black),
@@ -282,7 +284,7 @@ class BikeDashboardScreen extends ConsumerWidget {
                         loading: () => const Center(child: CircularProgressIndicator()),
                         error: (err, st) => Center(child: Text('Failed to load metadata: $err')),
                       ),
-                    ),
+                    )]),
                   ),
                 ),
               ),

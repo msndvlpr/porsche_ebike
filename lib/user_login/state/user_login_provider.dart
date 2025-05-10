@@ -13,7 +13,7 @@ class UserAuthNotifier extends AsyncNotifier<String> {
   @override
   FutureOr<String> build() {
     _authenticationRepository = ref.read(authenticationRepositoryProvider);
-    return Future.value(null);
+    return Future.value();
   }
 
   Future<void> authenticateUser(String username, String password) async {
