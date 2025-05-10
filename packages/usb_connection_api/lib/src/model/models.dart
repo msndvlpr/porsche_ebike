@@ -1,2 +1,2 @@
 export 'usb_port.dart';
-export 'bike_data.dart';
+export 'usb_bike_data.dart';

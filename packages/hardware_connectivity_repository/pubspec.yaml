@@ -13,6 +13,8 @@ dependencies:
     path: ../bluetooth_connection_api
   usb_connection_api:
     path: ../usb_connection_api
+  intl: ^0.18.1
+
 
 dev_dependencies:
   flutter_test:

@@ -1,6 +1,6 @@
 import 'dart:math';
 import 'package:flutter_blue_plus/flutter_blue_plus.dart';
-import 'model/bike_data.dart';
+import 'src/model/ble_bike_data.dart';
 
 
 List<ScanResult> getMockScanResults() {
@@ -45,22 +45,30 @@ List<ScanResult> getMockScanResults() {
 }
 
 
-Stream<BikeData> getMockBikeDataReadings({
-  int bikeId = 1402,
-  BikeType bikeType = BikeType.metroBee,
-  Duration interval = const Duration(seconds: 3)
-}) async* {
-  double odoMeter = 165000.0; // in meters
-  double batteryCharge = 84.0; // in %
-  double x = 0, y = 0, z = 0;
-  int rpm = 60;
+Stream<BleBikeData> getBleMockBikeDataReadings({required int bikeId}) async* {
+
+  double odoMeter = 165000.0; // odo in meters
+  double batteryCharge = 84.0; // battery in %
+  double x = 0, y = 0, z = 0;  // gyro
+  int rpm = 60;  // rpm
+
   bool rpmIncreasing = true;
 
   final rand = Random();
-  int tick = 0;
+
+  // Generate total air time between 30 seconds to 300 seconds
+  int? totalAirtime = (30 + rand.nextInt(300 - 30 + 1)) as int?;
+  // Conditional error simulation
+  String lastError = 'Motor Overheat';
+
+  // Conditional fields based on bike type epoc time in seconds
+  int? lastTheftAlert = 1652091600;
+
+  // Random bike type
+  final bikeType = bikeId % 2 == 0 ? BleBikeType.cliffHanger : BleBikeType.metroBee;
 
   while (true) {
-    await Future.delayed(interval);
+    await Future.delayed(const Duration(seconds: 2));
 
     // RPM control logic
     if (rpmIncreasing) {
@@ -84,29 +92,20 @@ Stream<BikeData> getMockBikeDataReadings({
     y += rand.nextDouble() * 0.5 - 0.25;
     z += rand.nextDouble() * 0.5 - 0.25;
 
-    // Conditional error simulation
-    String lastError = 'Motor Overheat';
+    List<String>? gyroscope = [x.toStringAsFixed(2), y.toStringAsFixed(2), z.toStringAsFixed(2)];
 
-    // Conditional fields based on bike type
-    int? lastTheftAlert;
-    List<double>? gyroscope;
-    int? totalAirtime;
 
-    if (bikeType == BikeType.cliffHanger) {
-      // Allow gyro and airtime, but no theft alerts
-      gyroscope = [x, y, z];
-      totalAirtime = tick * interval.inSeconds;
+    if (bikeType == BleBikeType.cliffHanger) {
+      // CliffHanger: no lastTheftAlert
       lastTheftAlert = null;
     } else {
-      // MetroBee: no gyro or airtime, allow theft alerts
-      if (tick % 45 == 0 && rand.nextInt(100) < 5) {
-        lastTheftAlert = 1652091600;
-      }
+      // MetroBee: no gyro or airtime
       gyroscope = null;
       totalAirtime = null;
     }
 
-    yield BikeData(
+
+    yield BleBikeData(
       bikeId: bikeId,
       bikeType: bikeType,
       motorRpm: rpm,
@@ -117,7 +116,5 @@ Stream<BikeData> getMockBikeDataReadings({
       gyroscope: gyroscope,
       totalAirtime: totalAirtime,
     );
-
-    tick++;
   }
 }

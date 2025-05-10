@@ -4,6 +4,8 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:hardware_connectivity_repository/hardware_connectivity_repository.dart';
 import 'package:usb_connection_api/usb_connection_api.dart';
 
+import 'network_metadata_provider.dart';
+
 
 final hardwareConnectivityProvider = Provider<HardwareConnectivityRepository>((ref) {
 
@@ -12,7 +14,8 @@ final hardwareConnectivityProvider = Provider<HardwareConnectivityRepository>((r
   return HardwareConnectivityRepository(usbConApi, bleConApi);
 });
 
-final selectedDeviceProvider = StateProvider<String?>((ref) => null);
+final selectedDeviceProvider  = StateProvider<String?>((ref) => null);
+final connectedDeviceProvider = StateProvider<String?>((ref) => null);
 
 /*-------------------------------COMBINED------------------------------------*/
 
@@ -23,9 +26,9 @@ final devicesProvider = StateNotifierProvider<DevicesNotifier, AsyncValue<List<F
 
 class DevicesNotifier extends StateNotifier<AsyncValue<List<FoundDevice>>> {
   final HardwareConnectivityRepository _repo;
-  StreamSubscription<List<FoundDevice>>? _subscription;
+  StreamSubscription<List<FoundDevice>>? _foundDevicesSubscription;
 
-  bool get isScanning => _subscription != null;
+  bool get isScanning => _foundDevicesSubscription != null;
 
   DevicesNotifier(this._repo) : super(const AsyncData([])) {
     _listenToStream();
@@ -40,27 +43,27 @@ class DevicesNotifier extends StateNotifier<AsyncValue<List<FoundDevice>>> {
   }
 
   void startScanning() {
-    if (_subscription != null) return;
+    if (_foundDevicesSubscription != null) return;
 
     _repo.startScanning(); // unified start
     state = const AsyncLoading();
 
-    _subscription = _repo.getCombinedDiscoveredDevicesStream().listen((devices) => state = AsyncData(devices),
+    _foundDevicesSubscription = _repo.getCombinedDiscoveredDevicesStream().listen((devices) => state = AsyncData(devices),
       onError: (e, st) => state = AsyncError(e, st),
     );
   }
 
   void stopScanning() {
     _repo.stopScanning(); // unified stop
-    _subscription?.cancel();
-    _subscription = null;
+    _foundDevicesSubscription?.cancel();
+    _foundDevicesSubscription = null;
     final currentList = state.value ?? [];
     state = AsyncData(currentList);
   }
 
   @override
   void dispose() {
-    _subscription?.cancel();
+    _foundDevicesSubscription?.cancel();
     super.dispose();
   }
 
@@ -75,37 +78,54 @@ class DevicesNotifier extends StateNotifier<AsyncValue<List<FoundDevice>>> {
 /*-------------------------------DATA----------------------------------------*/
 
 final bikeReadingProvider = StateNotifierProvider<BikeReadingNotifier, AsyncValue<BikeReading?>>((ref) {
-  final repository = ref.read(hardwareConnectivityProvider);
-  return BikeReadingNotifier(repository);
-});
+    final repo = ref.watch(hardwareConnectivityProvider);
+    return BikeReadingNotifier(ref, repo);
+  }
+);
 
 class BikeReadingNotifier extends StateNotifier<AsyncValue<BikeReading?>> {
+
+  final Ref ref;
   final HardwareConnectivityRepository repository;
-  StreamSubscription<BikeReading>? _subscription;
+  StreamSubscription<BikeReading>? _bikeReadingSubscription;
+  String? _lastConnectedDevice;
 
-  BikeReadingNotifier(this.repository) : super(const AsyncValue.data(null));
+  bool get isStreaming => _bikeReadingSubscription != null;
 
-  void startBikeReadingListening(String id) {
+  BikeReadingNotifier(this.ref, this.repository) : super(const AsyncValue.data(null));
+
+  void connectDeviceAndStartListening(String id) {
     state = const AsyncValue.loading();
-    _subscription?.cancel();
-    _subscription = repository.getBikeReadingsStreamOverUsb(portAddress: id).listen((reading) {
-        state = AsyncValue.data(reading);
-      },
-      onError: (err, stack) {
-        state = AsyncValue.error(err, stack);
-      },
-    );
+    _bikeReadingSubscription?.cancel();
+    _bikeReadingSubscription = repository.getBikeReadingsStreamOverUsb(portAddress: id).listen((reading) {
+      state = AsyncValue.data(reading);
+
+      final connectedDevice = ref.read(connectedDeviceProvider);
+      final bikeTypeName = reading.bikeModel.name;
+
+      if (connectedDevice != null && connectedDevice != _lastConnectedDevice) {
+        /// Fetch the bikes additional assets and information from backend
+        ref.read(bikeMetadataProvider.notifier).fetchBikeAssets(connectedDevice, bikeTypeName);
+
+        /// Trigger the analytics endpoint for bike connected event
+        final timeStamp = DateTime.now().millisecondsSinceEpoch;
+        ref.read(bikeMetadataProvider.notifier).triggerBikeConnectedEvent(timeStamp.toString(), reading.bikeId.toString(), bikeTypeName);
+
+        _lastConnectedDevice = connectedDevice;
+      }
+    }, onError: (err, stack) {
+          state = AsyncValue.error(err, stack);
+        });
   }
 
   void stopBikeReadingListening() {
-    _subscription?.cancel();
-    _subscription = null;
-    state = const AsyncValue.data(null);
+    _bikeReadingSubscription?.cancel();
+    _bikeReadingSubscription = null;
   }
 
   @override
   void dispose() {
-    _subscription?.cancel();
+    _bikeReadingSubscription?.cancel();
     super.dispose();
   }
 }

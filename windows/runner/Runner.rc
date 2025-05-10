@@ -93,7 +93,7 @@ BEGIN
             VALUE "FileDescription", "porsche_ebike_code_challenge" "\0"
             VALUE "FileVersion", VERSION_AS_STRING "\0"
             VALUE "InternalName", "porsche_ebike_code_challenge" "\0"
-            VALUE "LegalCopyright", "Copyright (C) 2025 com.challenge.caronsale. All rights reserved." "\0"
+            VALUE "LegalCopyright", "Copyright (C) 2025 com.challenge.porsche. All rights reserved." "\0"
             VALUE "OriginalFilename", "porsche_ebike_code_challenge.exe" "\0"
             VALUE "ProductName", "porsche_ebike_code_challenge" "\0"
             VALUE "ProductVersion", VERSION_AS_STRING "\0"

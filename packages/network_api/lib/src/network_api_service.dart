@@ -16,11 +16,12 @@ class NetworkApiService {
   final String baseUrl;
   NetworkApiService({this.baseUrl = "some-mocked-base-url"});
 
-  Future<dynamic> getBikeAssetData(String bikeId, String bikeType, String userId, String token) async {
+  /// Backend endpoint for fetching bike assets data resource
+  Future<dynamic> getBikeAssetData(String bikeId, String bikeType, String userAuthId, String token) async {
     try {
       final queryParams = {'bikeId': bikeId, 'bikeType': bikeType};
       final uri = Uri.https(baseUrl, '/api/bike-asset', queryParams);
-      final headers = {"User": userId, 'Authorization': 'Bearer $token'};
+      final headers = {"User": userAuthId, 'Authorization': 'Bearer $token'};
       final timeOut = const Duration(seconds: 10);
       final response = await MockHttpDataHandler.httpClient.get(uri, headers: headers).timeout(timeOut);
 
@@ -53,7 +54,44 @@ class NetworkApiService {
     }
   }
 
+  /// Backend endpoint for sending bike analytics data
+  Future<bool> triggerBikeConnectedEvent(String timeStamp, String bikeId, String bikeType, String userAuthId, String token) async {
+    try {
 
+      final body = jsonEncode({'timeStamp': timeStamp, 'bikeId': bikeId, 'bikeType': bikeType});
+      final uri = Uri.https(baseUrl, '/api/analytics');
+      final headers = {'Content-Type': 'application/json', "User": userAuthId, 'Authorization': 'Bearer $token'};
+      final timeOut = const Duration(seconds: 10);
+      final loginResponse = await MockHttpDataHandler.httpClient.post(uri, headers: headers, body: body).timeout(timeOut);
+
+      if (loginResponse.statusCode == 200) {
+        return true;
+
+      } else {
+        debugPrint('Error ${loginResponse.statusCode}: ${loginResponse.reasonPhrase}');
+        return false;
+
+      }
+    } on SocketException catch(e) {
+      debugPrint(e.message);
+      throw NetworkException('No Internet connection, please check your network.');
+
+    } on TimeoutException catch(e) {
+      debugPrint(e.message);
+      throw NetworkException('The request took too long to process, please try again shortly.');
+
+    } on HttpException catch(e) {
+      debugPrint(e.message);
+      throw NetworkException('Error loading the data, please try again shortly.');
+
+    } catch (e) {
+      debugPrint(e.toString());
+      throw NetworkException('An unknown error occurred, please try again shortly.');
+
+    }
+  }
+
+  /// Backend endpoint for authenticating the user
   Future<String> postUserLoginData(String credentials) async {
     try {
 

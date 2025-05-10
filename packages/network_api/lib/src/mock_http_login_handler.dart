@@ -28,7 +28,7 @@ class MockHttpLoginHandler {
     final Map<String, dynamic> body = jsonDecode(request.body);
     final String auth = body['auth'];
 
-    // Simulate a checking the user authentication info whether is valid or not
+    /// Simulate a checking the user authentication info whether is valid or not
     final credentialsMatched = true;
     if (credentialsMatched) {
       return Response(jsonEncode({'token': _validToken}), 200);

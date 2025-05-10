@@ -1,50 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'dart:async';
-import 'package:flutter_libserialport/flutter_libserialport.dart';
-import 'package:hardware_connectivity_repository/hardware_connectivity_repository.dart';
-import 'package:intl/intl.dart';
 import '../state/hardware_connectivity_provider.dart';
-import '../state/network_resource_provider.dart';
+import '../state/network_metadata_provider.dart';
+import '../widget/live_indicator.dart';
 
-/*class BikeDashboardScreen extends StatelessWidget {
-  const BikeDashboardScreen({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      theme: ThemeData(
-        primarySwatch: Colors.indigo,
-        hintColor: Colors.grey.shade600,
-        textTheme: TextTheme(
-          headlineSmall: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold, color: Colors.indigo),
-          titleMedium: const TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
-          bodyMedium: const TextStyle(fontSize: 14),
-          bodySmall: TextStyle(fontSize: 12, color: Colors.grey[600]),
-        ),
-        cardTheme: CardTheme(
-          elevation: 4,
-          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
-        ),
-        elevatedButtonTheme: ElevatedButtonThemeData(
-          style: ElevatedButton.styleFrom(
-            padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 12),
-            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
-            textStyle: const TextStyle(fontSize: 16, fontWeight: FontWeight.w600),
-          ),
-        ),
-        outlinedButtonTheme: OutlinedButtonThemeData(
-          style: OutlinedButton.styleFrom(
-            padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 12),
-            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
-            textStyle: const TextStyle(fontSize: 16, fontWeight: FontWeight.w600),
-          ),
-        ),
-      ),
-      home: const BikeInfoFrame(),
-    );
-  }
-}*/
 
 class BikeDashboardScreen extends ConsumerWidget {
   const BikeDashboardScreen({super.key});
@@ -55,19 +14,26 @@ class BikeDashboardScreen extends ConsumerWidget {
     final usbDevicesAsync = ref.watch(devicesProvider);
     final usbNotifier = ref.watch(devicesProvider.notifier);
     final selectedDevice = ref.watch(selectedDeviceProvider);
+    final connectedDevice = ref.watch(connectedDeviceProvider);
     final isScanning = ref.watch(devicesProvider.select((stateNotifier) =>
        stateNotifier is AsyncData && (ref.read(devicesProvider.notifier)).isScanning));
-
+    final isStreaming = ref.watch(bikeReadingProvider.select((stateNotifier) =>
+    stateNotifier is AsyncData && (ref.read(bikeReadingProvider.notifier)).isStreaming));
     final theme = Theme.of(context);
+
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text('PORSCHE eBike Performance Diagnostic'),
-        centerTitle: true,
-        elevation: 0,
-        backgroundColor: theme.primaryColor.withOpacity(0.8),
-        titleTextStyle: const TextStyle(color: Colors.white, fontSize: 22, fontWeight: FontWeight.bold),
-      ),
+          title: const Text(
+            'Porsche eBike Performance Diagnostics Tool',
+            style: TextStyle(
+              color: Colors.black,
+              fontSize: 22,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+          centerTitle: true,
+        ),
       body: Container(margin: EdgeInsets.only(bottom: 8),
         child: Padding(
           padding: const EdgeInsets.all(20.0),
@@ -75,18 +41,18 @@ class BikeDashboardScreen extends ConsumerWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
 
-              /// Discovered Bikes Pane
-              Expanded(
+              /// Discovered Bikes Section
+              Expanded(flex: 3,
                 child: Card(
                   elevation: 8,
                   shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
                   child: Padding(
-                    padding: const EdgeInsets.all(24.0),
+                    padding: const EdgeInsets.all(16.0),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text('Discovered Bikes', style: theme.textTheme.headlineSmall),
-                        const SizedBox(height: 12),
+                        Text('Discovered Bikes', style: TextStyle(fontSize: 22, fontWeight: FontWeight.w800, color: Colors.grey[800])),
+                        const SizedBox(height: 28),
                         Expanded(
                           child: usbDevicesAsync.when(
                             loading: () => const Center(child: CircularProgressIndicator()),
@@ -94,65 +60,97 @@ class BikeDashboardScreen extends ConsumerWidget {
                             data: (devices) {
                               if (devices.isEmpty) {
                                 return const Center(
-                                  child: Text('No USB or BLE devices available, please press Scan to start searching.'),
+                                  child: Text('No devices available, please press Scan to start searching.'),
                                 );
                               }
 
-                              return ListView.builder(
+                              return ListView.separated(
                                 itemCount: devices.length,
+                                separatorBuilder: (context, index) => const Divider(thickness: 0.2, height: 0, color: Colors.grey),
+                                padding: EdgeInsets.symmetric(vertical: 0),
                                 itemBuilder: (context, index) {
                                   final item = devices[index];
                                   final deviceId = item.deviceId;
                                   final isSelected = selectedDevice == deviceId;
 
-                                  return ListTile(
-                                    title: Text(item.deviceName ?? 'Unknown'),
-                                    trailing: Text(item.connectionType?.value ?? 'N/A'),
-                                    tileColor: isSelected ? theme.primaryColor.withOpacity(0.2) : null,
-                                    onTap: () {
-                                      ref.read(selectedDeviceProvider.notifier).state = deviceId;
-                                    },
+                                  return Container(
+                                    margin: const EdgeInsets.symmetric(vertical: 4, horizontal: 8),
+                                    decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(8),
+                                      color: isSelected ? theme.primaryColor.withOpacity(0.2) : null,
+                                    ),
+                                    child: ListTile(
+                                      contentPadding: const EdgeInsets.symmetric(horizontal: 6, vertical: 0),
+                                      leading: Text(item.deviceName ?? 'Unknown', style: const TextStyle(fontSize: 13, fontWeight: FontWeight.w400)),
+                                      trailing: Text(item.connectionType?.value ?? 'N/A', style: const TextStyle(fontSize: 12, fontWeight: FontWeight.w300)),
+                                      onTap: () {
+                                        ref.read(selectedDeviceProvider.notifier).state = deviceId;
+                                      },
+                                    ),
                                   );
                                 },
                               );
+
                             },
                           ),
                         ),
                         const SizedBox(height: 12),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceAround,
+                        Column(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
 
-                            ElevatedButton(
-                              onPressed: selectedDevice != null ? () {
+                            SizedBox(width: double.infinity,
+                              child: ElevatedButton(
+                                  style: ElevatedButton.styleFrom(elevation: 12, shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(8.0)
+                                  )),
+                                onPressed: selectedDevice != null ? () {
 
-                                ref.read(bikeReadingProvider.notifier).startBikeReadingListening(selectedDevice);
+                                  if(selectedDevice != connectedDevice){
+                                    /// Let's connect the device and start reading data stream
+                                    ref.read(bikeReadingProvider.notifier).connectDeviceAndStartListening(selectedDevice);
+                                    /// Set the device as connected, which means disconnect others
+                                    ref.read(connectedDeviceProvider.notifier).state = selectedDevice;
 
-                                //reading.bikeType.name
-                                //todo
-                                ref.read(bikeMetadataProvider.notifier).fetch(selectedDevice, 'CliffHanger');
+                                  } else {
+                                    /// Let's disconnect from the device
+                                    /// Stop the data stream but still show tha last data reading on the center pane
+                                    ref.watch(bikeReadingProvider.notifier).stopBikeReadingListening();
+                                    ref.read(connectedDeviceProvider.notifier).state = null;
+                                  }
 
-                              } : null,
-                              child: Text('Connect / Disconnect')
+
+                                } : null,
+                                child: Text((selectedDevice == connectedDevice && selectedDevice != null) ? 'Disconnect' : 'Connect')
+                              ),
                             ),
 
-                            ElevatedButton.icon(
-                              onPressed: () {
-                                usbNotifier.toggleScanning();
-                                if (!isScanning) {
-                                  ScaffoldMessenger.of(context).showSnackBar(
-                                    const SnackBar(content: Text('Scanning for new bikes...')),
-                                  );
-                                }
-                              },
-                              icon: isScanning ? const SizedBox(
-                                height: 16,
-                                width: 16,
-                                child: CircularProgressIndicator(strokeWidth: 2.0),
-                              )
-                                  : const Icon(Icons.usb),
-                              label: Text(isScanning ? 'Stop' : 'Scan'),
-                            )
+                            SizedBox(height: 12),
+
+                            SizedBox(width: double.infinity,
+                              child: ElevatedButton.icon(
+                                  style: ElevatedButton.styleFrom(elevation: 12, shape: RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.circular(8.0)
+                                  )),
+                                onPressed: () {
+                                  usbNotifier.toggleScanning();
+                                  if (!isScanning) {
+                                    ScaffoldMessenger.of(context).showSnackBar(
+                                      const SnackBar(content: Text('Scanning for new bikes...')),
+                                    );
+                                  }
+                                },
+                                icon: isScanning ? const SizedBox(
+                                  height: 16,
+                                  width: 16,
+                                  child: CircularProgressIndicator(strokeWidth: 2.0),
+                                )
+                                    : Row (children: [const Icon(Icons.usb), const SizedBox(width: 4), const Icon(Icons.bluetooth)]),
+                                label: Text(isScanning ? 'Stop' : 'Scan')
+                              ),
+                            ),
+
+                            SizedBox(height: 12)
                           ],
                         ),
                       ],
@@ -161,20 +159,31 @@ class BikeDashboardScreen extends ConsumerWidget {
                 ),
               ),
 
-              const SizedBox(width: 16),
+              const SizedBox(width: 12),
 
               /// Bike Readings Section
-              Expanded(
+              Expanded(flex: 3,
                 child: Card(
                   elevation: 8,
                   shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
                   child: Padding(
-                    padding: const EdgeInsets.all(24.0),
+                    padding: const EdgeInsets.all(16.0),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text('Bike Readings', style: theme.textTheme.headlineSmall),
-                        const SizedBox(height: 12),
+                        Row(
+                          children: [
+                            Text('Bike Readings', style: TextStyle(fontSize: 22, fontWeight: FontWeight.w800, color: Colors.grey[800])),
+                            Spacer(),
+
+                            /// Live indicator shown only if we have a reading
+                            ref.watch(bikeReadingProvider).maybeWhen(
+                              data: (reading) => reading != null ? LiveIndicator(isLive: isStreaming) : const SizedBox.shrink(),
+                              orElse: () => const SizedBox.shrink(),
+                            ),
+                          ],
+                        ),
+                        const SizedBox(height: 30),
                         ref.watch(bikeReadingProvider).when(
                           data: (reading) {
                             if (reading == null) {
@@ -183,28 +192,32 @@ class BikeDashboardScreen extends ConsumerWidget {
 
                             final readingMap = {
                               'Bike ID': reading.bikeId,
-                              'Model': reading.bikeType.name,
+                              'Bike Model': reading.bikeModel.name,
+                              'State of Charge': '${reading.batteryCharge} %',
                               'Motor RPM': reading.motorRpm.toString(),
-                              'Battery Charge': '${reading.batteryCharge}%',
-                              'Odometer': '${reading.odoMeterKm} km',
-                              'Last Error': reading.lastError,
+                              'ODOMeter': '${reading.odoMeterKm} km',
+                              'Last Know Error': reading.lastError,
                               if (reading.lastTheftAlert != null)
-                                'Theft Alert': reading.lastTheftAlert!,
+                                'Last Anti-Theft Alert': reading.lastTheftAlert!,
+                              if (reading.gyroscope != null)
+                                'Gyroscope': 'x: ${reading.gyroscope![0]}, y: ${reading.gyroscope![1]}, z: ${reading.gyroscope![2]}',
+                              if (reading.totalAirtime != null)
+                                'Total Air-Time (s)': reading.totalAirtime!,
                             };
 
                             return ListView.separated(
                               shrinkWrap: true,
                               physics: const NeverScrollableScrollPhysics(),
                               itemCount: readingMap.length,
-                              separatorBuilder: (context, index) => const Divider(height: 16),
+                              separatorBuilder: (context, index) => const Divider(thickness: 0.2, height: 22, color: Colors.grey),
                               itemBuilder: (context, index) {
                                 final key = readingMap.keys.elementAt(index);
                                 final value = readingMap.values.elementAt(index);
                                 return Row(
                                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                   children: [
-                                    Text(key, style: theme.textTheme.titleMedium),
-                                    Text(value.toString(), style: theme.textTheme.bodyMedium),
+                                    Text(key, style: theme.textTheme.bodyMedium),
+                                    Text(value.toString(), style: theme.textTheme.titleMedium),
                                   ],
                                 );
                               },
@@ -212,23 +225,22 @@ class BikeDashboardScreen extends ConsumerWidget {
                           },
                           loading: () => const Expanded(child: Center(child: CircularProgressIndicator())),
                           error: (err, stack) => Text('Failed to get readings: $err'),
-                        ),
+                        )
                       ],
                     ),
                   ),
                 ),
               ),
 
-
-              const SizedBox(width: 16),
+              const SizedBox(width: 12),
 
               /// Model Overview Section
-              Expanded(
+              Expanded(flex: 5,
                 child: Card(
                   elevation: 8,
                   shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
                   child: Padding(
-                    padding: const EdgeInsets.all(24.0),
+                    padding: const EdgeInsets.all(16.0),
                     child: ref.watch(bikeMetadataProvider).when(
                       data: (bikeData) {
                         if (bikeData == null) return const Text('Select a bike and press Connect.');
@@ -236,15 +248,15 @@ class BikeDashboardScreen extends ConsumerWidget {
                         return Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Text('Model Overview', style: theme.textTheme.headlineSmall),
-                            const SizedBox(height: 12),
+                            Text('Model Overview', style: TextStyle(fontSize: 22, fontWeight: FontWeight.w800, color: Colors.grey[800])),
+                            const SizedBox(height: 22),
                             Text(
-                              bikeData.resourceId.toString(),//todo
-                              style: theme.textTheme.headlineSmall?.copyWith(color: theme.primaryColor),
+                              bikeData.bikeModel,
+                              style: TextStyle(fontSize: 18, fontWeight: FontWeight.w600, color: Colors.black),
                             ),
-                            const SizedBox(height: 8),
+                            const SizedBox(height: 22),
                             Text(bikeData.bikeDescription, style: theme.textTheme.bodyMedium),
-                            const SizedBox(height: 20),
+                            const SizedBox(height: 30),
                             AspectRatio(
                               aspectRatio: 16 / 9,
                               child: Container(

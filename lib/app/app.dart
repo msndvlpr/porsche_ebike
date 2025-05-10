@@ -1,6 +1,7 @@
 import 'package:authentication_repository/authentication_repository.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:porsche_ebike_code_challenge/bike_dashboard/view/bike_dashboard_screen.dart';
 import 'package:secure_storage_api/secure_storage_api.dart';
 
 import '../theme/app_theme.dart';
@@ -34,7 +35,7 @@ class App extends ConsumerWidget {
             theme: AppTheme.lightTheme,
             darkTheme: AppTheme.darkTheme,
             themeMode: themeMode,
-            home: LoginScreen()
+            home: BikeDashboardScreen()//todo: LoginScreen()
         );
   }
 }

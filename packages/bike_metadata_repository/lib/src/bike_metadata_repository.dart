@@ -17,7 +17,7 @@ class BikeMetadataRepository {
 
   Future<BikeAssetData> getBikeMetadataById(String bikeId, String bikeType) async {
 
-    // Retrieve already stored user id and network token from local storage for authorised backend communication
+    /// Retrieve already stored user id and network token from local storage for authorised backend communication
     final userId = await _secureStorageApi.read(storageKeyUserId);
     final token = await _secureStorageApi.read(storageKeyToken);
 
@@ -25,7 +25,24 @@ class BikeMetadataRepository {
       final data = await _networkApiService.getBikeAssetData(bikeId, bikeType, userId!, token!);
       return data;
 
-    } on NetworkException catch (e) {
+    } on NetworkException {
+      rethrow;
+
+    } catch (e) {
+      rethrow;
+    }
+  }
+
+  Future<bool> triggerBikeConnectedEvent(String timeStamp, String bikeId, String bikeType) async {
+
+    final userId = await _secureStorageApi.read(storageKeyUserId);
+    final token = await _secureStorageApi.read(storageKeyToken);
+
+    try {
+      final data = await _networkApiService.triggerBikeConnectedEvent(timeStamp, bikeId, bikeType, userId!, token!);
+      return data;
+
+    } on NetworkException {
       rethrow;
 
     } catch (e) {

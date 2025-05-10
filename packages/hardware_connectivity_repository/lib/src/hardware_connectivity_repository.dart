@@ -1,5 +1,6 @@
 import 'package:bluetooth_connection_api/bluetooth_connection_api.dart';
 import 'package:hardware_connectivity_repository/src/model/bike_reading.dart';
+import 'package:intl/intl.dart';
 import 'package:usb_connection_api/usb_connection_api.dart';
 import 'model/found_device.dart';
 import 'package:rxdart/rxdart.dart';
@@ -21,8 +22,7 @@ class HardwareConnectivityRepository {
         return FoundDevice(
           connectionType: DeviceType.usb,
           deviceName: usbPort.productName ?? usbPort.description ?? 'Unknown Device',
-          deviceId: usbPort.name, // device unique port address
-          connected: false
+          deviceId: usbPort.name // device unique port address
         );
       }).toList();
     });
@@ -38,41 +38,47 @@ class HardwareConnectivityRepository {
     _usbConnectionApi.stopScanning();
   }
 
-  /// Get data readings from a USB device via stream
+  /// Get real time data readings from a USB device via stream
   Stream<BikeReading> getBikeReadingsStreamOverUsb({required String portAddress}) {
     return _usbConnectionApi.getBikeReadingsDataStream(usbPortAddress: portAddress).map((bikeData) {
       return BikeReading(
         bikeId: bikeData.bikeId,
-        bikeType: _mapBikeTypeToModel(bikeData.bikeType),
+        bikeModel: bikeData.bikeType.value == 'CliffHanger' ? BikeModel.cliffHanger : BikeModel.metroBee,
         motorRpm: bikeData.motorRpm,
         batteryCharge: bikeData.batteryCharge,
         odoMeterKm: (bikeData.odoMeter / 1000).toStringAsFixed(3),
         lastError: bikeData.lastError,
         lastTheftAlert: bikeData.lastTheftAlert != null ?
-        DateTime.fromMillisecondsSinceEpoch(bikeData.lastTheftAlert! * 1000,
-          isUtc: true,
-        )
-            : null,
+        DateFormat('yyyy.MM.dd HH:mm').format(DateTime.fromMillisecondsSinceEpoch(bikeData.lastTheftAlert! * 1000, isUtc: true)) : null,
         gyroscope: bikeData.gyroscope,
         totalAirtime: bikeData.totalAirtime,
       );
     });
   }
 
-  BikeModel _mapBikeTypeToModel(BikeType type) {
-    switch (type) {
-      case BikeType.cliffHanger:
-        return BikeModel.cliffHanger;
-      case BikeType.metroBee:
-        return BikeModel.metroBee;
-      }
-  }
+  /*-------------------------------BLE---------------------------------------*/
 
-  /*-------------------------------BLE----------------------------------------*/
+  /// Get real time data readings from a BLE device via stream
+  Stream<BikeReading> getBikeReadingsStreamOverBle({required String address}) {
+    return _bluetoothConnectionApi.getBikeReadingsDataStreamOverBle(bleDeviceAddress: address).map((bikeData) {
+      return BikeReading(
+        bikeId: bikeData.bikeId,
+        bikeModel: bikeData.bikeType.value == 'CliffHanger' ? BikeModel.cliffHanger : BikeModel.metroBee,
+        motorRpm: bikeData.motorRpm,
+        batteryCharge: bikeData.batteryCharge,
+        odoMeterKm: (bikeData.odoMeter / 1000).toStringAsFixed(3),
+        lastError: bikeData.lastError,
+        lastTheftAlert: bikeData.lastTheftAlert != null ?
+        DateFormat('yyyy.MM.dd HH:mm').format(DateTime.fromMillisecondsSinceEpoch(bikeData.lastTheftAlert! * 1000, isUtc: true)) : null,
+        gyroscope: bikeData.gyroscope,
+        totalAirtime: bikeData.totalAirtime,
+      );
+    });
+  }
 
   /// Get a stream of discovered BLE devices
   Stream<List<FoundDevice>> getDiscoveredDevicesStreamBle() {
-    final stream = _bluetoothConnectionApi.getBluetoothDeviceStream();
+    final stream = _bluetoothConnectionApi.getBluetoothDevicesStream();
 
     return stream.map((scanResults) {
       return scanResults
@@ -81,8 +87,7 @@ class HardwareConnectivityRepository {
         return FoundDevice(
           connectionType: DeviceType.ble,
           deviceName: scanResult.device.platformName,
-          deviceId: scanResult.device.remoteId.str,
-          connected: false,
+          deviceId: scanResult.device.remoteId.str
         );
       }).toList();
     });
@@ -100,7 +105,7 @@ class HardwareConnectivityRepository {
 
   /*-------------------------------COMBINED-----------------------------------*/
 
-  /// Combined stream of USB + BLE discovered devices
+  /// Combined stream of USB + BLE data readings
   Stream<List<FoundDevice>> getCombinedDiscoveredDevicesStream() {
     return Rx.combineLatest2<List<FoundDevice>, List<FoundDevice>, List<FoundDevice>>(
       getDiscoveredDevicesStreamUsb(),
