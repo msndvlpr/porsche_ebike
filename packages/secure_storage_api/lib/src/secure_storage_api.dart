@@ -14,8 +14,4 @@ class SecureStorageApi {
   Future<void> write(String key, String value) async {
     await _flutterSecureStorage.write(key: key, value: value);
   }
-
-  Future<void> clearAll() async {
-    await _flutterSecureStorage.deleteAll();
-  }
 }

@@ -1,70 +1,57 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:mocktail/mocktail.dart';
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:secure_storage_api/secure_storage_api.dart';
 
-class MockFlutterSecureStorage extends Mock implements FlutterSecureStorage {}
+
+class FakeFlutterSecureStorage implements FlutterSecureStorage {
+  final Map<String, String> _storage = {};
+
+  @override
+  Future<String?> read({required String key, IOSOptions? iOptions, AndroidOptions? aOptions,
+    LinuxOptions? lOptions, WebOptions? webOptions, MacOsOptions? mOptions, WindowsOptions? wOptions}) async {
+    return _storage[key];
+  }
+
+  @override
+  Future<void> write({required String key, required String? value, IOSOptions? iOptions, AndroidOptions? aOptions,
+    LinuxOptions? lOptions, WebOptions? webOptions, MacOsOptions? mOptions, WindowsOptions? wOptions}) async {
+    if (value != null) {
+      _storage[key] = value;
+    }
+  }
+
+  // The rest of the interface is not used in your implementation, so you can throw UnimplementedError
+  @override
+  noSuchMethod(Invocation invocation) => super.noSuchMethod(invocation);
+}
 
 void main() {
+  group('SecureStorageApi', () {
+    late SecureStorageApi secureStorageApi;
+    late FakeFlutterSecureStorage fakeStorage;
 
-  late MockFlutterSecureStorage mockStorage;
-  late SecureStorageApi secureStorageApi;
-
-  setUp(() {
-    mockStorage = MockFlutterSecureStorage();
-    secureStorageApi = SecureStorageApi(flutterSecureStorage: mockStorage);
-  });
-
-  group('read', (){
-
-    test('GIVEN SecureStorageApi as the local storage api WHEN key is given and data already stored in THEN should retrieve data successfully', () async {
-      const key = 'testKey';
-      const value = 'testValue';
-      when(() => mockStorage.read(key: key)).thenAnswer((_) async => value);
-
-      final result = await secureStorageApi.read(key);
-
-      expect(result, equals(value));
-      verify(() => mockStorage.read(key: key)).called(1);
+    setUp(() {
+      fakeStorage = FakeFlutterSecureStorage();
+      secureStorageApi = SecureStorageApi(flutterSecureStorage: fakeStorage);
     });
 
-    test('GIVEN SecureStorageApi as the local storage api WHEN key is given and data doesnt exist THEN should return null', () async {
-      const key = 'testKey';
-      when(() => mockStorage.read(key: key)).thenAnswer((_) async => null);
+    test('write() stores value in secure storage', () async {
+      await secureStorageApi.write('token', '123abc');
 
-      final result = await secureStorageApi.read(key);
+      final value = await fakeStorage.read(key: 'token');
+      expect(value, '123abc');
+    });
 
+    test('read() retrieves value from secure storage', () async {
+      await fakeStorage.write(key: 'username', value: 'mohsen');
+
+      final result = await secureStorageApi.read('username');
+      expect(result, 'mohsen');
+    });
+
+    test('read() returns null for non-existent key', () async {
+      final result = await secureStorageApi.read('nonexistent');
       expect(result, isNull);
-      verify(() => mockStorage.read(key: key)).called(1);
-    });
-
-  });
-
-  group('write', (){
-
-    test('GIVEN SecureStorageApi as the local storage api WHEN key and data are given THEN should store data successfully', () async {
-      const key = 'testKey';
-      const value = 'testValue';
-      when(() => mockStorage.write(key: key, value: value)).thenAnswer((_) async {});
-
-      await secureStorageApi.write(key, value);
-
-      verify(() => mockStorage.write(key: key, value: value)).called(1);
     });
   });
-
-  group('clearAll', (){
-
-    test('GIVEN SecureStorageApi as the local storage api WHEN key is given and some data already stored in THEN should remove all data', () async {
-      when(() => mockStorage.deleteAll()).thenAnswer((_) async {});
-
-      await secureStorageApi.clearAll();
-
-      verify(() => mockStorage.deleteAll()).called(1);
-    });
-  });
-
-
-
-
 }
