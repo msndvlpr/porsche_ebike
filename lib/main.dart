@@ -9,6 +9,7 @@ import 'package:secure_storage_api/secure_storage_api.dart';
 import 'app/app.dart';
 import 'app/observers.dart';
 
+
 Future<void> main() async {
 
   WidgetsFlutterBinding.ensureInitialized();
@@ -26,20 +27,12 @@ Future<void> main() async {
     return true;
   };
 
-  //final auctionRepository = AuctionRepository();
-  final authenticationRepository = AuthenticationRepository();
-  final secureStorageApi = SecureStorageApi();
-
 
   runApp(ProviderScope(
     observers: [
       Observers()
     ],
-    child: App(
-        //auctionRepository: auctionRepository,
-        authenticationRepository: authenticationRepository,
-        secureStorageApi: secureStorageApi),
-  ));
+    child: App()));
 }
 
 

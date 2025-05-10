@@ -7,9 +7,12 @@ import 'mock_usb_data_generator.dart';
 
 
 class UsbConnectionApi {
+  final Stream<UsbBikeData> Function({required int bikeId}) getBikeDataReadings;
+
+  UsbConnectionApi({Stream<UsbBikeData> Function({required int bikeId})? getBikeDataReadings})
+      : getBikeDataReadings = getBikeDataReadings ?? getMockBikeDataReadings;
 
   bool _scanning = false;
-
   void startScanning() => _scanning = true;
   void stopScanning() => _scanning = false;
 
@@ -110,7 +113,7 @@ class UsbConnectionApi {
     /// todo: connectToUsbDeviceByAddress(usbPortAddress);
 
     final id = stringToFixedDigitInt(usbPortAddress);
-    final stream = getMockBikeDataReadings(bikeId: id);
+    final stream = getBikeDataReadings(bikeId: id);
 
     UsbBikeData? previous;
 

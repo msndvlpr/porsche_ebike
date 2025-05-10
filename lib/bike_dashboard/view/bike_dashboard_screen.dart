@@ -23,11 +23,11 @@ class BikeDashboardScreen extends ConsumerWidget {
 
 
     return Scaffold(
-      appBar: AppBar(
-          title: const Text(
+      appBar: AppBar(backgroundColor: theme.colorScheme.primary.withAlpha(140),
+          title: Text(
             'Porsche eBike Performance Diagnostics Tool',
             style: TextStyle(
-              color: Colors.black,
+              color: Colors.grey[900],
               fontSize: 22,
               fontWeight: FontWeight.bold,
             ),
@@ -101,7 +101,7 @@ class BikeDashboardScreen extends ConsumerWidget {
 
                             SizedBox(width: double.infinity,
                               child: ElevatedButton(
-                                  style: ElevatedButton.styleFrom(elevation: 12, shape: RoundedRectangleBorder(
+                                  style: ElevatedButton.styleFrom(elevation: 6, shape: RoundedRectangleBorder(
                                     borderRadius: BorderRadius.circular(8.0)
                                   )),
                                 onPressed: selectedDevice != null ? () {
@@ -129,7 +129,7 @@ class BikeDashboardScreen extends ConsumerWidget {
 
                             SizedBox(width: double.infinity,
                               child: ElevatedButton.icon(
-                                  style: ElevatedButton.styleFrom(elevation: 12, shape: RoundedRectangleBorder(
+                                  style: ElevatedButton.styleFrom(elevation: 6, shape: RoundedRectangleBorder(
                                       borderRadius: BorderRadius.circular(8.0)
                                   )),
                                 onPressed: () {
@@ -184,47 +184,52 @@ class BikeDashboardScreen extends ConsumerWidget {
                           ],
                         ),
                         const SizedBox(height: 30),
-                        ref.watch(bikeReadingProvider).when(
-                          data: (reading) {
-                            if (reading == null) {
-                              return const Text('No data received yet.');
-                            }
+                        Expanded(
+                          child: ref.watch(bikeReadingProvider).when(
+                            data: (reading) {
+                              if (reading == null) {
+                                return Column(mainAxisAlignment: MainAxisAlignment.center ,children: [
+                                  Center(child: Text('No data received yet.')),
+                                  SizedBox(height: 70)
+                                ],);
+                              }
 
-                            final readingMap = {
-                              'Bike ID': reading.bikeId,
-                              'Bike Model': reading.bikeModel.name,
-                              'State of Charge': '${reading.batteryCharge} %',
-                              'Motor RPM': reading.motorRpm.toString(),
-                              'ODOMeter': '${reading.odoMeterKm} km',
-                              'Last Know Error': reading.lastError,
-                              if (reading.lastTheftAlert != null)
-                                'Last Anti-Theft Alert': reading.lastTheftAlert!,
-                              if (reading.gyroscope != null)
-                                'Gyroscope': 'x: ${reading.gyroscope![0]}, y: ${reading.gyroscope![1]}, z: ${reading.gyroscope![2]}',
-                              if (reading.totalAirtime != null)
-                                'Total Air-Time (s)': reading.totalAirtime!,
-                            };
+                              final readingMap = {
+                                'Bike ID': reading.bikeId,
+                                'Bike Model': reading.bikeModel.name,
+                                'State of Charge': '${reading.batteryCharge} %',
+                                'Motor RPM': reading.motorRpm.toString(),
+                                'ODOMeter': '${reading.odoMeterKm} km',
+                                'Last Know Error': reading.lastError,
+                                if (reading.lastTheftAlert != null)
+                                  'Last Anti-Theft Alert': reading.lastTheftAlert!,
+                                if (reading.gyroscope != null)
+                                  'Gyroscope': 'x: ${reading.gyroscope![0]}, y: ${reading.gyroscope![1]}, z: ${reading.gyroscope![2]}',
+                                if (reading.totalAirtime != null)
+                                  'Total Air-Time (s)': reading.totalAirtime!,
+                              };
 
-                            return ListView.separated(
-                              shrinkWrap: true,
-                              physics: const NeverScrollableScrollPhysics(),
-                              itemCount: readingMap.length,
-                              separatorBuilder: (context, index) => const Divider(thickness: 0.2, height: 22, color: Colors.grey),
-                              itemBuilder: (context, index) {
-                                final key = readingMap.keys.elementAt(index);
-                                final value = readingMap.values.elementAt(index);
-                                return Row(
-                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                  children: [
-                                    Text(key, style: theme.textTheme.bodyMedium),
-                                    Text(value.toString(), style: theme.textTheme.titleMedium),
-                                  ],
-                                );
-                              },
-                            );
-                          },
-                          loading: () => const Expanded(child: Center(child: CircularProgressIndicator())),
-                          error: (err, stack) => Text('Failed to get readings: $err'),
+                              return ListView.separated(
+                                shrinkWrap: true,
+                                physics: const NeverScrollableScrollPhysics(),
+                                itemCount: readingMap.length,
+                                separatorBuilder: (context, index) => const Divider(thickness: 0.2, height: 22, color: Colors.grey),
+                                itemBuilder: (context, index) {
+                                  final key = readingMap.keys.elementAt(index);
+                                  final value = readingMap.values.elementAt(index);
+                                  return Row(
+                                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                    children: [
+                                      Text(key, style: theme.textTheme.bodyMedium),
+                                      Text(value.toString(), style: theme.textTheme.titleSmall),
+                                    ],
+                                  );
+                                },
+                              );
+                            },
+                            loading: () => const Expanded(child: Center(child: CircularProgressIndicator())),
+                            error: (err, stack) => Text('Failed to get readings: $err'),
+                          ),
                         )
                       ],
                     ),
@@ -241,40 +246,42 @@ class BikeDashboardScreen extends ConsumerWidget {
                   shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
                   child: Padding(
                     padding: const EdgeInsets.all(16.0),
-                    child: ref.watch(bikeMetadataProvider).when(
-                      data: (bikeData) {
-                        if (bikeData == null) return const Text('Select a bike and press Connect.');
+                    child: Expanded(
+                      child: ref.watch(bikeMetadataProvider).when(
+                        data: (bikeData) {
+                          if (bikeData == null) return Center(child: const Text('Select a bike and press Connect.'));
 
-                        return Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text('Model Overview', style: TextStyle(fontSize: 22, fontWeight: FontWeight.w800, color: Colors.grey[800])),
-                            const SizedBox(height: 22),
-                            Text(
-                              bikeData.bikeModel,
-                              style: TextStyle(fontSize: 18, fontWeight: FontWeight.w600, color: Colors.black),
-                            ),
-                            const SizedBox(height: 22),
-                            Text(bikeData.bikeDescription, style: theme.textTheme.bodyMedium),
-                            const SizedBox(height: 30),
-                            AspectRatio(
-                              aspectRatio: 16 / 9,
-                              child: Container(
-                                decoration: BoxDecoration(
-                                  border: Border.all(color: Colors.grey.shade300),
-                                  borderRadius: BorderRadius.circular(8),
-                                  image: DecorationImage(
-                                    image: NetworkImage(bikeData.bikeImageUrl),
-                                    fit: BoxFit.cover,
+                          return Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text('Model Overview', style: TextStyle(fontSize: 22, fontWeight: FontWeight.w800, color: Colors.grey[800])),
+                              const SizedBox(height: 22),
+                              Text(
+                                bikeData.bikeModel,
+                                style: TextStyle(fontSize: 18, fontWeight: FontWeight.w600, color: Colors.black),
+                              ),
+                              const SizedBox(height: 22),
+                              Text(bikeData.bikeDescription, style: theme.textTheme.bodyMedium),
+                              const SizedBox(height: 30),
+                              AspectRatio(
+                                aspectRatio: 16 / 9,
+                                child: Container(
+                                  decoration: BoxDecoration(
+                                    border: Border.all(color: Colors.grey.shade300),
+                                    borderRadius: BorderRadius.circular(8),
+                                    image: DecorationImage(
+                                      image: NetworkImage(bikeData.bikeImageUrl),
+                                      fit: BoxFit.cover,
+                                    ),
                                   ),
                                 ),
                               ),
-                            ),
-                          ],
-                        );
-                      },
-                      loading: () => const Center(child: CircularProgressIndicator()),
-                      error: (err, st) => Center(child: Text('Failed to load metadata: $err')),
+                            ],
+                          );
+                        },
+                        loading: () => const Center(child: CircularProgressIndicator()),
+                        error: (err, st) => Center(child: Text('Failed to load metadata: $err')),
+                      ),
                     ),
                   ),
                 ),

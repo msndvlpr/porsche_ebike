@@ -441,9 +441,9 @@
     },
     {
       "name": "intl",
-      "rootUri": "file:///Users/arefeh/.pub-cache/hosted/pub.dev/intl-0.20.2",
+      "rootUri": "file:///Users/arefeh/.pub-cache/hosted/pub.dev/intl-0.18.1",
       "packageUri": "lib/",
-      "languageVersion": "3.3"
+      "languageVersion": "2.12"
     },
     {
       "name": "io",
@@ -938,7 +938,7 @@
       "languageVersion": "3.6"
     }
   ],
-  "generated": "2025-05-09T16:55:03.023056Z",
+  "generated": "2025-05-10T05:36:56.124983Z",
   "generator": "pub",
   "generatorVersion": "3.7.2",
   "flutterRoot": "file:///Users/arefeh/Downloads/flutter",

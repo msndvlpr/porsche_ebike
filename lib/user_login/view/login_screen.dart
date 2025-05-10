@@ -39,22 +39,26 @@ class UserAuthenticationScreenState extends ConsumerState<LoginScreen> {
     final authState = ref.watch(userAuthProvider);
     final isObscure = ref.watch(obscurePasswordProvider);
 
-    // Listen to userAuthProvider for state changes
-    ref.listen<UserAuthState>(userAuthProvider, (previous, current) {
-      if (current is UserAuthDataStateSuccess) {
-        _usernameController.clear();
-        _passwordController.clear();
-        ScaffoldMessenger.of(context).clearSnackBars();
+    ref.listen<AsyncValue<String>>(userAuthProvider, (previous, next) {
+      next.whenOrNull(
+        data: (_) {
+          _usernameController.clear();
+          _passwordController.clear();
+          ScaffoldMessenger.of(context).clearSnackBars();
 
-        Navigator.of(context).pushReplacement(
-          MaterialPageRoute(builder: (_) => BikeDashboardScreen()),
-        );
-      } else if (current is UserAuthDataStateFailure) {
-        ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(content: Text(current.errorMessage)),
-        );
-      }
+          Navigator.of(context).pushReplacement(
+            MaterialPageRoute(builder: (_) => BikeDashboardScreen()),
+          );
+        },
+        error: (err, _) {
+          ScaffoldMessenger.of(context).showSnackBar(
+            SnackBar(content: Text(err.toString())),
+          );
+        },
+      );
     });
+
+
 
     return Scaffold(
       body: Center(
@@ -76,11 +80,6 @@ class UserAuthenticationScreenState extends ConsumerState<LoginScreen> {
                         Text(
                           "User Authentication:",
                           style: Theme.of(context).textTheme.headlineSmall,
-                        ),
-                        const SizedBox(height: 24),
-                        Text(
-                          "You need to log in once, the next time you'll be signed in automatically.",
-                          style: Theme.of(context).textTheme.bodySmall,
                         ),
                         const SizedBox(height: 26),
                         // Username Field
@@ -113,7 +112,7 @@ class UserAuthenticationScreenState extends ConsumerState<LoginScreen> {
                         ),
                         const SizedBox(height: 20),
                         // Login Button
-                        authState is UserAuthDataStateLoading
+                        authState.isLoading
                             ? CircularProgressIndicator(color: Theme.of(context).colorScheme.primary)
                             : ElevatedButton(
                           onPressed: _submit,
