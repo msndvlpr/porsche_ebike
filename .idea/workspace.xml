@@ -9,13 +9,33 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8ed2c952-683f-4e19-b9f3-80980f90de14" name="Changes" comment="fix some bugs and implement unit tests">
-      <change beforePath="$PROJECT_DIR$/.dart_tool/package_config.json" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/package_config.json" afterDir="false" />
+    <list default="true" id="8ed2c952-683f-4e19-b9f3-80980f90de14" name="Changes" comment="some improvements">
+      <change afterPath="$PROJECT_DIR$/packages/bluetooth_connection_api/test/bluetooth_connection_api_test.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/hardware_connectivity_repository/test/hardware_connectivity_repository_test.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.flutter-plugins-dependencies" beforeDir="false" afterPath="$PROJECT_DIR$/.flutter-plugins-dependencies" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/bike_dashboard/view/bike_dashboard_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/bike_dashboard/view/bike_dashboard_screen.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/user_login/state/user_login_provider.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/user_login/state/user_login_provider.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/macos/Flutter/ephemeral/FlutterInputs.xcfilelist" beforeDir="false" afterPath="$PROJECT_DIR$/macos/Flutter/ephemeral/FlutterInputs.xcfilelist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/authentication_repository/.dart_tool/package_config.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/authentication_repository/.dart_tool/package_config.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/authentication_repository/.dart_tool/package_config_subset" beforeDir="false" afterPath="$PROJECT_DIR$/packages/authentication_repository/.dart_tool/package_config_subset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/authentication_repository/.dart_tool/version" beforeDir="false" afterPath="$PROJECT_DIR$/packages/authentication_repository/.dart_tool/version" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/authentication_repository/.flutter-plugins" beforeDir="false" afterPath="$PROJECT_DIR$/packages/authentication_repository/.flutter-plugins" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/authentication_repository/.flutter-plugins-dependencies" beforeDir="false" afterPath="$PROJECT_DIR$/packages/authentication_repository/.flutter-plugins-dependencies" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/authentication_repository/build/test_cache/build/cache.dill.track.dill" beforeDir="false" afterPath="$PROJECT_DIR$/packages/authentication_repository/build/test_cache/build/cache.dill.track.dill" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/authentication_repository/test/authentication_repository_test.dart" beforeDir="false" afterPath="$PROJECT_DIR$/packages/authentication_repository/test/authentication_repository_test.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/bike_metadata_repository/.flutter-plugins" beforeDir="false" afterPath="$PROJECT_DIR$/packages/bike_metadata_repository/.flutter-plugins" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/bike_metadata_repository/.flutter-plugins-dependencies" beforeDir="false" afterPath="$PROJECT_DIR$/packages/bike_metadata_repository/.flutter-plugins-dependencies" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/bike_metadata_repository/test/authentication_repository_test.dart" beforeDir="false" afterPath="$PROJECT_DIR$/packages/bike_metadata_repository/test/bike_metadata_repository_test.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/bluetooth_connection_api/.flutter-plugins-dependencies" beforeDir="false" afterPath="$PROJECT_DIR$/packages/bluetooth_connection_api/.flutter-plugins-dependencies" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/bluetooth_connection_api/lib/src/bluetooth_connection_api.dart" beforeDir="false" afterPath="$PROJECT_DIR$/packages/bluetooth_connection_api/lib/src/bluetooth_connection_api.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/hardware_connectivity_repository/.flutter-plugins-dependencies" beforeDir="false" afterPath="$PROJECT_DIR$/packages/hardware_connectivity_repository/.flutter-plugins-dependencies" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/hardware_connectivity_repository/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/packages/hardware_connectivity_repository/pubspec.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/network_api/.flutter-plugins-dependencies" beforeDir="false" afterPath="$PROJECT_DIR$/packages/network_api/.flutter-plugins-dependencies" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/network_api/build/test_cache/build/cache.dill.track.dill" beforeDir="false" afterPath="$PROJECT_DIR$/packages/network_api/build/test_cache/build/cache.dill.track.dill" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/network_api/lib/src/network_api_service.dart" beforeDir="false" afterPath="$PROJECT_DIR$/packages/network_api/lib/src/network_api_service.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/network_api/test/network_api_service_test.dart" beforeDir="false" afterPath="$PROJECT_DIR$/packages/network_api/test/network_api_service_test.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/secure_storage_api/.flutter-plugins-dependencies" beforeDir="false" afterPath="$PROJECT_DIR$/packages/secure_storage_api/.flutter-plugins-dependencies" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/usb_connection_api/test/usb_connection_api_test.dart" beforeDir="false" afterPath="$PROJECT_DIR$/packages/usb_connection_api/test/usb_connection_api_test.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,6 +84,7 @@
   "keyToString": {
     "Dart Command Line App.auction_repository_test.dart.executor": "Run",
     "Dart Command Line App.authentication_repository_test.dart.executor": "Run",
+    "Dart Command Line App.bike_metadata_repository_test.dart.executor": "Run",
     "Dart Command Line App.bluetooth_con_api_service.dart.executor": "Run",
     "Dart Command Line App.cos_challenge.dart.executor": "Run",
     "Dart Command Line App.new_test.dart.executor": "Run",
@@ -97,6 +118,7 @@
     "Flutter Test.Given NetworkApiService as my data source When http get method is called Then should respond 200 with data.executor": "Run",
     "Flutter Test.Given NetworkApiService as my data source When http get method is called Then should respond 300 with multiple choice data.executor": "Run",
     "Flutter Test.Navigates to AuctionVehicleDetailsScreen when a ListTile is tapped.executor": "Run",
+    "Flutter Test.NetworkApiService.executor": "Run",
     "Flutter Test.Shows error message when state is AuctionDataStateFailure.executor": "Run",
     "Flutter Test.Shows error message when state is AuctionDataStateFailure2.executor": "Run",
     "Flutter Test.Shows error message when state is AuctionDataStateFailure3.executor": "Run",
@@ -107,6 +129,7 @@
     "Flutter Test.getAuctionData.executor": "Run",
     "Flutter Test.postUserAuthenticationInfo.executor": "Run",
     "Flutter Test.tests in auction_data_bloc_test.dart.executor": "Run",
+    "Flutter Test.tests in bluetooth_connection_api_test.dart.executor": "Run",
     "Flutter Test.tests in data_validator_test.dart.executor": "Run",
     "Flutter Test.tests in network_api_service_test.dart.executor": "Run",
     "Flutter Test.tests in usb_connection_api_test.dart.executor": "Run",
@@ -146,49 +169,49 @@
       <recent name="C:\Users\me88756\Projects\Personal\caronsale-code-challenge\lib\home\view" />
     </key>
   </component>
-  <component name="RunManager" selected="Flutter.main.dart">
-    <configuration name="bluetooth_con_api_service.dart" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application" temporary="true" nameIsGenerated="true">
-      <option name="filePath" value="$PROJECT_DIR$/packages/bluetooth_con_api/lib/src/bluetooth_con_api_service.dart" />
-      <option name="workingDirectory" value="$PROJECT_DIR$/packages/bluetooth_con_api" />
+  <component name="RunManager" selected="Flutter Test.tests in bluetooth_connection_api_test.dart">
+    <configuration name="authentication_repository_test.dart" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application" temporary="true" nameIsGenerated="true">
+      <option name="filePath" value="$PROJECT_DIR$/packages/authentication_repository/test/authentication_repository_test.dart" />
+      <option name="workingDirectory" value="$PROJECT_DIR$/packages/authentication_repository" />
       <method v="2" />
     </configuration>
-    <configuration name="secure_storage_api_test.dart" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application" temporary="true" nameIsGenerated="true">
-      <option name="filePath" value="$PROJECT_DIR$/packages/secure_storage_api/test/secure_storage_api_test.dart" />
-      <option name="workingDirectory" value="$PROJECT_DIR$/packages/secure_storage_api" />
+    <configuration name="bike_metadata_repository_test.dart" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application" temporary="true" nameIsGenerated="true">
+      <option name="filePath" value="$PROJECT_DIR$/packages/bike_metadata_repository/test/bike_metadata_repository_test.dart" />
+      <option name="workingDirectory" value="$PROJECT_DIR$/packages/bike_metadata_repository" />
       <method v="2" />
     </configuration>
-    <configuration name="GIVEN VehicleSelectionScreen with the passed vehicle items WHEN view is rendered and an listTile is tapped THEN should navigate to next screen (1)" type="FlutterTestConfigType" factoryName="Flutter Test" temporary="true" nameIsGenerated="true">
-      <option name="testName" value="GIVEN VehicleSelectionScreen with the passed vehicle items WHEN view is rendered and an listTile is tapped THEN should navigate to next screen" />
-      <option name="testFile" value="$PROJECT_DIR$/test/vehicle_search/view/vehicle_search_screen_test.dart" />
-      <option name="useRegexp" value="true" />
+    <configuration name="NetworkApiService" type="FlutterTestConfigType" factoryName="Flutter Test" temporary="true" nameIsGenerated="true">
+      <option name="testName" value="NetworkApiService" />
+      <option name="testFile" value="$PROJECT_DIR$/packages/network_api/test/network_api_service_test.dart" />
+      <option name="useRegexp" value="false" />
       <method v="2" />
     </configuration>
-    <configuration name="GIVEN VehicleSelectionScreen with the passed vehicle items WHEN view is rendered and an listTile is tapped THEN should navigate to next screen" type="FlutterTestConfigType" factoryName="Flutter Test" temporary="true" nameIsGenerated="true">
-      <option name="testName" value="GIVEN VehicleSelectionScreen with the passed vehicle items WHEN view is rendered and an listTile is tapped THEN should navigate to next screen" />
-      <option name="testFile" value="$PROJECT_DIR$/test/vehicle_auction/view/vehicle_selection_screen_test.dart" />
-      <option name="useRegexp" value="true" />
+    <configuration name="postUserAuthenticationInfo" type="FlutterTestConfigType" factoryName="Flutter Test" temporary="true" nameIsGenerated="true">
+      <option name="testName" value="postUserAuthenticationInfo" />
+      <option name="testFile" value="$PROJECT_DIR$/packages/network_api/test/network_api_service_test.dart" />
+      <option name="useRegexp" value="false" />
       <method v="2" />
     </configuration>
-    <configuration name="tests in usb_connection_api_test.dart" type="FlutterTestConfigType" factoryName="Flutter Test" temporary="true" nameIsGenerated="true">
-      <option name="testFile" value="$PROJECT_DIR$/packages/usb_connection_api/test/usb_connection_api_test.dart" />
+    <configuration name="tests in bluetooth_connection_api_test.dart" type="FlutterTestConfigType" factoryName="Flutter Test" temporary="true" nameIsGenerated="true">
+      <option name="testFile" value="$PROJECT_DIR$/packages/bluetooth_connection_api/test/bluetooth_connection_api_test.dart" />
       <option name="useRegexp" value="false" />
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Dart Command Line App.secure_storage_api_test.dart" />
-      <item itemvalue="Dart Command Line App.bluetooth_con_api_service.dart" />
+      <item itemvalue="Dart Command Line App.authentication_repository_test.dart" />
+      <item itemvalue="Dart Command Line App.bike_metadata_repository_test.dart" />
       <item itemvalue="Flutter.main.dart" />
-      <item itemvalue="Flutter Test.tests in usb_connection_api_test.dart" />
-      <item itemvalue="Flutter Test.GIVEN VehicleSelectionScreen with the passed vehicle items WHEN view is rendered and an listTile is tapped THEN should navigate to next screen (1)" />
-      <item itemvalue="Flutter Test.GIVEN VehicleSelectionScreen with the passed vehicle items WHEN view is rendered and an listTile is tapped THEN should navigate to next screen" />
+      <item itemvalue="Flutter Test.NetworkApiService" />
+      <item itemvalue="Flutter Test.postUserAuthenticationInfo" />
+      <item itemvalue="Flutter Test.tests in bluetooth_connection_api_test.dart" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Dart Command Line App.secure_storage_api_test.dart" />
-        <item itemvalue="Flutter Test.tests in usb_connection_api_test.dart" />
-        <item itemvalue="Dart Command Line App.bluetooth_con_api_service.dart" />
-        <item itemvalue="Flutter Test.GIVEN VehicleSelectionScreen with the passed vehicle items WHEN view is rendered and an listTile is tapped THEN should navigate to next screen (1)" />
-        <item itemvalue="Flutter Test.GIVEN VehicleSelectionScreen with the passed vehicle items WHEN view is rendered and an listTile is tapped THEN should navigate to next screen" />
+        <item itemvalue="Flutter Test.tests in bluetooth_connection_api_test.dart" />
+        <item itemvalue="Dart Command Line App.bike_metadata_repository_test.dart" />
+        <item itemvalue="Flutter Test.postUserAuthenticationInfo" />
+        <item itemvalue="Flutter Test.NetworkApiService" />
+        <item itemvalue="Dart Command Line App.authentication_repository_test.dart" />
       </list>
     </recent_temporary>
   </component>
@@ -209,7 +232,15 @@
       <option name="project" value="LOCAL" />
       <updated>1746857011056</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="some improvements">
+      <option name="closed" value="true" />
+      <created>1746859891344</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1746859891344</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -236,7 +267,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="fix some bugs and add unit tests" />
     <MESSAGE value="fix some bugs and implement unit tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix some bugs and implement unit tests" />
+    <MESSAGE value="some improvements" />
+    <option name="LAST_COMMIT_MESSAGE" value="some improvements" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

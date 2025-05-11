@@ -1,4 +1,4 @@
-/*import 'package:authentication_repository/bike_metadata_repository.dart';
+import 'package:authentication_repository/authentication_repository.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mocktail/mocktail.dart';
 import 'package:network_api/network_api_service.dart';
@@ -22,11 +22,10 @@ void main() {
     registerFallbackValue('fallback-value');
   });
 
-  group('authenticateUserByCredentials', () {
+  group('AuthenticationRepository', () {
     test(
-      'GIVEN AuthenticationRepository WHEN username and password are provided THEN should get token from API service and return',
-          () async {
-        when(() => mockNetworkApiService.postUserAuthenticationInfo(any()))
+      'should successfully get token from api of authenticationRepo service', () async {
+        when(() => mockNetworkApiService.postUserLoginData(any()))
             .thenAnswer((_) async => 'some-jwt-token');
 
         when(() => mockSecureStorageApi.write(any(), any()))
@@ -44,4 +43,3 @@ void main() {
     );
   });
 }
-*/

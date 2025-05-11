@@ -17,7 +17,7 @@ class NetworkApiService {
   NetworkApiService({this.baseUrl = "some-mocked-base-url"});
 
   /// Backend endpoint for fetching bike assets data resource
-  Future<dynamic> getBikeAssetData(String bikeId, String bikeType, String userAuthId, String token) async {
+  Future<BikeAssetData> getBikeAssetData(String bikeId, String bikeType, String userAuthId, String token) async {
     try {
       final queryParams = {'bikeId': bikeId, 'bikeType': bikeType};
       final uri = Uri.https(baseUrl, '/api/bike-asset', queryParams);

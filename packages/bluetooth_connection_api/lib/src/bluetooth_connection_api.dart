@@ -9,9 +9,14 @@ import 'model/ble_bike_data.dart';
 
 class BluetoothConnectionApi {
 
+  final Stream<BleBikeData> Function({required int bikeId}) bleDataStreamProvider;
+
+  BluetoothConnectionApi({
+    Stream<BleBikeData> Function({required int bikeId})? bleDataStreamProvider,
+  }) : bleDataStreamProvider = bleDataStreamProvider ?? getBleMockBikeDataReadings;
+
 
   bool _scanning = false;
-
   void startScanning() => _scanning = true;
   void stopScanning() => _scanning = false;
 
@@ -24,10 +29,10 @@ class BluetoothConnectionApi {
       yield mockScanResults;
     }
 
-    // Wait for Bluetooth to be ON
+    /// Wait for Bluetooth to be ON
     await FlutterBluePlus.adapterState.where((state) => state == BluetoothAdapterState.on).first;
 
-    // Start scanning
+    /// Start scanning for nearby devices
     await FlutterBluePlus.startScan(timeout: Duration(seconds: 2), withServices: withServices);
 
     final controller = StreamController<List<ScanResult>>();
@@ -53,11 +58,11 @@ class BluetoothConnectionApi {
 
   Stream<BleBikeData> getBikeReadingsDataStreamOverBle({required String bleDeviceAddress}) async* {
 
-    /// Simulate connection to the USB port
-    /// todo: connectToBleDeviceByAddress(bleDeviceAddress)
+    /// Simulate connection to a real USB port
+    /// TODO: connectToBleDeviceByAddress(bleDeviceAddress)
 
-    final id = stringToFixedDigitInt(bleDeviceAddress);
-    final stream = getBleMockBikeDataReadings(bikeId: id);
+    final id = _stringToFixedDigitInt(bleDeviceAddress);
+    final stream = bleDataStreamProvider(bikeId: id);
 
     BleBikeData? previous;
 
@@ -69,7 +74,7 @@ class BluetoothConnectionApi {
     }
   }
 
-  int stringToFixedDigitInt(String input, {int digits = 6}) {
+  int _stringToFixedDigitInt(String input, {int digits = 6}) {
     final int hash = input.hashCode & 0x7FFFFFFF;
     final int max = pow(6, digits).toInt();
     return hash % max;
@@ -96,4 +101,3 @@ class BluetoothConnectionApi {
   }
 
 }
-

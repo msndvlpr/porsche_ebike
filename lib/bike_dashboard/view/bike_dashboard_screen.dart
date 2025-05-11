@@ -188,10 +188,7 @@ class BikeDashboardScreen extends ConsumerWidget {
                           child: ref.watch(bikeReadingProvider).when(
                             data: (reading) {
                               if (reading == null) {
-                                return Column(mainAxisAlignment: MainAxisAlignment.center ,children: [
-                                  Center(child: Text('No data received yet')),
-                                  SizedBox(height: 70)
-                                ]);
+                                return Center(child: Text('No data received yet'));
                               }
 
                               final readingMap = {
