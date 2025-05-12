@@ -12,7 +12,7 @@ While the application may run on other platforms, please note that it is officia
 
 
 ## Technical Features
-- **User Authentication**: Uses an Authentication Repository and a mocked HTTP handler. Authentication is simulated based on a random username and password, and based on any user input login will be succeffull.
+- **User Authentication**: Uses an Authentication Repository and a mocked HTTP handler. Authentication is simulated based on a random username and password, and based on any user input login will be successful.
 - **VIN/Vehicle Search**: User can search for vehicles using a VIN. Based on the VIN, the user may get a full match or a list of similar vehicles.
 - **Auction Data**: Users can select vehicles and view their auction details.
 - **Caching**: Data is cached per VIN in the `VehicleSearchScreen` and per External ID (EID) in the `VehicleSelectionScreen`.
@@ -22,7 +22,7 @@ While the application may run on other platforms, please note that it is officia
 
 ## Project Architecture
 ### Overview
-This project follows the **BLoC** (Business Logic Component) pattern for state management and also as the development architecture. It might be also similar to MVVM, because different layers in BLoC have a corresponding 
+This project follows the Clean Architecture and **Riverpod** for state management. pattern for state management and also as the development architecture. It might be also similar to MVVM, because different layers in BLoC have a corresponding 
 layer in MVVM, for example the view layer is the same, external packages for repositories and APIs correspond to repositories and datasources in the model layer
 of MVVM, and bloc layer is also acting the same as view-model in MVVM. The reason why I have used BLoC for the above purposes is that it offers a structured and 
 testable way to manage complex states and business logic in Flutter, promoting maintainability and scalability by clearly separating business logic from UI. On the
@@ -85,32 +85,18 @@ pubspec.yaml
 ## Screen Flow and Features Overview
 
 ### Login Screen:
-In this screen user should enter it's username and password for the identification (authentication), for simulating a real situation username and password are arbitrary and 
-on a random basis success or failure response will be returned from a Mocked Http Handler. Once the authentication is successful a token will be responded and it will be saved in a
-local Secure Storage with the Username to be used later for the calling other mocked http requests (for auctions etc.), then it will be navigated to the next screen and for the
-next time of application launch, the login page will be skipped as requested in the requirement document.
+In this screen user should enter it's username and password for the authentication, as the application deals with important diagnostic information about the bike usage the authentication is necessary to 
+provided protection for unauthorised access to the app and to the client-backend communication. for simulating a real login, username and password are arbitrary and 
+success response will be returned from a Mocked Http Handler. Once the authentication is successful a token will be responded and it will be saved in a
+local Secure Storage with the Username to be used later for calling other backend endpoints (such as getting bike overview information, bike description and image).
 
-### Vehicle/VIN Search Screen:
-In this screen a text field is provided to enter a VIN and it will be validated by a validator utility class upon user entry. Based on the requirement document there will be
-a few number of response types, so if the response id an error or failure it will be shown here, otherwise it will navigate to the next page to display the corresponding 
-vehicle auction data. User can also enable "use cache" feature by which a cached version of data will be shown if we receive error from backend (i.e. mocked http handler). 
-Please also note that cached data is per VIN, so if we already receive a successful response for a VIN and then we enable use cache feature, then upon getting failure from 
-backend, the cached data will be shown.
-In this page user can also change the theme to dark or light, and also logout from th current user from the top left option menu, then they will be requested again to enter
-username and password to authenticate and previous authentication data (i.e. token  and username) will be cleared from local storage.
+### Bike Dashboard Screen
+In this screen which is the main screen, there are three section including scanned and found USB and BLE devices to connect (left pane), bike diagnostic data readings which will be shown in a real time channel (center pane),
+and the bike overview section in which bike additional information including the image will be displayed (right pane).
+There are also two buttons in the left pane, one for scanning nearby devices and a another for connecting and disconnecting to the device (ebike) and starting the realtime data stream. As requested in the requirement
+document, there are two bike models for which the received data model differ, and also some data attributes should be updated on a continuous basis (such as Gyroscope) and some other attributes should be changed once 
+per request (sun as Last Error).
 
-### Vehicle Selection Screen:
-This page will show the data in case of MultipleChoice (300 code) response, so all the vehicle options will be shown according to their similarity number from top to bottom. Also an
-indicator is used to visualise the similarity number to the user. If user clicks on each arbitrary item, then "External Id" of the item will be used to call another backend endpoint
-to fetch the Auction Details and accordingly and then navigate to the Auction Details Screen. 
-Note: As it has been requested in the requirements document not to manipulate the mocked
-http handler class, so response type 300 was filtered out and accounted as an error response in order to simulate a separate service for getting Auction Details from external id (EID).
-If caching feature is enabled in the previous page, here it will also apply and if a data per EID is already cached, then in case of getting error response from backed, it will be shown.
-
-### Auction Details Screen:
-This screen is responsible to show the Auction Details data, it is possible to come to this page directly from VIN search screen if the response is 200, or from Vehicle Search Screen
-when clicking on an option and receive a non error response. At the first glance, some important information of an auction/vehicle will be shown, and then user can click on the arrow
-icon to expand the box and see further details including the relevant dates etc.
 
 
 ## Testing
