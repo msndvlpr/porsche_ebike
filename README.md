@@ -1,11 +1,18 @@
-# PORSCHE EBIKE PERFORMANCE Coding Challenge
+# PORSCHE E-BIKE Performance Coding Challenge
 
 ## Overview
-This project is a Flutter-based application for vehicle auctions, where users can search for vehicles by VIN, view auction details, and authenticate using a repository-based 
-authentication system. It also supports caching mechanisms, dark theme and also UI state handling for improved user experience in case of network success or failures.
+This project is a Flutter-based application for Porsche Ebikes Performance diagnostic purposes, where technician users can connect to an ebike via Bluetooth or USB interface and fetch the bike data and 
+diagnostic information in a real-time basis. The application is designed and tested to run on MacOS as mentioned in the requirement document (Windows or MacOS).
+The application has several features including scanning and finding available USB and BLE devices, fetching diagnostic information via stream, authentication, dark mode etc. 
 
-## Features
-- **User Authentication**: Uses an Authentication Repository and a mocked HTTP handler. Authentication is simulated with random success/failure responses.
+## Project Assumptions
+This project has been fully developed and tested on MacOS only. According to the challenge requirements, either of MacOS and Windows were the supported platforms. However, I did not have access to a Windows machine 
+during development, so full compatibility on Windows could not be verified but can be easily provided.
+While the application may run on other platforms, please note that it is officially tested and guaranteed to work on macOS.
+
+
+## Technical Features
+- **User Authentication**: Uses an Authentication Repository and a mocked HTTP handler. Authentication is simulated based on a random username and password, and based on any user input login will be succeffull.
 - **VIN/Vehicle Search**: User can search for vehicles using a VIN. Based on the VIN, the user may get a full match or a list of similar vehicles.
 - **Auction Data**: Users can select vehicles and view their auction details.
 - **Caching**: Data is cached per VIN in the `VehicleSearchScreen` and per External ID (EID) in the `VehicleSelectionScreen`.
@@ -42,28 +49,30 @@ lib/
 │   ├── app.dart
 │   ..
 │
-├── user_authentication/
-│   ├── bloc/
+├── bike_dashboard/
+│   ├── state/
 │   ├── view/
 │   ├── widget/
 │
-├── utils/
-│
-├── vehicle_auction/
-│   ├── bloc/
-│   ├── model/
+├── user_login/
+│   ├── state/
 │   ├── view/
-│   ├── widget/
+│
+├── theme/
+│   ├── state/
 │
 ├── vehicle_search/
 │
 ├── main.dart
 │
 packages/
-├── auction_repository/
+├── bike_metadata_repository/
 ├── authentication_repository/
+├── hardware_connectivity_repository/
 ├── network_api/
 ├── secure_storage_api/
+├── bluetooth_connection_api/
+├── usb_connection_api/
 │
 test/
 │
