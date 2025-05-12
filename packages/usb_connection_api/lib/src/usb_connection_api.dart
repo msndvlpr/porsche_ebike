@@ -109,8 +109,8 @@ class UsbConnectionApi {
 
   Stream<UsbBikeData> getBikeReadingsDataStream({required String usbPortAddress}) async* {
 
-    /// Simulate connection to the USB port
-    /// todo: connectToUsbDeviceByAddress(usbPortAddress);
+    /// Simulate connection to a real USB port
+    /// TODO: connectToUsbDeviceByAddress(usbPortAddress);
 
     final id = stringToFixedDigitInt(usbPortAddress);
     final stream = getBikeDataReadings(bikeId: id);

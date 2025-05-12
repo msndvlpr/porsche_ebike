@@ -1,13 +1,12 @@
 import 'dart:developer';
 import 'dart:ui';
-import 'package:authentication_repository/authentication_repository.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:intl/date_symbol_data_local.dart';
-import 'package:secure_storage_api/secure_storage_api.dart';
 import 'app/app.dart';
 import 'app/observers.dart';
+import 'package:desktop_window/desktop_window.dart';
 
 
 Future<void> main() async {
@@ -16,7 +15,9 @@ Future<void> main() async {
 
   await initializeDateFormatting('de_DE', null);
 
-  await SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
+  Size size = await DesktopWindow.getWindowSize();
+  await DesktopWindow.setWindowSize(Size(size.width, size.height));
+  await DesktopWindow.setMinWindowSize(Size(size.width, size.height));
 
   FlutterError.onError = (details) {
     log(details.exceptionAsString(), stackTrace: details.stack);

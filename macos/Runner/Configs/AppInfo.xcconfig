@@ -8,7 +8,7 @@
 PRODUCT_NAME = porsche_ebike_code_challenge
 
 // The application's bundle identifier
-PRODUCT_BUNDLE_IDENTIFIER = com.challenge.caronsale.caronsaleCodeChallenge
+PRODUCT_BUNDLE_IDENTIFIER = com.challenge.ebike.porschePerformance
 
 // The copyright displayed in application information
 PRODUCT_COPYRIGHT = Copyright © 2025 com.challenge.porsche. All rights reserved.

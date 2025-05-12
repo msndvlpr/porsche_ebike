@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:porsche_ebike_code_challenge/bike_dashboard/view/bike_dashboard_screen.dart';
-
 import '../state/user_login_provider.dart';
+
 
 class LoginScreen extends ConsumerStatefulWidget {
   const LoginScreen({super.key});
@@ -83,7 +83,7 @@ class UserAuthenticationScreenState extends ConsumerState<LoginScreen> {
                           style: Theme.of(context).textTheme.headlineSmall,
                         ),
                         const SizedBox(height: 26),
-                        // Username Field
+
                         TextFormField(
                           controller: _usernameController,
                           decoration: InputDecoration(
@@ -94,7 +94,7 @@ class UserAuthenticationScreenState extends ConsumerState<LoginScreen> {
                           validator: (value) => value!.isEmpty ? "Please enter your username" : null,
                         ),
                         const SizedBox(height: 15),
-                        // Password Field
+
                         TextFormField(
                           controller: _passwordController,
                           obscureText: isObscure,
@@ -112,7 +112,7 @@ class UserAuthenticationScreenState extends ConsumerState<LoginScreen> {
                           validator: (value) => value!.length < 6 ? "Password must be at least 6 characters" : null,
                         ),
                         const SizedBox(height: 20),
-                        // Login Button
+
                         authState.isLoading
                             ? CircularProgressIndicator(color: Theme.of(context).colorScheme.primary)
                             : ElevatedButton(
@@ -124,7 +124,7 @@ class UserAuthenticationScreenState extends ConsumerState<LoginScreen> {
                           child: const Text("Login", style: TextStyle(fontSize: 16)),
                         ),
                         const SizedBox(height: 10),
-                        // Forgot Password
+
                         TextButton(
                           onPressed: () {},
                           child: Text(

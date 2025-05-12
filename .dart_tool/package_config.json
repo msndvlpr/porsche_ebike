@@ -176,6 +176,12 @@
       "languageVersion": "2.17"
     },
     {
+      "name": "desktop_window",
+      "rootUri": "file:///Users/arefeh/.pub-cache/hosted/pub.dev/desktop_window-0.4.2",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "diff_match_patch",
       "rootUri": "file:///Users/arefeh/.pub-cache/hosted/pub.dev/diff_match_patch-0.4.1",
       "packageUri": "lib/",
@@ -884,7 +890,7 @@
       "languageVersion": "3.6"
     }
   ],
-  "generated": "2025-05-12T01:32:19.737040Z",
+  "generated": "2025-05-12T02:15:00.400297Z",
   "generator": "pub",
   "generatorVersion": "3.7.2",
   "flutterRoot": "file:///Users/arefeh/Downloads/flutter",

@@ -58,7 +58,7 @@ class BluetoothConnectionApi {
 
   Stream<BleBikeData> getBikeReadingsDataStreamOverBle({required String bleDeviceAddress}) async* {
 
-    /// Simulate connection to a real USB port
+    /// Simulate connection to a real BLE device
     /// TODO: connectToBleDeviceByAddress(bleDeviceAddress)
 
     final id = _stringToFixedDigitInt(bleDeviceAddress);
