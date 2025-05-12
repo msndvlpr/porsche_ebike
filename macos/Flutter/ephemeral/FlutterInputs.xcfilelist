@@ -52,12 +52,6 @@
 /Users/arefeh/.pub-cache/hosted/pub.dev/boolean_selector-2.1.2/LICENSE
 /Users/arefeh/.pub-cache/hosted/pub.dev/build-2.4.2/LICENSE
 /Users/arefeh/.pub-cache/hosted/pub.dev/build_config-1.1.2/LICENSE
-/Users/arefeh/.pub-cache/hosted/pub.dev/build_daemon-4.0.4/LICENSE
-/Users/arefeh/.pub-cache/hosted/pub.dev/build_resolvers-2.4.4/LICENSE
-/Users/arefeh/.pub-cache/hosted/pub.dev/build_runner-2.4.15/LICENSE
-/Users/arefeh/.pub-cache/hosted/pub.dev/build_runner_core-8.0.0/LICENSE
-/Users/arefeh/.pub-cache/hosted/pub.dev/built_collection-5.1.1/LICENSE
-/Users/arefeh/.pub-cache/hosted/pub.dev/built_value-8.9.5/LICENSE
 /Users/arefeh/.pub-cache/hosted/pub.dev/characters-1.4.0/LICENSE
 /Users/arefeh/.pub-cache/hosted/pub.dev/characters-1.4.0/lib/characters.dart
 /Users/arefeh/.pub-cache/hosted/pub.dev/characters-1.4.0/lib/src/characters.dart
@@ -74,7 +68,6 @@
 /Users/arefeh/.pub-cache/hosted/pub.dev/clock-1.1.2/lib/src/default.dart
 /Users/arefeh/.pub-cache/hosted/pub.dev/clock-1.1.2/lib/src/stopwatch.dart
 /Users/arefeh/.pub-cache/hosted/pub.dev/clock-1.1.2/lib/src/utils.dart
-/Users/arefeh/.pub-cache/hosted/pub.dev/code_builder-4.10.1/LICENSE
 /Users/arefeh/.pub-cache/hosted/pub.dev/collection-1.19.1/LICENSE
 /Users/arefeh/.pub-cache/hosted/pub.dev/collection-1.19.1/lib/collection.dart
 /Users/arefeh/.pub-cache/hosted/pub.dev/collection-1.19.1/lib/src/algorithms.dart
@@ -264,7 +257,6 @@
 /Users/arefeh/.pub-cache/hosted/pub.dev/freezed_annotation-3.0.0/LICENSE
 /Users/arefeh/.pub-cache/hosted/pub.dev/frontend_server_client-4.0.0/LICENSE
 /Users/arefeh/.pub-cache/hosted/pub.dev/glob-2.1.3/LICENSE
-/Users/arefeh/.pub-cache/hosted/pub.dev/graphs-2.3.2/LICENSE
 /Users/arefeh/.pub-cache/hosted/pub.dev/http-1.3.0/LICENSE
 /Users/arefeh/.pub-cache/hosted/pub.dev/http-1.3.0/lib/http.dart
 /Users/arefeh/.pub-cache/hosted/pub.dev/http-1.3.0/lib/src/base_client.dart
@@ -837,6 +829,7 @@
 /Users/arefeh/.pub-cache/hosted/pub.dev/riverpod_analyzer_utils-0.5.10/LICENSE
 /Users/arefeh/.pub-cache/hosted/pub.dev/riverpod_annotation-2.6.1/LICENSE
 /Users/arefeh/.pub-cache/hosted/pub.dev/riverpod_generator-2.6.5/LICENSE
+/Users/arefeh/.pub-cache/hosted/pub.dev/riverpod_test-0.1.9/LICENSE
 /Users/arefeh/.pub-cache/hosted/pub.dev/rxdart-0.28.0/LICENSE
 /Users/arefeh/.pub-cache/hosted/pub.dev/rxdart-0.28.0/lib/rxdart.dart
 /Users/arefeh/.pub-cache/hosted/pub.dev/rxdart-0.28.0/lib/src/rx.dart
@@ -922,6 +915,10 @@
 /Users/arefeh/.pub-cache/hosted/pub.dev/rxdart-0.28.0/lib/transformers.dart
 /Users/arefeh/.pub-cache/hosted/pub.dev/rxdart-0.28.0/lib/utils.dart
 /Users/arefeh/.pub-cache/hosted/pub.dev/shared_preferences-2.5.3/LICENSE
+/Users/arefeh/.pub-cache/hosted/pub.dev/shared_preferences-2.5.3/lib/shared_preferences.dart
+/Users/arefeh/.pub-cache/hosted/pub.dev/shared_preferences-2.5.3/lib/src/shared_preferences_async.dart
+/Users/arefeh/.pub-cache/hosted/pub.dev/shared_preferences-2.5.3/lib/src/shared_preferences_devtools_extension_data.dart
+/Users/arefeh/.pub-cache/hosted/pub.dev/shared_preferences-2.5.3/lib/src/shared_preferences_legacy.dart
 /Users/arefeh/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.10/LICENSE
 /Users/arefeh/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.10/lib/shared_preferences_android.dart
 /Users/arefeh/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.10/lib/src/messages.g.dart
@@ -979,7 +976,6 @@
 /Users/arefeh/.pub-cache/hosted/pub.dev/state_notifier-1.0.0/LICENSE
 /Users/arefeh/.pub-cache/hosted/pub.dev/state_notifier-1.0.0/lib/state_notifier.dart
 /Users/arefeh/.pub-cache/hosted/pub.dev/stream_channel-2.1.4/LICENSE
-/Users/arefeh/.pub-cache/hosted/pub.dev/stream_transform-2.1.1/LICENSE
 /Users/arefeh/.pub-cache/hosted/pub.dev/stream_with_value-0.5.0/LICENSE
 /Users/arefeh/.pub-cache/hosted/pub.dev/string_scanner-1.4.1/LICENSE
 /Users/arefeh/.pub-cache/hosted/pub.dev/string_scanner-1.4.1/lib/src/charcode.dart
@@ -1000,7 +996,6 @@
 /Users/arefeh/.pub-cache/hosted/pub.dev/test-1.25.15/LICENSE
 /Users/arefeh/.pub-cache/hosted/pub.dev/test_api-0.7.4/LICENSE
 /Users/arefeh/.pub-cache/hosted/pub.dev/test_core-0.6.8/LICENSE
-/Users/arefeh/.pub-cache/hosted/pub.dev/timing-1.0.2/LICENSE
 /Users/arefeh/.pub-cache/hosted/pub.dev/typed_data-1.4.0/LICENSE
 /Users/arefeh/.pub-cache/hosted/pub.dev/typed_data-1.4.0/lib/src/typed_buffer.dart
 /Users/arefeh/.pub-cache/hosted/pub.dev/typed_data-1.4.0/lib/src/typed_queue.dart
@@ -2067,7 +2062,7 @@
 /Users/arefeh/Downloads/flutter/packages/flutter_tools/lib/src/build_system/targets/icon_tree_shaker.dart
 /Users/arefeh/Downloads/flutter/packages/flutter_tools/lib/src/build_system/targets/macos.dart
 /Users/arefeh/Downloads/flutter/packages/flutter_tools/lib/src/build_system/targets/native_assets.dart
-/Users/arefeh/StudioProjects/porsche_ebike/DOES_NOT_EXIST_RERUN_FOR_WILDCARD371789161
+/Users/arefeh/StudioProjects/porsche_ebike/DOES_NOT_EXIST_RERUN_FOR_WILDCARD944626961
 /Users/arefeh/StudioProjects/porsche_ebike/assets/images/launcher.png
 /Users/arefeh/StudioProjects/porsche_ebike/assets/images/porsche_ebike_logo.png
 /Users/arefeh/StudioProjects/porsche_ebike/lib/app/app.dart
@@ -2077,6 +2072,7 @@
 /Users/arefeh/StudioProjects/porsche_ebike/lib/bike_dashboard/view/bike_dashboard_screen.dart
 /Users/arefeh/StudioProjects/porsche_ebike/lib/bike_dashboard/widget/live_indicator.dart
 /Users/arefeh/StudioProjects/porsche_ebike/lib/main.dart
+/Users/arefeh/StudioProjects/porsche_ebike/lib/theme/state/app_theme_provider.dart
 /Users/arefeh/StudioProjects/porsche_ebike/lib/user_login/state/user_login_provider.dart
 /Users/arefeh/StudioProjects/porsche_ebike/lib/user_login/view/login_screen.dart
 /Users/arefeh/StudioProjects/porsche_ebike/packages/authentication_repository/lib/authentication_repository.dart

@@ -95,10 +95,10 @@ class UsbConnectionApi {
         }
       }
 
-      // Add mock USB devices
+      /// Add mock USB devices
       current.addAll(getMockUsbPorts());
 
-      // Only emit if the list has changed
+      /// Only emit if the list has changed
       if (current.length != previous.length || !_usbPortsEqual(current, previous)) {
         yield current;
         previous = current;

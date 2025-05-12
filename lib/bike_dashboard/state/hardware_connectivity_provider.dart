@@ -3,7 +3,6 @@ import 'package:bluetooth_connection_api/bluetooth_connection_api.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:hardware_connectivity_repository/hardware_connectivity_repository.dart';
 import 'package:usb_connection_api/usb_connection_api.dart';
-
 import 'network_metadata_provider.dart';
 
 
@@ -17,7 +16,7 @@ final hardwareConnectivityProvider = Provider<HardwareConnectivityRepository>((r
 final selectedDeviceProvider  = StateProvider<String?>((ref) => null);
 final connectedDeviceProvider = StateProvider<String?>((ref) => null);
 
-/*-------------------------------COMBINED------------------------------------*/
+
 
 final devicesProvider = StateNotifierProvider<DevicesNotifier, AsyncValue<List<FoundDevice>>>((ref) {
   final repo = ref.watch(hardwareConnectivityProvider);
@@ -75,7 +74,6 @@ class DevicesNotifier extends StateNotifier<AsyncValue<List<FoundDevice>>> {
   }
 }
 
-/*-------------------------------DATA----------------------------------------*/
 
 final bikeReadingProvider = StateNotifierProvider<BikeReadingNotifier, AsyncValue<BikeReading?>>((ref) {
     final repo = ref.watch(hardwareConnectivityProvider);

@@ -7,13 +7,13 @@ final obscurePasswordProvider = StateProvider<bool>((ref) => true);
 
 final authenticationRepositoryProvider = Provider<AuthenticationRepository>((ref) => AuthenticationRepository());
 
-class UserAuthNotifier extends AsyncNotifier<String> {
+class UserAuthNotifier extends AsyncNotifier<String?> {
   late final AuthenticationRepository _authenticationRepository;
 
   @override
-  FutureOr<String> build() {
+  FutureOr<String>? build() {
     _authenticationRepository = ref.read(authenticationRepositoryProvider);
-    return Future.value();
+    return null;
   }
 
   Future<void> authenticateUser(String username, String password) async {
@@ -27,7 +27,7 @@ class UserAuthNotifier extends AsyncNotifier<String> {
   }
 }
 
-final userAuthProvider = AsyncNotifierProvider<UserAuthNotifier, String>(() {
+final userAuthProvider = AsyncNotifierProvider<UserAuthNotifier, String?>(() {
   return UserAuthNotifier();
 });
 

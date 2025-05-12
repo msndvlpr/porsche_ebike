@@ -3,6 +3,7 @@ import 'dart:developer';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 class Observers extends ProviderObserver {
+
   @override
   void didUpdateProvider(
     ProviderBase provider,
@@ -24,6 +25,7 @@ class Observers extends ProviderObserver {
   "provider": "${provider.name ?? provider.runtimeType}",
   "newValue": "disposed"
 }''');
+
     super.didDisposeProvider(provider, container);
   }
 }

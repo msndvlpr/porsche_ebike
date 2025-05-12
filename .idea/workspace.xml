@@ -10,9 +10,66 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8ed2c952-683f-4e19-b9f3-80980f90de14" name="Changes" comment="implement unit tests">
+      <change afterPath="$PROJECT_DIR$/lib/theme/state/app_theme_provider.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/bike_dashboard/state/hardware_connectivity_provider_test.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/bike_dashboard/state/network_metadata_provider_test.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/bike_dashboard/view/bike_dashboard_screen_test.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.dart_tool/package_config.json" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/package_config.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.dart_tool/package_config_subset" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/package_config_subset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.flutter-plugins-dependencies" beforeDir="false" afterPath="$PROJECT_DIR$/.flutter-plugins-dependencies" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/hardware_connectivity_repository/.flutter-plugins-dependencies" beforeDir="false" afterPath="$PROJECT_DIR$/packages/hardware_connectivity_repository/.flutter-plugins-dependencies" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/hardware_connectivity_repository/test/hardware_connectivity_repository_test.dart" beforeDir="false" afterPath="$PROJECT_DIR$/packages/hardware_connectivity_repository/test/hardware_connectivity_repository_test.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/src/main/res/mipmap-hdpi/launcher_icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/src/main/res/mipmap-hdpi/launcher_icon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/src/main/res/mipmap-mdpi/launcher_icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/src/main/res/mipmap-mdpi/launcher_icon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/src/main/res/mipmap-xhdpi/launcher_icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/src/main/res/mipmap-xhdpi/launcher_icon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/src/main/res/mipmap-xxhdpi/launcher_icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/src/main/res/mipmap-xxhdpi/launcher_icon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/src/main/res/mipmap-xxxhdpi/launcher_icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/src/main/res/mipmap-xxxhdpi/launcher_icon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flutter_launcher_icons.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/flutter_launcher_icons.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-1024x1024@1x.png" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-1024x1024@1x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-20x20@1x.png" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-20x20@1x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-20x20@2x.png" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-20x20@2x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-20x20@3x.png" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-20x20@3x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-29x29@1x.png" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-29x29@1x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-29x29@2x.png" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-29x29@2x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-29x29@3x.png" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-29x29@3x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-40x40@1x.png" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-40x40@1x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-40x40@2x.png" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-40x40@2x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-40x40@3x.png" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-40x40@3x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-50x50@1x.png" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-50x50@1x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-50x50@2x.png" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-50x50@2x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-57x57@1x.png" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-57x57@1x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-57x57@2x.png" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-57x57@2x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-60x60@2x.png" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-60x60@2x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-60x60@3x.png" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-60x60@3x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-72x72@1x.png" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-72x72@1x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-72x72@2x.png" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-72x72@2x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-76x76@1x.png" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-76x76@1x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-76x76@2x.png" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-76x76@2x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-83.5x83.5@2x.png" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-83.5x83.5@2x.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/app/app.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/app/app.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/app/observers.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/app/observers.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/bike_dashboard/state/hardware_connectivity_provider.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/bike_dashboard/state/hardware_connectivity_provider.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/bike_dashboard/view/bike_dashboard_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/bike_dashboard/view/bike_dashboard_screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/user_login/state/user_login_provider.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/user_login/state/user_login_provider.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/user_login/view/login_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/user_login/view/login_screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/macos/Flutter/ephemeral/FlutterInputs.xcfilelist" beforeDir="false" afterPath="$PROJECT_DIR$/macos/Flutter/ephemeral/FlutterInputs.xcfilelist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/macos/Runner/Assets.xcassets/AppIcon.appiconset/Contents.json" beforeDir="false" afterPath="$PROJECT_DIR$/macos/Runner/Assets.xcassets/AppIcon.appiconset/Contents.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/macos/Runner/Assets.xcassets/AppIcon.appiconset/app_icon_1024.png" beforeDir="false" afterPath="$PROJECT_DIR$/macos/Runner/Assets.xcassets/AppIcon.appiconset/app_icon_1024.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/macos/Runner/Assets.xcassets/AppIcon.appiconset/app_icon_128.png" beforeDir="false" afterPath="$PROJECT_DIR$/macos/Runner/Assets.xcassets/AppIcon.appiconset/app_icon_128.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/macos/Runner/Assets.xcassets/AppIcon.appiconset/app_icon_16.png" beforeDir="false" afterPath="$PROJECT_DIR$/macos/Runner/Assets.xcassets/AppIcon.appiconset/app_icon_16.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/macos/Runner/Assets.xcassets/AppIcon.appiconset/app_icon_256.png" beforeDir="false" afterPath="$PROJECT_DIR$/macos/Runner/Assets.xcassets/AppIcon.appiconset/app_icon_256.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/macos/Runner/Assets.xcassets/AppIcon.appiconset/app_icon_32.png" beforeDir="false" afterPath="$PROJECT_DIR$/macos/Runner/Assets.xcassets/AppIcon.appiconset/app_icon_32.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/macos/Runner/Assets.xcassets/AppIcon.appiconset/app_icon_512.png" beforeDir="false" afterPath="$PROJECT_DIR$/macos/Runner/Assets.xcassets/AppIcon.appiconset/app_icon_512.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/macos/Runner/Assets.xcassets/AppIcon.appiconset/app_icon_64.png" beforeDir="false" afterPath="$PROJECT_DIR$/macos/Runner/Assets.xcassets/AppIcon.appiconset/app_icon_64.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/usb_connection_api/lib/src/usb_connection_api.dart" beforeDir="false" afterPath="$PROJECT_DIR$/packages/usb_connection_api/lib/src/usb_connection_api.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/favicon.png" beforeDir="false" afterPath="$PROJECT_DIR$/web/favicon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/icons/Icon-192.png" beforeDir="false" afterPath="$PROJECT_DIR$/web/icons/Icon-192.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/icons/Icon-512.png" beforeDir="false" afterPath="$PROJECT_DIR$/web/icons/Icon-512.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/icons/Icon-maskable-192.png" beforeDir="false" afterPath="$PROJECT_DIR$/web/icons/Icon-maskable-192.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/icons/Icon-maskable-512.png" beforeDir="false" afterPath="$PROJECT_DIR$/web/icons/Icon-maskable-512.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/windows/runner/Runner.rc" beforeDir="false" afterPath="$PROJECT_DIR$/windows/runner/Runner.rc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/windows/runner/resources/app_icon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/windows/runner/resources/app_icon.ico" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,6 +127,7 @@
     "Dart Command Line App.snippet.dart.executor": "Run",
     "Dart Test.Tests in authentication_repository_test.dart.executor": "Run",
     "Flutter Test.AuctionDataBloc.executor": "Run",
+    "Flutter Test.BikeReadingNotifier.executor": "Run",
     "Flutter Test.Displays CircularProgressIndicator when state is AuctionDataStateLoading.executor": "Run",
     "Flutter Test.Does not display CircularProgressIndicator when state is loaded.executor": "Run",
     "Flutter Test.Does not display CircularProgressIndicator when state is not AuctionDataStateLoading.executor": "Run",
@@ -104,18 +162,40 @@
     "Flutter Test.Shows error message when state is AuctionDataStateFailure5.executor": "Run",
     "Flutter Test.Triggers VehicleDataFetched event when a vehicle is selected.executor": "Run",
     "Flutter Test.VehicleSelectionScreen.executor": "Run",
+    "Flutter Test.connectDeviceAndStartListening updates state with reading.executor": "Run",
+    "Flutter Test.fails to fetch bike assets and sets error state.executor": "Run",
+    "Flutter Test.fails to trigger bike connected event and sets error state.executor": "Run",
+    "Flutter Test.fetches bike assets successfully.executor": "Run",
     "Flutter Test.getAuctionData.executor": "Run",
+    "Flutter Test.initial state is AsyncData with empty list.executor": "Run",
+    "Flutter Test.initial state is AsyncData with null.executor": "Run",
+    "Flutter Test.initial state is null.executor": "Run",
+    "Flutter Test.isScanning is false initially.executor": "Run",
+    "Flutter Test.onError in bike readings stream updates state to AsyncError.executor": "Run",
+    "Flutter Test.onError in stream updates state to AsyncError.executor": "Run",
     "Flutter Test.postUserAuthenticationInfo.executor": "Run",
+    "Flutter Test.renders title correctly.executor": "Run",
     "Flutter Test.returns mapped FoundDevice from USB ports.executor": "Debug",
+    "Flutter Test.sets loading state while fetching.executor": "Run",
+    "Flutter Test.sets loading state while triggering event.executor": "Run",
+    "Flutter Test.startScanning updates state to AsyncLoading and starts listening to stream.executor": "Debug",
+    "Flutter Test.startScanning updates state to loading and then data.executor": "Run",
+    "Flutter Test.stopBikeReadingListening cancels the subscription.executor": "Run",
+    "Flutter Test.stopScanning cancels subscription and updates state to current list.executor": "Run",
     "Flutter Test.tests in auction_data_bloc_test.dart.executor": "Run",
     "Flutter Test.tests in bluetooth_connection_api_test.dart.executor": "Run",
     "Flutter Test.tests in data_validator_test.dart.executor": "Run",
+    "Flutter Test.tests in hardware_connectivity_provider_test.dart.executor": "Run",
     "Flutter Test.tests in hardware_connectivity_repository_test.dart.executor": "Run",
     "Flutter Test.tests in network_api_service_test.dart.executor": "Run",
+    "Flutter Test.tests in network_metadata_provider_test.dart.executor": "Run",
     "Flutter Test.tests in usb_connection_api_test.dart.executor": "Run",
     "Flutter Test.tests in user_auth_bloc_test.dart.executor": "Run",
     "Flutter Test.tests in vehicle_search_screen_test.dart.executor": "Run",
     "Flutter Test.tests in vehicle_selection_screen_test.dart.executor": "Run",
+    "Flutter Test.toggleScanning starts scanning when not scanning.executor": "Run",
+    "Flutter Test.toggleScanning stops scanning when scanning.executor": "Run",
+    "Flutter Test.triggers bike connected event successfully.executor": "Run",
     "Flutter.main.dart.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.cidr.known.project.marker": "true",
@@ -149,49 +229,51 @@
       <recent name="C:\Users\me88756\Projects\Personal\caronsale-code-challenge\lib\home\view" />
     </key>
   </component>
-  <component name="RunManager" selected="Flutter Test.returns mapped FoundDevice from USB ports">
-    <configuration name="bike_metadata_repository_test.dart" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application" temporary="true" nameIsGenerated="true">
-      <option name="filePath" value="$PROJECT_DIR$/packages/bike_metadata_repository/test/bike_metadata_repository_test.dart" />
-      <option name="workingDirectory" value="$PROJECT_DIR$/packages/bike_metadata_repository" />
-      <method v="2" />
-    </configuration>
-    <configuration name="postUserAuthenticationInfo" type="FlutterTestConfigType" factoryName="Flutter Test" temporary="true" nameIsGenerated="true">
-      <option name="testName" value="postUserAuthenticationInfo" />
-      <option name="testFile" value="$PROJECT_DIR$/packages/network_api/test/network_api_service_test.dart" />
+  <component name="RunManager" selected="Flutter.main.dart">
+    <configuration name="BikeReadingNotifier" type="FlutterTestConfigType" factoryName="Flutter Test" temporary="true" nameIsGenerated="true">
+      <option name="testName" value="BikeReadingNotifier" />
+      <option name="testFile" value="$PROJECT_DIR$/test/bike_dashboard/state/hardware_connectivity_provider_test.dart" />
       <option name="useRegexp" value="false" />
       <method v="2" />
     </configuration>
-    <configuration name="returns mapped FoundDevice from USB ports" type="FlutterTestConfigType" factoryName="Flutter Test" temporary="true" nameIsGenerated="true">
-      <option name="testName" value="returns mapped FoundDevice from USB ports" />
-      <option name="testFile" value="$PROJECT_DIR$/packages/hardware_connectivity_repository/test/hardware_connectivity_repository_test.dart" />
+    <configuration name="connectDeviceAndStartListening updates state with reading" type="FlutterTestConfigType" factoryName="Flutter Test" temporary="true" nameIsGenerated="true">
+      <option name="testName" value="connectDeviceAndStartListening updates state with reading" />
+      <option name="testFile" value="$PROJECT_DIR$/test/bike_dashboard/state/hardware_connectivity_provider_test.dart" />
       <option name="useRegexp" value="false" />
       <method v="2" />
     </configuration>
-    <configuration name="tests in bluetooth_connection_api_test.dart" type="FlutterTestConfigType" factoryName="Flutter Test" temporary="true" nameIsGenerated="true">
-      <option name="testFile" value="$PROJECT_DIR$/packages/bluetooth_connection_api/test/bluetooth_connection_api_test.dart" />
+    <configuration name="renders title correctly" type="FlutterTestConfigType" factoryName="Flutter Test" temporary="true" nameIsGenerated="true">
+      <option name="testName" value="renders title correctly" />
+      <option name="testFile" value="$PROJECT_DIR$/test/bike_dashboard/view/bike_dashboard_screen_test.dart" />
+      <option name="useRegexp" value="true" />
+      <method v="2" />
+    </configuration>
+    <configuration name="startScanning updates state to loading and then data" type="FlutterTestConfigType" factoryName="Flutter Test" temporary="true" nameIsGenerated="true">
+      <option name="testName" value="startScanning updates state to loading and then data" />
+      <option name="testFile" value="$PROJECT_DIR$/test/bike_dashboard/state/hardware_connectivity_provider_test.dart" />
       <option name="useRegexp" value="false" />
       <method v="2" />
     </configuration>
-    <configuration name="tests in hardware_connectivity_repository_test.dart" type="FlutterTestConfigType" factoryName="Flutter Test" temporary="true" nameIsGenerated="true">
-      <option name="testFile" value="$PROJECT_DIR$/packages/hardware_connectivity_repository/test/hardware_connectivity_repository_test.dart" />
+    <configuration name="tests in hardware_connectivity_provider_test.dart" type="FlutterTestConfigType" factoryName="Flutter Test" temporary="true" nameIsGenerated="true">
+      <option name="testFile" value="$PROJECT_DIR$/test/bike_dashboard/state/hardware_connectivity_provider_test.dart" />
       <option name="useRegexp" value="false" />
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Dart Command Line App.bike_metadata_repository_test.dart" />
       <item itemvalue="Flutter.main.dart" />
-      <item itemvalue="Flutter Test.postUserAuthenticationInfo" />
-      <item itemvalue="Flutter Test.returns mapped FoundDevice from USB ports" />
-      <item itemvalue="Flutter Test.tests in bluetooth_connection_api_test.dart" />
-      <item itemvalue="Flutter Test.tests in hardware_connectivity_repository_test.dart" />
+      <item itemvalue="Flutter Test.BikeReadingNotifier" />
+      <item itemvalue="Flutter Test.connectDeviceAndStartListening updates state with reading" />
+      <item itemvalue="Flutter Test.renders title correctly" />
+      <item itemvalue="Flutter Test.startScanning updates state to loading and then data" />
+      <item itemvalue="Flutter Test.tests in hardware_connectivity_provider_test.dart" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Flutter Test.returns mapped FoundDevice from USB ports" />
-        <item itemvalue="Flutter Test.tests in hardware_connectivity_repository_test.dart" />
-        <item itemvalue="Flutter Test.tests in bluetooth_connection_api_test.dart" />
-        <item itemvalue="Dart Command Line App.bike_metadata_repository_test.dart" />
-        <item itemvalue="Flutter Test.postUserAuthenticationInfo" />
+        <item itemvalue="Flutter Test.renders title correctly" />
+        <item itemvalue="Flutter Test.BikeReadingNotifier" />
+        <item itemvalue="Flutter Test.startScanning updates state to loading and then data" />
+        <item itemvalue="Flutter Test.tests in hardware_connectivity_provider_test.dart" />
+        <item itemvalue="Flutter Test.connectDeviceAndStartListening updates state with reading" />
       </list>
     </recent_temporary>
   </component>
@@ -228,7 +310,15 @@
       <option name="project" value="LOCAL" />
       <updated>1746983433096</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="implement unit tests">
+      <option name="closed" value="true" />
+      <created>1746991011462</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1746991011462</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -261,6 +351,23 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint type="Dart">
+          <url>file://$PROJECT_DIR$/lib/bike_dashboard/view/bike_dashboard_screen.dart</url>
+          <line>69</line>
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint type="Dart">
+          <url>file://$PROJECT_DIR$/lib/bike_dashboard/view/bike_dashboard_screen.dart</url>
+          <line>197</line>
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint type="Dart">
+          <url>file://$PROJECT_DIR$/lib/bike_dashboard/view/bike_dashboard_screen.dart</url>
+          <line>268</line>
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+      </breakpoints>
       <default-breakpoints>
         <breakpoint type="dart-exception" />
       </default-breakpoints>

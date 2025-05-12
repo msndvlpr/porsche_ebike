@@ -39,24 +39,25 @@ class UserAuthenticationScreenState extends ConsumerState<LoginScreen> {
     final authState = ref.watch(userAuthProvider);
     final isObscure = ref.watch(obscurePasswordProvider);
 
-    ref.listen<AsyncValue<String>>(userAuthProvider, (previous, next) {
-      next.whenOrNull(
-        data: (_) {
-          _usernameController.clear();
-          _passwordController.clear();
-          ScaffoldMessenger.of(context).clearSnackBars();
+    ref.listen<AsyncValue<String?>>(
+      userAuthProvider, (previous, next) {
+        next.whenOrNull(data: (_) {
+            _usernameController.clear();
+            _passwordController.clear();
+            ScaffoldMessenger.of(context).clearSnackBars();
 
-          Navigator.of(context).pushReplacement(
-            MaterialPageRoute(builder: (_) => BikeDashboardScreen()),
-          );
-        },
-        error: (err, _) {
-          ScaffoldMessenger.of(context).showSnackBar(
-            SnackBar(content: Text(err.toString())),
-          );
-        },
-      );
-    });
+            Navigator.of(context).pushReplacement(
+              MaterialPageRoute(builder: (_) => BikeDashboardScreen()),
+            );
+          },
+          error: (err, _) {
+            ScaffoldMessenger.of(context).showSnackBar(
+              SnackBar(content: Text(err.toString())),
+            );
+          },
+        );
+      },
+    );
 
 
 
