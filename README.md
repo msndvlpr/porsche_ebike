@@ -13,20 +13,19 @@ While the application may run on other platforms, please note that it is officia
 
 ## Technical Features
 - **User Authentication**: Uses an Authentication Repository and a mocked HTTP handler. Authentication is simulated based on a random username and password, and based on any user input login will be successful.
-- **VIN/Vehicle Search**: User can search for vehicles using a VIN. Based on the VIN, the user may get a full match or a list of similar vehicles.
-- **Auction Data**: Users can select vehicles and view their auction details.
-- **Caching**: Data is cached per VIN in the `VehicleSearchScreen` and per External ID (EID) in the `VehicleSelectionScreen`.
-- **State Management**: The application follows the BLoC architecture pattern for state management and handles UI states Consequently.
+- **USB devices Scan**: User can scan and see real connected USB devices to the PC, as well as some mocked devices. 
+- **BLE devices Scan**: User can scan and see real nearby Bluetooth devices to the PC, as well as some mocked devices.
+- **Connect to device (bike)**: User can select any device in the list and then connect to fetch information and diagnostic data in a data stream format.
+- **Fetch bike overview data**: Fetch bike overview data including bike description and image from backend 
+- **State Management**: The application follows the Riverpod for state management and MVVM design pattern 
 - **VIN Validation**: A validator method checks user input based on Wikipedia and other online sources.
-- **Dark Theme**: Application theme can be changed to Dark or Light.
+- **Dark/Light Theme**: Application theme can be changed to Dark or Light.
 
 ## Project Architecture
 ### Overview
-This project follows the Clean Architecture and **Riverpod** for state management. pattern for state management and also as the development architecture. It might be also similar to MVVM, because different layers in BLoC have a corresponding 
-layer in MVVM, for example the view layer is the same, external packages for repositories and APIs correspond to repositories and datasources in the model layer
-of MVVM, and bloc layer is also acting the same as view-model in MVVM. The reason why I have used BLoC for the above purposes is that it offers a structured and 
-testable way to manage complex states and business logic in Flutter, promoting maintainability and scalability by clearly separating business logic from UI. On the
-other hand it has also a very high number of reputation and popularity among Flutter developers.
+The application follows the Riverpod package for state management and adopts the MVVM (Model-View-ViewModel) design pattern within a Clean Architecture structure. This combination offers a clear separation of concerns,
+improved scalability, and enhanced testability. Riverpod enables reactive, type-safe state handling with minimal boilerplate, while MVVM ensures a well-organized flow of data and business logic between the UI
+and the underlying models. Clean Architecture further reinforces modularity by dividing the project into distinct layers—presentation, domain, and data—making the codebase easier to maintain, test, and extend.
 
 ### Structure
 - **Repositories**: There are 2 repositories under `packages` directory, including `AuctionRepository` for managing backend requests for VIN and auction search stuff, and another 
