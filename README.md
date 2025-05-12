@@ -94,29 +94,29 @@ document, there are two bike models for which the received data model differ, an
 per request (sun as Last Error).
 
 
-
 ## Testing
-- The project uses `flutter_test` and `mocktail` for unit and widget testing.
+- The project uses `flutter_test` and `mocktail` for unit testing.
 - Tests are available in the `test/` folder.
 - Run tests using:
   ```sh
   flutter test
   ```
-- Note: Tests under the 4 packages might need run only via `flutter test` command, because sometimes Flutter has some issues recognizing them as Test to be run visually.
-  Other Tests in the main app may run without issue either visually or command line. 
+- Note: Tests under some packages might need run only via `flutter test` command, because sometimes Flutter has issues recognizing them as Test to be run visually.
+  So if any test runs with problem just run it via terminal with above command.
 
-## VIN Validation
-- A static validator in `utils/data_validator.dart` checks user input.
-- The validation logic is based on real-world VIN examples.
-- While accurate, it may not be 100% reliable. (successfully tested with valid WBAYK510405N35485 vin)
 
 ## Running the Project
 1. Install Flutter dependencies:
    ```sh
    flutter pub get
    ```
-2. Run the application:
+2. Build the project for MacOs:
    ```sh
-   flutter run
+   flutter build macos
+   ```
+3. Run it on MacOS:
+   ```sh
+   flutter run -d MACOS_DEVICE_ID
+
    ```
    
