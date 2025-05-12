@@ -29,12 +29,12 @@ and the underlying models. Clean Architecture further reinforces modularity by d
 Riverpod is also used to implement View-Model layer for playing an intermediary role between Repositories and User Interface.
 
 ### Structure
-- **Repositories**: There are three repositories under `packages` directory, including `AuthenticationRepository`, `BikeMetadataRepository` and `HardwareConnectivityRepository` for managing backend requests for VIN and auction search stuff, and another 
-  `AuthenticationRepository` for managing user authentication. The application business logic should be handled here.
-- **APIs**: There are 2 APIs under `packages` directory, including `NetworkAPI` for handling http requests from network, and another `SecureStorageRepository` for handling secure
-  local storage possibility in Flutter.
+- **Repositories**: There are three repositories under `packages` directory, including `AuthenticationRepository` for user login stuff and the handling related business logic, `BikeMetadataRepository` for bike metadata handling and related business logic and also  
+ `HardwareConnectivityRepository` for handling USB abd BLE connection and data transmission from different devices.
+- **APIs**: There are 4 APIs (or data-sources) under `packages` directory, including `NetworkAPI` for handling http requests from backend, `SecureStorageAPI` for storing and handling important
+  data storage on the local, `BleConnectionAPI` for handling all Bluetooth related connectivity and `UsbConnectionAPI` for handling connectivity over USP port.
 - **Modules**: Project has different modules based on the different features of the app, they are `User Authentication`, `Vehicle Search` and `Vehicle Auction`. Then each module 
-  contains its own sub folders including `bloc`, `model`, `view` and `widget` (some of them might be not available for every module).
+  contains its own sub folders including `provider`, `model`, `view` and `widget` (some of them might be not available for every module).
   - **provider**: Serving as the state management framework and also acting as a intermediary layer between the repositories and the UI layer
   - **model**: Containing the data models necessary for UI layer. 
   - **view**: Serving as the contacting point of the application with user interaction and only responsible for data representation and not any business logic.
