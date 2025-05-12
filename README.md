@@ -17,29 +17,30 @@ While the application may run on other platforms, please note that it is officia
 - **BLE devices Scan**: User can scan and see real nearby Bluetooth devices to the PC, as well as some mocked devices.
 - **Connect to device (bike)**: User can select any device in the list and then connect to fetch information and diagnostic data in a data stream format.
 - **Fetch bike overview data**: Fetch bike overview data including bike description and image from backend 
-- **State Management**: The application follows the Riverpod for state management and MVVM design pattern 
-- **VIN Validation**: A validator method checks user input based on Wikipedia and other online sources.
+- **State Management**: The application follows the Riverpod for state management and reactive development.
+- **HTTP Rest Handling**: This application uses the http package for client-server communication over REST, with two mocked request handlers implemented—one for authentication and another for bike data—to simulate backend responses during development and testing.
 - **Dark/Light Theme**: Application theme can be changed to Dark or Light.
 
 ## Project Architecture
 ### Overview
 The application follows the Riverpod package for state management and adopts the MVVM (Model-View-ViewModel) design pattern within a Clean Architecture structure. This combination offers a clear separation of concerns,
 improved scalability, and enhanced testability. Riverpod enables reactive, type-safe state handling with minimal boilerplate, while MVVM ensures a well-organized flow of data and business logic between the UI
-and the underlying models. Clean Architecture further reinforces modularity by dividing the project into distinct layers—presentation, domain, and data—making the codebase easier to maintain, test, and extend.
+and the underlying models. Clean Architecture further reinforces modularity by dividing the project into distinct layers and making the codebase easier to maintain, test, and extend.
+Riverpod is also used to implement View-Model layer for playing an intermediary role between Repositories and User Interface.
 
 ### Structure
-- **Repositories**: There are 2 repositories under `packages` directory, including `AuctionRepository` for managing backend requests for VIN and auction search stuff, and another 
+- **Repositories**: There are three repositories under `packages` directory, including `AuthenticationRepository`, `BikeMetadataRepository` and `HardwareConnectivityRepository` for managing backend requests for VIN and auction search stuff, and another 
   `AuthenticationRepository` for managing user authentication. The application business logic should be handled here.
 - **APIs**: There are 2 APIs under `packages` directory, including `NetworkAPI` for handling http requests from network, and another `SecureStorageRepository` for handling secure
   local storage possibility in Flutter.
 - **Modules**: Project has different modules based on the different features of the app, they are `User Authentication`, `Vehicle Search` and `Vehicle Auction`. Then each module 
   contains its own sub folders including `bloc`, `model`, `view` and `widget` (some of them might be not available for every module).
-  - **bloc**: Serving as the state management framework and also acting as a intermediary layer between the repositories and the UI layer
+  - **provider**: Serving as the state management framework and also acting as a intermediary layer between the repositories and the UI layer
   - **model**: Containing the data models necessary for UI layer. 
   - **view**: Serving as the contacting point of the application with user interaction and only responsible for data representation and not any business logic.
   - **widget**: Containing necessary UI widgets for reusing in different views.
 
-(Following is the project structure based on bloc pattern)
+(Following is the project structure based on MVVM pattern)
 
 ### Project Structure Overview
 ```

@@ -9,7 +9,7 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8ed2c952-683f-4e19-b9f3-80980f90de14" name="Changes" comment="add READMe document">
+    <list default="true" id="8ed2c952-683f-4e19-b9f3-80980f90de14" name="Changes" comment="update README document">
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -283,7 +283,15 @@
       <option name="project" value="LOCAL" />
       <updated>1747027662855</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="update README document">
+      <option name="closed" value="true" />
+      <created>1747033579313</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1747033579313</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -314,7 +322,8 @@
     <MESSAGE value="implement unit tests" />
     <MESSAGE value="fix window size issue and set them switcher" />
     <MESSAGE value="add READMe document" />
-    <option name="LAST_COMMIT_MESSAGE" value="add READMe document" />
+    <MESSAGE value="update README document" />
+    <option name="LAST_COMMIT_MESSAGE" value="update README document" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
